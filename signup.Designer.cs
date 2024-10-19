@@ -1,6 +1,6 @@
 ﻿namespace Home_Health_Device_Data_Logger
 {
-    partial class signup
+    partial class Signup
     {
         /// <summary>
         /// Required designer variable.
@@ -33,28 +33,28 @@
             lblAge = new Label();
             lblBloodGroup = new Label();
             lblEmail = new Label();
-            lblConfirmEmail = new Label();
+            lblConfirmPassword = new Label();
             lblPassword = new Label();
             grpGender = new GroupBox();
-            rdoOthers = new RadioButton();
+            rdoOther = new RadioButton();
             rdoFemale = new RadioButton();
             rdoMale = new RadioButton();
             lblLastName = new Label();
             txtFirstName = new TextBox();
             txtLastName = new TextBox();
             txtAge = new TextBox();
-            txtBloodGroup = new TextBox();
             txtEmail = new TextBox();
-            txtConfirmEmail = new TextBox();
+            txtConfirmPassword = new TextBox();
             txtPassword = new TextBox();
             grpRole = new GroupBox();
             rdoTechnician = new RadioButton();
             rdoPatient = new RadioButton();
-            btnSubmit = new Button();
+            btnSignup = new Button();
             lblPasswordHint = new Label();
             txtPasswordHint = new TextBox();
             picUploadImage = new PictureBox();
             btnUploadImage = new Button();
+            cmbBloodGroup = new ComboBox();
             grpGender.SuspendLayout();
             grpRole.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picUploadImage).BeginInit();
@@ -75,7 +75,7 @@
             // lblFirstName
             // 
             lblFirstName.AutoSize = true;
-            lblFirstName.Location = new Point(48, 60);
+            lblFirstName.Location = new Point(49, 63);
             lblFirstName.Name = "lblFirstName";
             lblFirstName.Size = new Size(64, 15);
             lblFirstName.TabIndex = 1;
@@ -84,7 +84,7 @@
             // lblAge
             // 
             lblAge.AutoSize = true;
-            lblAge.Location = new Point(52, 120);
+            lblAge.Location = new Point(49, 127);
             lblAge.Name = "lblAge";
             lblAge.Size = new Size(28, 15);
             lblAge.TabIndex = 3;
@@ -93,7 +93,7 @@
             // lblBloodGroup
             // 
             lblBloodGroup.AutoSize = true;
-            lblBloodGroup.Location = new Point(38, 266);
+            lblBloodGroup.Location = new Point(49, 156);
             lblBloodGroup.Name = "lblBloodGroup";
             lblBloodGroup.Size = new Size(74, 15);
             lblBloodGroup.TabIndex = 4;
@@ -102,25 +102,25 @@
             // lblEmail
             // 
             lblEmail.AutoSize = true;
-            lblEmail.Location = new Point(527, 60);
+            lblEmail.Location = new Point(527, 62);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(41, 15);
             lblEmail.TabIndex = 5;
             lblEmail.Text = "&E-mail";
             // 
-            // lblConfirmEmail
+            // lblConfirmPassword
             // 
-            lblConfirmEmail.AutoSize = true;
-            lblConfirmEmail.Location = new Point(527, 89);
-            lblConfirmEmail.Name = "lblConfirmEmail";
-            lblConfirmEmail.Size = new Size(88, 15);
-            lblConfirmEmail.TabIndex = 6;
-            lblConfirmEmail.Text = "&Confirm E-mail";
+            lblConfirmPassword.AutoSize = true;
+            lblConfirmPassword.Location = new Point(527, 130);
+            lblConfirmPassword.Name = "lblConfirmPassword";
+            lblConfirmPassword.Size = new Size(104, 15);
+            lblConfirmPassword.TabIndex = 6;
+            lblConfirmPassword.Text = "&Confirm Password";
             // 
             // lblPassword
             // 
             lblPassword.AutoSize = true;
-            lblPassword.Location = new Point(527, 120);
+            lblPassword.Location = new Point(528, 97);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(57, 15);
             lblPassword.TabIndex = 7;
@@ -128,23 +128,23 @@
             // 
             // grpGender
             // 
-            grpGender.Controls.Add(rdoOthers);
+            grpGender.Controls.Add(rdoOther);
             grpGender.Controls.Add(rdoFemale);
             grpGender.Controls.Add(rdoMale);
-            grpGender.Location = new Point(49, 149);
+            grpGender.Location = new Point(49, 187);
             grpGender.Name = "grpGender";
             grpGender.Size = new Size(106, 100);
             grpGender.TabIndex = 8;
             grpGender.TabStop = false;
             grpGender.Text = "&Gender";
             // 
-            // rdoOthers
+            // rdoOther
             // 
-            rdoOthers.Location = new Point(15, 70);
-            rdoOthers.Name = "rdoOthers";
-            rdoOthers.Size = new Size(85, 24);
-            rdoOthers.TabIndex = 0;
-            rdoOthers.Text = "&Others";
+            rdoOther.Location = new Point(15, 70);
+            rdoOther.Name = "rdoOther";
+            rdoOther.Size = new Size(85, 24);
+            rdoOther.TabIndex = 0;
+            rdoOther.Text = "&Others";
             // 
             // rdoFemale
             // 
@@ -172,7 +172,7 @@
             // lblLastName
             // 
             lblLastName.AutoSize = true;
-            lblLastName.Location = new Point(49, 89);
+            lblLastName.Location = new Point(49, 94);
             lblLastName.Name = "lblLastName";
             lblLastName.Size = new Size(63, 15);
             lblLastName.TabIndex = 2;
@@ -180,7 +180,7 @@
             // 
             // txtFirstName
             // 
-            txtFirstName.Location = new Point(160, 60);
+            txtFirstName.Location = new Point(162, 60);
             txtFirstName.Name = "txtFirstName";
             txtFirstName.PlaceholderText = "John";
             txtFirstName.Size = new Size(100, 23);
@@ -188,7 +188,7 @@
             // 
             // txtLastName
             // 
-            txtLastName.Location = new Point(161, 92);
+            txtLastName.Location = new Point(162, 91);
             txtLastName.Name = "txtLastName";
             txtLastName.PlaceholderText = "Doe";
             txtLastName.Size = new Size(100, 23);
@@ -202,37 +202,30 @@
             txtAge.Size = new Size(100, 23);
             txtAge.TabIndex = 11;
             // 
-            // txtBloodGroup
-            // 
-            txtBloodGroup.Location = new Point(158, 264);
-            txtBloodGroup.Name = "txtBloodGroup";
-            txtBloodGroup.PlaceholderText = "O +ve";
-            txtBloodGroup.Size = new Size(100, 23);
-            txtBloodGroup.TabIndex = 12;
-            // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(620, 57);
+            txtEmail.Location = new Point(632, 59);
             txtEmail.Name = "txtEmail";
             txtEmail.PlaceholderText = "example@gmail.com";
-            txtEmail.Size = new Size(157, 23);
+            txtEmail.Size = new Size(156, 23);
             txtEmail.TabIndex = 13;
             // 
-            // txtConfirmEmail
+            // txtConfirmPassword
             // 
-            txtConfirmEmail.Location = new Point(621, 86);
-            txtConfirmEmail.Name = "txtConfirmEmail";
-            txtConfirmEmail.PlaceholderText = "example@gmail.com";
-            txtConfirmEmail.Size = new Size(156, 23);
-            txtConfirmEmail.TabIndex = 14;
+            txtConfirmPassword.Location = new Point(632, 127);
+            txtConfirmPassword.Name = "txtConfirmPassword";
+            txtConfirmPassword.PasswordChar = '*';
+            txtConfirmPassword.PlaceholderText = "********";
+            txtConfirmPassword.Size = new Size(156, 23);
+            txtConfirmPassword.TabIndex = 14;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(623, 117);
+            txtPassword.Location = new Point(632, 94);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
             txtPassword.PlaceholderText = "********";
-            txtPassword.Size = new Size(154, 23);
+            txtPassword.Size = new Size(156, 23);
             txtPassword.TabIndex = 15;
             // 
             // grpRole
@@ -241,7 +234,7 @@
             grpRole.Controls.Add(rdoPatient);
             grpRole.Location = new Point(527, 187);
             grpRole.Name = "grpRole";
-            grpRole.Size = new Size(200, 100);
+            grpRole.Size = new Size(261, 100);
             grpRole.TabIndex = 16;
             grpRole.TabStop = false;
             grpRole.Text = "Role";
@@ -268,23 +261,23 @@
             rdoPatient.Text = "&Patient";
             rdoPatient.UseVisualStyleBackColor = true;
             // 
-            // btnSubmit
+            // btnSignup
             // 
-            btnSubmit.BackColor = SystemColors.HotTrack;
-            btnSubmit.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSubmit.ForeColor = SystemColors.ButtonFace;
-            btnSubmit.Location = new Point(346, 379);
-            btnSubmit.Name = "btnSubmit";
-            btnSubmit.Size = new Size(119, 33);
-            btnSubmit.TabIndex = 17;
-            btnSubmit.Text = "Submit";
-            btnSubmit.UseVisualStyleBackColor = false;
-            btnSubmit.Click += button1_Click;
+            btnSignup.BackColor = SystemColors.HotTrack;
+            btnSignup.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSignup.ForeColor = SystemColors.ButtonFace;
+            btnSignup.Location = new Point(346, 379);
+            btnSignup.Name = "btnSignup";
+            btnSignup.Size = new Size(119, 33);
+            btnSignup.TabIndex = 17;
+            btnSignup.Text = "Submit";
+            btnSignup.UseVisualStyleBackColor = false;
+            btnSignup.Click += btnSignup_Click;
             // 
             // lblPasswordHint
             // 
             lblPasswordHint.AutoSize = true;
-            lblPasswordHint.Location = new Point(527, 153);
+            lblPasswordHint.Location = new Point(528, 159);
             lblPasswordHint.Name = "lblPasswordHint";
             lblPasswordHint.Size = new Size(83, 15);
             lblPasswordHint.TabIndex = 18;
@@ -292,10 +285,10 @@
             // 
             // txtPasswordHint
             // 
-            txtPasswordHint.Location = new Point(624, 150);
+            txtPasswordHint.Location = new Point(632, 156);
             txtPasswordHint.Name = "txtPasswordHint";
             txtPasswordHint.PlaceholderText = "Birth Date, Car Number, etc";
-            txtPasswordHint.Size = new Size(153, 23);
+            txtPasswordHint.Size = new Size(156, 23);
             txtPasswordHint.TabIndex = 19;
             // 
             // picUploadImage
@@ -321,34 +314,45 @@
             btnUploadImage.UseVisualStyleBackColor = false;
             btnUploadImage.Click += btnUploadImage_Click;
             // 
-            // signup
+            // cmbBloodGroup
+            // 
+            cmbBloodGroup.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbBloodGroup.FormattingEnabled = true;
+            cmbBloodGroup.Items.AddRange(new object[] { "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-" });
+            cmbBloodGroup.Location = new Point(162, 159);
+            cmbBloodGroup.Name = "cmbBloodGroup";
+            cmbBloodGroup.Size = new Size(100, 23);
+            cmbBloodGroup.TabIndex = 22;
+            // 
+            // Signup
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(cmbBloodGroup);
             Controls.Add(btnUploadImage);
             Controls.Add(picUploadImage);
             Controls.Add(txtPasswordHint);
             Controls.Add(lblPasswordHint);
-            Controls.Add(btnSubmit);
+            Controls.Add(btnSignup);
             Controls.Add(grpRole);
             Controls.Add(txtPassword);
-            Controls.Add(txtConfirmEmail);
+            Controls.Add(txtConfirmPassword);
             Controls.Add(txtEmail);
-            Controls.Add(txtBloodGroup);
             Controls.Add(txtAge);
             Controls.Add(txtLastName);
             Controls.Add(txtFirstName);
             Controls.Add(grpGender);
             Controls.Add(lblPassword);
-            Controls.Add(lblConfirmEmail);
+            Controls.Add(lblConfirmPassword);
             Controls.Add(lblEmail);
             Controls.Add(lblBloodGroup);
             Controls.Add(lblAge);
             Controls.Add(lblLastName);
             Controls.Add(lblFirstName);
             Controls.Add(lblSignUp);
-            Name = "signup";
+            MinimizeBox = false;
+            Name = "Signup";
             Text = "signup";
             grpGender.ResumeLayout(false);
             grpGender.PerformLayout();
@@ -366,27 +370,27 @@
         private Label lblAge;
         private Label lblBloodGroup;
         private Label lblEmail;
-        private Label lblConfirmEmail;
+        private Label lblConfirmPassword;
         private Label lblPassword;
         private GroupBox grpGender;
-        private RadioButton rdoOthers;
+        private RadioButton rdoOther;
         private RadioButton rdoFemale;
         private RadioButton rdoMale;
         private Label lblLastName;
         private TextBox txtFirstName;
         private TextBox txtLastName;
         private TextBox txtAge;
-        private TextBox txtBloodGroup;
         private TextBox txtEmail;
-        private TextBox txtConfirmEmail;
+        private TextBox txtConfirmPassword;
         private TextBox txtPassword;
         private GroupBox grpRole;
         private RadioButton rdoPatient;
         private RadioButton rdoTechnician;
-        private Button btnSubmit;
+        private Button btnSignup;
         private Label lblPasswordHint;
         private TextBox txtPasswordHint;
         private PictureBox picUploadImage;
         private Button btnUploadImage;
+        private ComboBox cmbBloodGroup;
     }
 }

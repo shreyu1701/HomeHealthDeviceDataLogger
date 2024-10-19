@@ -34,9 +34,10 @@
             txtEmail = new TextBox();
             txtPassword = new TextBox();
             linkForgetPassword = new LinkLabel();
-            btnSubmit = new Button();
+            btnLogin = new Button();
             label4 = new Label();
             btnSignUp = new Button();
+            lblError = new Label();
             SuspendLayout();
             // 
             // lblLogin
@@ -65,7 +66,7 @@
             // 
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPassword.Location = new Point(277, 209);
+            lblPassword.Location = new Point(277, 205);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(76, 21);
             lblPassword.TabIndex = 2;
@@ -83,8 +84,9 @@
             // txtPassword
             // 
             txtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPassword.Location = new Point(280, 243);
+            txtPassword.Location = new Point(280, 236);
             txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
             txtPassword.PlaceholderText = "*********";
             txtPassword.Size = new Size(238, 29);
             txtPassword.TabIndex = 4;
@@ -100,18 +102,18 @@
             linkForgetPassword.Text = "For&get Password?";
             linkForgetPassword.LinkClicked += linkLabel1_LinkClicked;
             // 
-            // btnSubmit
+            // btnLogin
             // 
-            btnSubmit.BackColor = Color.DodgerBlue;
-            btnSubmit.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSubmit.ForeColor = Color.White;
-            btnSubmit.Location = new Point(356, 306);
-            btnSubmit.Name = "btnSubmit";
-            btnSubmit.Size = new Size(85, 30);
-            btnSubmit.TabIndex = 6;
-            btnSubmit.Text = "&Submit";
-            btnSubmit.UseVisualStyleBackColor = false;
-            btnSubmit.Click += button1_Click;
+            btnLogin.BackColor = Color.DodgerBlue;
+            btnLogin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogin.ForeColor = Color.White;
+            btnLogin.Location = new Point(357, 306);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(85, 30);
+            btnLogin.TabIndex = 6;
+            btnLogin.Text = "&Login";
+            btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += new EventHandler(btnLogin_Click);
             // 
             // label4
             // 
@@ -133,16 +135,26 @@
             btnSignUp.TabIndex = 8;
             btnSignUp.Text = "Sign &Up";
             btnSignUp.UseVisualStyleBackColor = false;
-            btnSignUp.Click += button2_Click;
+            btnSignUp.Click += new EventHandler(btnSignup_Click);
+            // 
+            // lblError
+            // 
+            lblError.AutoSize = true;
+            lblError.Location = new Point(275, 94);
+            lblError.Name = "lblError";
+            lblError.Size = new Size(36, 15);
+            lblError.TabIndex = 9;
+            lblError.Text = "Note:";
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblError);
             Controls.Add(btnSignUp);
             Controls.Add(label4);
-            Controls.Add(btnSubmit);
+            Controls.Add(btnLogin);
             Controls.Add(linkForgetPassword);
             Controls.Add(txtPassword);
             Controls.Add(txtEmail);
@@ -163,8 +175,9 @@
         private TextBox txtEmail;
         private TextBox txtPassword;
         private LinkLabel linkForgetPassword;
-        private Button btnSubmit;
+        private Button btnLogin;
         private Label label4;
         private Button btnSignUp;
+        private Label lblError;
     }
 }

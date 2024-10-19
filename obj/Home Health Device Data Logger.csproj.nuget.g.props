@@ -18,7 +18,5 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgSyncfusion_Shared_Base Condition=" '$(PkgSyncfusion_Shared_Base)' == '' ">C:\Users\shrey\.nuget\packages\syncfusion.shared.base\27.1.53</PkgSyncfusion_Shared_Base>
     <PkgSyncfusion_Gauge_Windows Condition=" '$(PkgSyncfusion_Gauge_Windows)' == '' ">C:\Users\shrey\.nuget\packages\syncfusion.gauge.windows\27.1.53</PkgSyncfusion_Gauge_Windows>
-    <PkgLiveCharts_Wpf Condition=" '$(PkgLiveCharts_Wpf)' == '' ">C:\Users\shrey\.nuget\packages\livecharts.wpf\0.9.7</PkgLiveCharts_Wpf>
-    <PkgLiveCharts_WinForms Condition=" '$(PkgLiveCharts_WinForms)' == '' ">C:\Users\shrey\.nuget\packages\livecharts.winforms\0.9.7.1</PkgLiveCharts_WinForms>
   </PropertyGroup>
 </Project>

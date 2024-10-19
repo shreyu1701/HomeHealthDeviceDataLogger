@@ -13,7 +13,7 @@
     <Compile Update="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="signup.cs">
+    <Compile Update="Signup.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="TechnicianAddHealthData.cs">

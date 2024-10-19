@@ -46,9 +46,9 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
-            "LiveCharts.WinForms": {
+            "Forge.OpenAI": {
               "target": "Package",
-              "version": "[0.9.7.1, )"
+              "version": "[1.5.5, )"
             },
             "SixLabors.ImageSharp.Drawing": {
               "target": "Package",
