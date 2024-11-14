@@ -28,45 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint51 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 79D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint52 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 70D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint53 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 73D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint54 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 68D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint55 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 80D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint56 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 86D);
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint57 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 179D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint58 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 150D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint59 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 204D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint60 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 168D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint61 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 180D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint62 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 186D);
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint63 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 79D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint64 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 70D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint65 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 73D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint66 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 68D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint67 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 80D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint68 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 86D);
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint69 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 90D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint70 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 99D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint71 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 95D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint72 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 89D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint73 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 99D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint74 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 95D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint75 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(7D, 91D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint26 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 79D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint27 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 70D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint28 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 73D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint29 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 68D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint30 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 80D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint31 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 86D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint32 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 179D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint33 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 150D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint34 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 204D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint35 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 168D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint36 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 180D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint37 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 186D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint38 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 79D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint39 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 70D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint40 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 73D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint41 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 68D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint42 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 80D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint43 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 86D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint44 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 90D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint45 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 99D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint46 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 95D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint47 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 89D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint48 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 99D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint49 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 95D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint50 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(7D, 91D);
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            btnAddPatient = new Button();
             btnTechnicianAddHealthData = new Button();
             dataGridViewDashboard = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
@@ -84,7 +85,7 @@
             txtID = new TextBox();
             txtName = new TextBox();
             btnDelete = new Button();
-            btnEdit = new Button();
+            btnEditPatient = new Button();
             dataGridViewHistory = new DataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
@@ -203,6 +204,7 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(btnAddPatient);
             tabPage1.Controls.Add(btnTechnicianAddHealthData);
             tabPage1.Controls.Add(dataGridViewDashboard);
             tabPage1.Location = new Point(4, 24);
@@ -211,6 +213,19 @@
             tabPage1.Size = new Size(546, 437);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Dashboard";
+            // 
+            // btnAddPatient
+            // 
+            btnAddPatient.BackColor = SystemColors.HotTrack;
+            btnAddPatient.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAddPatient.ForeColor = SystemColors.ButtonFace;
+            btnAddPatient.Location = new Point(230, 6);
+            btnAddPatient.Name = "btnAddPatient";
+            btnAddPatient.Size = new Size(148, 33);
+            btnAddPatient.TabIndex = 7;
+            btnAddPatient.Text = "Add Patient";
+            btnAddPatient.UseVisualStyleBackColor = false;
+            btnAddPatient.Click += btnAddPatient_Click;
             // 
             // btnTechnicianAddHealthData
             // 
@@ -298,7 +313,7 @@
             tabPage2.Controls.Add(txtID);
             tabPage2.Controls.Add(txtName);
             tabPage2.Controls.Add(btnDelete);
-            tabPage2.Controls.Add(btnEdit);
+            tabPage2.Controls.Add(btnEditPatient);
             tabPage2.Controls.Add(dataGridViewHistory);
             tabPage2.Controls.Add(dateTimePickerHistoryTo);
             tabPage2.Location = new Point(4, 24);
@@ -374,17 +389,18 @@
             btnDelete.Text = "&Delete";
             btnDelete.UseVisualStyleBackColor = false;
             // 
-            // btnEdit
+            // btnEditPatient
             // 
-            btnEdit.BackColor = SystemColors.HotTrack;
-            btnEdit.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnEdit.ForeColor = SystemColors.ButtonFace;
-            btnEdit.Location = new Point(369, 51);
-            btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(78, 34);
-            btnEdit.TabIndex = 8;
-            btnEdit.Text = "&Edit";
-            btnEdit.UseVisualStyleBackColor = false;
+            btnEditPatient.BackColor = SystemColors.HotTrack;
+            btnEditPatient.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEditPatient.ForeColor = SystemColors.ButtonFace;
+            btnEditPatient.Location = new Point(369, 51);
+            btnEditPatient.Name = "btnEditPatient";
+            btnEditPatient.Size = new Size(78, 34);
+            btnEditPatient.TabIndex = 8;
+            btnEditPatient.Text = "&Edit";
+            btnEditPatient.UseVisualStyleBackColor = false;
+            btnEditPatient.Click += btnEditPatient_Click;
             // 
             // dataGridViewHistory
             // 
@@ -544,22 +560,22 @@
             // 
             // chtBloodPressure
             // 
-            chartArea9.Name = "ChartArea1";
-            chtBloodPressure.ChartAreas.Add(chartArea9);
-            legend9.Name = "Legend1";
-            chtBloodPressure.Legends.Add(legend9);
+            chartArea5.Name = "ChartArea1";
+            chtBloodPressure.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            chtBloodPressure.Legends.Add(legend5);
             chtBloodPressure.Location = new Point(6, 56);
             chtBloodPressure.Name = "chtBloodPressure";
-            series9.ChartArea = "ChartArea1";
-            series9.Legend = "Legend1";
-            series9.Name = "BloodPressure";
-            series9.Points.Add(dataPoint51);
-            series9.Points.Add(dataPoint52);
-            series9.Points.Add(dataPoint53);
-            series9.Points.Add(dataPoint54);
-            series9.Points.Add(dataPoint55);
-            series9.Points.Add(dataPoint56);
-            chtBloodPressure.Series.Add(series9);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "BloodPressure";
+            series5.Points.Add(dataPoint26);
+            series5.Points.Add(dataPoint27);
+            series5.Points.Add(dataPoint28);
+            series5.Points.Add(dataPoint29);
+            series5.Points.Add(dataPoint30);
+            series5.Points.Add(dataPoint31);
+            chtBloodPressure.Series.Add(series5);
             chtBloodPressure.Size = new Size(303, 196);
             chtBloodPressure.TabIndex = 0;
             chtBloodPressure.Text = "Blood Pressure";
@@ -577,22 +593,22 @@
             // 
             // chtSugarLevel
             // 
-            chartArea10.Name = "ChartArea1";
-            chtSugarLevel.ChartAreas.Add(chartArea10);
-            legend10.Name = "Legend1";
-            chtSugarLevel.Legends.Add(legend10);
+            chartArea6.Name = "ChartArea1";
+            chtSugarLevel.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            chtSugarLevel.Legends.Add(legend6);
             chtSugarLevel.Location = new Point(6, 65);
             chtSugarLevel.Name = "chtSugarLevel";
-            series10.ChartArea = "ChartArea1";
-            series10.Legend = "Legend1";
-            series10.Name = "Sugar Level";
-            series10.Points.Add(dataPoint57);
-            series10.Points.Add(dataPoint58);
-            series10.Points.Add(dataPoint59);
-            series10.Points.Add(dataPoint60);
-            series10.Points.Add(dataPoint61);
-            series10.Points.Add(dataPoint62);
-            chtSugarLevel.Series.Add(series10);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Sugar Level";
+            series6.Points.Add(dataPoint32);
+            series6.Points.Add(dataPoint33);
+            series6.Points.Add(dataPoint34);
+            series6.Points.Add(dataPoint35);
+            series6.Points.Add(dataPoint36);
+            series6.Points.Add(dataPoint37);
+            chtSugarLevel.Series.Add(series6);
             chtSugarLevel.Size = new Size(303, 196);
             chtSugarLevel.TabIndex = 1;
             chtSugarLevel.Text = "Sugar Level";
@@ -609,22 +625,22 @@
             // 
             // chtHeartRate
             // 
-            chartArea11.Name = "ChartArea1";
-            chtHeartRate.ChartAreas.Add(chartArea11);
-            legend11.Name = "Legend1";
-            chtHeartRate.Legends.Add(legend11);
+            chartArea7.Name = "ChartArea1";
+            chtHeartRate.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            chtHeartRate.Legends.Add(legend7);
             chtHeartRate.Location = new Point(6, 65);
             chtHeartRate.Name = "chtHeartRate";
-            series11.ChartArea = "ChartArea1";
-            series11.Legend = "Legend1";
-            series11.Name = "Heart Rate";
-            series11.Points.Add(dataPoint63);
-            series11.Points.Add(dataPoint64);
-            series11.Points.Add(dataPoint65);
-            series11.Points.Add(dataPoint66);
-            series11.Points.Add(dataPoint67);
-            series11.Points.Add(dataPoint68);
-            chtHeartRate.Series.Add(series11);
+            series7.ChartArea = "ChartArea1";
+            series7.Legend = "Legend1";
+            series7.Name = "Heart Rate";
+            series7.Points.Add(dataPoint38);
+            series7.Points.Add(dataPoint39);
+            series7.Points.Add(dataPoint40);
+            series7.Points.Add(dataPoint41);
+            series7.Points.Add(dataPoint42);
+            series7.Points.Add(dataPoint43);
+            chtHeartRate.Series.Add(series7);
             chtHeartRate.Size = new Size(303, 196);
             chtHeartRate.TabIndex = 1;
             chtHeartRate.Text = "Heart Rate";
@@ -641,23 +657,23 @@
             // 
             // chtOxygenLevel
             // 
-            chartArea12.Name = "ChartArea1";
-            chtOxygenLevel.ChartAreas.Add(chartArea12);
-            legend12.Name = "Legend1";
-            chtOxygenLevel.Legends.Add(legend12);
+            chartArea8.Name = "ChartArea1";
+            chtOxygenLevel.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            chtOxygenLevel.Legends.Add(legend8);
             chtOxygenLevel.Location = new Point(6, 65);
             chtOxygenLevel.Name = "chtOxygenLevel";
-            series12.ChartArea = "ChartArea1";
-            series12.Legend = "Legend1";
-            series12.Name = "Oxygen Level";
-            series12.Points.Add(dataPoint69);
-            series12.Points.Add(dataPoint70);
-            series12.Points.Add(dataPoint71);
-            series12.Points.Add(dataPoint72);
-            series12.Points.Add(dataPoint73);
-            series12.Points.Add(dataPoint74);
-            series12.Points.Add(dataPoint75);
-            chtOxygenLevel.Series.Add(series12);
+            series8.ChartArea = "ChartArea1";
+            series8.Legend = "Legend1";
+            series8.Name = "Oxygen Level";
+            series8.Points.Add(dataPoint44);
+            series8.Points.Add(dataPoint45);
+            series8.Points.Add(dataPoint46);
+            series8.Points.Add(dataPoint47);
+            series8.Points.Add(dataPoint48);
+            series8.Points.Add(dataPoint49);
+            series8.Points.Add(dataPoint50);
+            chtOxygenLevel.Series.Add(series8);
             chtOxygenLevel.Size = new Size(303, 196);
             chtOxygenLevel.TabIndex = 1;
             chtOxygenLevel.Text = "Oxygen Level";
@@ -1246,7 +1262,7 @@
         private DataGridView dataGridViewDashboard;
         private TabPage tabPage2;
         private Button btnDelete;
-        private Button btnEdit;
+        private Button btnEditPatient;
         private DataGridView dataGridViewHistory;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -1339,5 +1355,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chtSugarLevel;
         private System.Windows.Forms.DataVisualization.Charting.Chart chtHeartRate;
         private System.Windows.Forms.DataVisualization.Charting.Chart chtOxygenLevel;
+        private Button btnAddPatient;
     }
 }

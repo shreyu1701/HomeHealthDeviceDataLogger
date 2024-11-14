@@ -50,6 +50,10 @@
               "target": "Package",
               "version": "[1.5.5, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "SixLabors.ImageSharp.Drawing": {
               "target": "Package",
               "version": "[2.1.4, )"

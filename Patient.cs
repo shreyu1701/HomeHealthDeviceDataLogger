@@ -1,12 +1,54 @@
 
+using Home_Health_Device_Data_Logger.HandleUser;
+using Microsoft.VisualBasic.ApplicationServices;
+using System.Windows.Forms.DataVisualization.Charting;
+
 namespace Home_Health_Device_Data_Logger
 {
     public partial class Patient : Form
     {
-        public Patient()
+        private HandleUser.User currentUser;
+        private Patient _patient;
+
+        public object Email { get; internal set; }
+
+        public Patient(HandleUser.User user)
         {
             InitializeComponent();
+            currentUser = user;
+            //InitializePatientDashboard();
+            //DisplayUserInfo();
         }
+
+
+        //private void InitializePatientDashboard()
+        //{
+        //    // Load patient data (you can customize this with the data you want to display)
+        //    lblFullName.Text = $"{currentUser.FirstName} {currentUser.LastName}";
+        //    lblAge.Text = currentUser.Age.ToString();
+        //    lblGender.Text = currentUser.Gender;
+        //    lblBloodGroup.Text = currentUser.BloodGroup;
+
+        //    // You can also load health data from a database or file here
+        //    // Display health data like blood pressure, sugar levels, etc.
+        //}
+
+        //private void DisplayUserInfo()
+        //{
+        //    try
+        //    {
+        //        lblFullName.Text = $"Welcome, {loggedInUser.FirstName} + {loggedInUser.LastName}!";
+        //        lblAgeNumber.Text = $"Age: {loggedInUser.Age}";
+        //        lblGender.Text = $"Gender: {loggedInUser.Gender}";
+        //        lblBloodGroup.Text = $"Blood Group:{loggedInUser.BloodGroup} ";
+
+        //        // Display additional patient-specific data or options here.
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Error Displaying user data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
 
         //Logout Button
         private void button1_Click(object sender, EventArgs e)
@@ -31,7 +73,7 @@ namespace Home_Health_Device_Data_Logger
         //Personal Save Button
         private void btnPersonalSave_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Personal Information  Save in System", "Peronal Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Personal Information  Save in System", "Personal Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         //Contact Save Button
         private void btnContactSave_Click(object sender, EventArgs e)
@@ -51,9 +93,9 @@ namespace Home_Health_Device_Data_Logger
 
         private void btnAddHealthData_Click(object sender, EventArgs e)
         {
-            AddHealthData addHealthData = new AddHealthData();
-            addHealthData.Show();
-            Visible= true;
+            PatientAddHealthData addHealthDataForm = new PatientAddHealthData(_patient);
+            addHealthDataForm.ShowDialog();
         }
+
     }
 }

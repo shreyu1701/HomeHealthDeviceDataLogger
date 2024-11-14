@@ -14,7 +14,6 @@ C:\Users\shrey\source\Windows Application C#\repos\Project\Home Health Device Da
 C:\Users\shrey\source\Windows Application C#\repos\Project\Home Health Device Data Logger\Home Health Device Data Logger\bin\Debug\net8.0-windows\System.Composition.Runtime.dll
 C:\Users\shrey\source\Windows Application C#\repos\Project\Home Health Device Data Logger\Home Health Device Data Logger\bin\Debug\net8.0-windows\System.Composition.TypedParts.dll
 C:\Users\shrey\source\Windows Application C#\repos\Project\Home Health Device Data Logger\Home Health Device Data Logger\obj\Debug\net8.0-windows\Home Health Device Data Logger.csproj.AssemblyReference.cache
-C:\Users\shrey\source\Windows Application C#\repos\Project\Home Health Device Data Logger\Home Health Device Data Logger\obj\Debug\net8.0-windows\Home_Health_Device_Data_Logger.AddHealthData.resources
 C:\Users\shrey\source\Windows Application C#\repos\Project\Home Health Device Data Logger\Home Health Device Data Logger\obj\Debug\net8.0-windows\Home_Health_Device_Data_Logger.Login.resources
 C:\Users\shrey\source\Windows Application C#\repos\Project\Home Health Device Data Logger\Home Health Device Data Logger\obj\Debug\net8.0-windows\Home_Health_Device_Data_Logger.Patient.resources
 C:\Users\shrey\source\Windows Application C#\repos\Project\Home Health Device Data Logger\Home Health Device Data Logger\obj\Debug\net8.0-windows\Home_Health_Device_Data_Logger.Properties.Resources.resources
@@ -49,3 +48,6 @@ C:\Users\shrey\source\Windows Application C#\repos\Project\Home Health Device Da
 C:\Users\shrey\source\Windows Application C#\repos\Project\Home Health Device Data Logger\Home Health Device Data Logger\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
 C:\Users\shrey\source\Windows Application C#\repos\Project\Home Health Device Data Logger\Home Health Device Data Logger\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 C:\Users\shrey\source\Windows Application C#\repos\Project\Home Health Device Data Logger\Home Health Device Data Logger\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\shrey\source\Windows Application C#\repos\Project\Home Health Device Data Logger\Home Health Device Data Logger\obj\Debug\net8.0-windows\Home_Health_Device_Data_Logger.PatientAddHealthData.resources
+C:\Users\shrey\source\Windows Application C#\repos\Project\Home Health Device Data Logger\Home Health Device Data Logger\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\shrey\source\Windows Application C#\repos\Project\Home Health Device Data Logger\Home Health Device Data Logger\obj\Debug\net8.0-windows\Home_Health_Device_Data_Logger.Utils.EditPatientForm.resources

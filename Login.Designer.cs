@@ -34,7 +34,7 @@
             txtEmail = new TextBox();
             txtPassword = new TextBox();
             linkForgetPassword = new LinkLabel();
-            btnLogin = new Button();
+            BtnLogin = new Button();
             label4 = new Label();
             btnSignUp = new Button();
             lblError = new Label();
@@ -102,18 +102,18 @@
             linkForgetPassword.Text = "For&get Password?";
             linkForgetPassword.LinkClicked += linkLabel1_LinkClicked;
             // 
-            // btnLogin
+            // BtnLogin
             // 
-            btnLogin.BackColor = Color.DodgerBlue;
-            btnLogin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(357, 306);
-            btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(85, 30);
-            btnLogin.TabIndex = 6;
-            btnLogin.Text = "&Login";
-            btnLogin.UseVisualStyleBackColor = false;
-            btnLogin.Click += new EventHandler(btnLogin_Click);
+            BtnLogin.BackColor = Color.DodgerBlue;
+            BtnLogin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BtnLogin.ForeColor = Color.White;
+            BtnLogin.Location = new Point(357, 306);
+            BtnLogin.Name = "BtnLogin";
+            BtnLogin.Size = new Size(85, 30);
+            BtnLogin.TabIndex = 6;
+            BtnLogin.Text = "&Login";
+            BtnLogin.UseVisualStyleBackColor = false;
+            BtnLogin.Click += btnLogin_Click;
             // 
             // label4
             // 
@@ -135,7 +135,7 @@
             btnSignUp.TabIndex = 8;
             btnSignUp.Text = "Sign &Up";
             btnSignUp.UseVisualStyleBackColor = false;
-            btnSignUp.Click += new EventHandler(btnSignup_Click);
+            btnSignUp.Click += BtnSignup_Click;
             // 
             // lblError
             // 
@@ -154,7 +154,7 @@
             Controls.Add(lblError);
             Controls.Add(btnSignUp);
             Controls.Add(label4);
-            Controls.Add(btnLogin);
+            Controls.Add(BtnLogin);
             Controls.Add(linkForgetPassword);
             Controls.Add(txtPassword);
             Controls.Add(txtEmail);
@@ -175,7 +175,7 @@
         private TextBox txtEmail;
         private TextBox txtPassword;
         private LinkLabel linkForgetPassword;
-        private Button btnLogin;
+        private Button BtnLogin;
         private Label label4;
         private Button btnSignUp;
         private Label lblError;

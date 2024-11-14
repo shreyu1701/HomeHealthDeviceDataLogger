@@ -1,0 +1,28 @@
+[
+  {
+    "FirstName": "John",
+    "LastName": "Doe",
+    "Age": "22",
+    "Gender": "Male",
+    "BloodGroup": "B+",
+    "Email": "test@patient.com",
+    "Password": "Patient123",
+    "ConfirmPassword": "patient123",
+    "PasswordHint": "patient123",
+    "Role": "Patient",
+    "ProfileImage": null
+  },
+  {
+    "FirstName": "Ajex",
+    "LastName": "Ras",
+    "Age": "15",
+    "Gender": "Male",
+    "BloodGroup": "AB+",
+    "Email": "test@technician.com",
+    "Password": "technician123",
+    "ConfirmPassword": "technician123",
+    "PasswordHint": "technician123",
+    "Role": "Technician",
+    "ProfileImage": "C:\\Users\\shrey\\OneDrive\\Documents\\GitHub\\HealthyFeast\\images\\employee\\pexels-dwanghong-28942226.jpg"
+  }
+]

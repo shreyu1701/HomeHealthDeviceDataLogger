@@ -534,7 +534,7 @@ namespace Home_Health_Device_Data_Logger
             chtOverallHealth.Series.Add(series2);
             chtOverallHealth.Series.Add(series3);
             chtOverallHealth.Series.Add(series4);
-            chtOverallHealth.Size = new Size(266, 134);
+            chtOverallHealth.Size = new Size(516, 134);
             chtOverallHealth.TabIndex = 5;
             chtOverallHealth.Text = "OverallHealthData";
             // 

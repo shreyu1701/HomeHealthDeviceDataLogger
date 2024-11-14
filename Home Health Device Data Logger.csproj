@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <PackageReference Include="Forge.OpenAI" Version="1.5.5" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="SixLabors.ImageSharp.Drawing" Version="2.1.4" />
     <PackageReference Include="Syncfusion.Gauge.Windows" Version="27.1.53" />
     <PackageReference Include="WinForms.DataVisualization" Version="1.9.2" />
@@ -29,6 +30,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="PatientHealthData\" />
   </ItemGroup>
 
 </Project>
