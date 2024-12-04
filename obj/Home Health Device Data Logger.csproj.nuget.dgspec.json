@@ -50,9 +50,9 @@
               "target": "Package",
               "version": "[1.5.5, )"
             },
-            "Newtonsoft.Json": {
+            "Microsoft.Data.SqlClient": {
               "target": "Package",
-              "version": "[13.0.3, )"
+              "version": "[5.2.2, )"
             },
             "SixLabors.ImageSharp.Drawing": {
               "target": "Package",
