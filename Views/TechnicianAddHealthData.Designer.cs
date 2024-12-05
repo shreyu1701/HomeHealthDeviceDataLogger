@@ -37,11 +37,11 @@
             btnSave = new Button();
             lblLowPressure = new Label();
             lblHighPressure = new Label();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtOxygenLevel = new TextBox();
+            txtHeartRate = new TextBox();
+            txtSugarLevel = new TextBox();
+            txtDiastolic = new TextBox();
+            txtSystolic = new TextBox();
             chkBoxOxygenLevel = new CheckBox();
             chkBoxHeartRate = new CheckBox();
             chkBoxSugarLevel = new CheckBox();
@@ -59,11 +59,11 @@
             grpAddHealthData.Controls.Add(btnSave);
             grpAddHealthData.Controls.Add(lblLowPressure);
             grpAddHealthData.Controls.Add(lblHighPressure);
-            grpAddHealthData.Controls.Add(textBox5);
-            grpAddHealthData.Controls.Add(textBox4);
-            grpAddHealthData.Controls.Add(textBox3);
-            grpAddHealthData.Controls.Add(textBox2);
-            grpAddHealthData.Controls.Add(textBox1);
+            grpAddHealthData.Controls.Add(txtOxygenLevel);
+            grpAddHealthData.Controls.Add(txtHeartRate);
+            grpAddHealthData.Controls.Add(txtSugarLevel);
+            grpAddHealthData.Controls.Add(txtDiastolic);
+            grpAddHealthData.Controls.Add(txtSystolic);
             grpAddHealthData.Controls.Add(chkBoxOxygenLevel);
             grpAddHealthData.Controls.Add(chkBoxHeartRate);
             grpAddHealthData.Controls.Add(chkBoxSugarLevel);
@@ -133,55 +133,55 @@
             // lblLowPressure
             // 
             lblLowPressure.AutoSize = true;
-            lblLowPressure.Location = new Point(402, 56);
+            lblLowPressure.Location = new Point(393, 56);
             lblLowPressure.Name = "lblLowPressure";
-            lblLowPressure.Size = new Size(29, 15);
+            lblLowPressure.Size = new Size(52, 15);
             lblLowPressure.TabIndex = 10;
-            lblLowPressure.Text = "Low";
+            lblLowPressure.Text = "Diastolic";
             // 
             // lblHighPressure
             // 
             lblHighPressure.AutoSize = true;
-            lblHighPressure.Location = new Point(316, 56);
+            lblHighPressure.Location = new Point(309, 56);
             lblHighPressure.Name = "lblHighPressure";
-            lblHighPressure.Size = new Size(33, 15);
+            lblHighPressure.Size = new Size(47, 15);
             lblHighPressure.TabIndex = 9;
-            lblHighPressure.Text = "High";
+            lblHighPressure.Text = "Systolic";
             // 
-            // textBox5
+            // txtOxygenLevel
             // 
-            textBox5.Location = new Point(307, 184);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(139, 23);
-            textBox5.TabIndex = 8;
+            txtOxygenLevel.Location = new Point(307, 184);
+            txtOxygenLevel.Name = "txtOxygenLevel";
+            txtOxygenLevel.Size = new Size(139, 23);
+            txtOxygenLevel.TabIndex = 8;
             // 
-            // textBox4
+            // txtHeartRate
             // 
-            textBox4.Location = new Point(307, 152);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(139, 23);
-            textBox4.TabIndex = 7;
+            txtHeartRate.Location = new Point(307, 152);
+            txtHeartRate.Name = "txtHeartRate";
+            txtHeartRate.Size = new Size(139, 23);
+            txtHeartRate.TabIndex = 7;
             // 
-            // textBox3
+            // txtSugarLevel
             // 
-            textBox3.Location = new Point(307, 119);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(139, 23);
-            textBox3.TabIndex = 6;
+            txtSugarLevel.Location = new Point(307, 119);
+            txtSugarLevel.Name = "txtSugarLevel";
+            txtSugarLevel.Size = new Size(139, 23);
+            txtSugarLevel.TabIndex = 6;
             // 
-            // textBox2
+            // txtDiastolic
             // 
-            textBox2.Location = new Point(392, 86);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(54, 23);
-            textBox2.TabIndex = 5;
+            txtDiastolic.Location = new Point(392, 86);
+            txtDiastolic.Name = "txtDiastolic";
+            txtDiastolic.Size = new Size(54, 23);
+            txtDiastolic.TabIndex = 5;
             // 
-            // textBox1
+            // txtSystolic
             // 
-            textBox1.Location = new Point(306, 86);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(52, 23);
-            textBox1.TabIndex = 4;
+            txtSystolic.Location = new Point(306, 86);
+            txtSystolic.Name = "txtSystolic";
+            txtSystolic.Size = new Size(52, 23);
+            txtSystolic.TabIndex = 4;
             // 
             // chkBoxOxygenLevel
             // 
@@ -192,6 +192,7 @@
             chkBoxOxygenLevel.TabIndex = 3;
             chkBoxOxygenLevel.Text = "Oxygen Level";
             chkBoxOxygenLevel.UseVisualStyleBackColor = true;
+            chkBoxOxygenLevel.CheckedChanged += chkBoxOxygenLevel_CheckedChanged;
             // 
             // chkBoxHeartRate
             // 
@@ -202,6 +203,7 @@
             chkBoxHeartRate.TabIndex = 2;
             chkBoxHeartRate.Text = "Heart Rate";
             chkBoxHeartRate.UseVisualStyleBackColor = true;
+            chkBoxHeartRate.CheckedChanged += chkBoxHeartRate_CheckedChanged;
             // 
             // chkBoxSugarLevel
             // 
@@ -212,6 +214,7 @@
             chkBoxSugarLevel.TabIndex = 1;
             chkBoxSugarLevel.Text = "Sugar Level";
             chkBoxSugarLevel.UseVisualStyleBackColor = true;
+            chkBoxSugarLevel.CheckedChanged += chkBoxSugarLevel_CheckedChanged;
             // 
             // chkBoxBloodPressure
             // 
@@ -222,6 +225,7 @@
             chkBoxBloodPressure.TabIndex = 0;
             chkBoxBloodPressure.Text = "Blood Pressure";
             chkBoxBloodPressure.UseVisualStyleBackColor = true;
+            chkBoxBloodPressure.CheckedChanged += chkBoxBloodPressure_CheckedChanged;
             // 
             // TechnicianAddHealthData
             // 
@@ -245,11 +249,11 @@
         private Button btnSave;
         private Label lblLowPressure;
         private Label lblHighPressure;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtOxygenLevel;
+        private TextBox txtHeartRate;
+        private TextBox txtSugarLevel;
+        private TextBox txtDiastolic;
+        private TextBox txtSystolic;
         private CheckBox chkBoxOxygenLevel;
         private CheckBox chkBoxHeartRate;
         private CheckBox chkBoxSugarLevel;

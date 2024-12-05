@@ -15,89 +15,149 @@ namespace Home_Health_Device_Data_Logger
 {
     public partial class AddHealthData : Form
     {
+        private const int MinHeartRate = 40, MaxHeartRate = 180;
+        private const int MinOxygenLevel = 70, MaxOxygenLevel = 100;
+        private const int MinBloodPressureSystolic = 90, MaxBloodPressureSystolic = 180;
+        private const int MinBloodPressureDiastolic = 60, MaxBloodPressureDiastolic = 120;
+        private const int MinSugarLevel = 70, MaxSugarLevel = 300;
+
         public AddHealthData()
         {
             InitializeComponent();
+            SetDefaultStates();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (!chkBoxBloodPressure.Checked && !chkBoxHeartRate.Checked && !chkBoxSugarLevel.Checked && !chkBoxOxygenLevel.Checked)
+            // Check if at least one checkbox is selected
+            if (!chkBoxBloodPressure.Checked && !chkBoxHeartRate.Checked &&
+                !chkBoxSugarLevel.Checked && !chkBoxOxygenLevel.Checked)
             {
-                MessageBox.Show("Please select at least one health metric to save data.");
+                MessageBox.Show("Please select at least one health metric to save data.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Validate inputs based on selected metrics
-            if (chkBoxBloodPressure.Checked && (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text)))
-            {
-                MessageBox.Show("Please enter valid blood pressure values.");
-                return;
-            }
 
-            if (chkBoxHeartRate.Checked && string.IsNullOrEmpty(textBox3.Text))
-            {
-                MessageBox.Show("Please enter a valid heart rate.");
-                return;
-            }
+            int systolic = 0, diastolic = 0, heartRate = 0, sugar = 0, oxygenLevel = 0;
+            string bloodPressure = null, sugarLevel = null;
 
-            if (chkBoxSugarLevel.Checked && string.IsNullOrEmpty(textBox4.Text))
-            {
-                MessageBox.Show("Please enter a valid sugar level.");
-                return;
-            }
-
-            if (chkBoxOxygenLevel.Checked && string.IsNullOrEmpty(textBox5.Text))
-            {
-                MessageBox.Show("Please enter a valid oxygen level.");
-                return;
-            }
+            int selectedUserID = UserSession.CurrentUserID;
 
             try
             {
-                // Fetch the UserID from the session
-                int currentUserId = UserSession.CurrentUserID;
+                if (chkBoxBloodPressure.Checked)
+                {
+                    if (!DataValidation.ValidateRequiredField("Systolic Blood Pressure", txtSystolic.Text, chkBoxBloodPressure.Checked) ||
+                        !DataValidation.ValidateRequiredField("Diastolic Blood Pressure", txtDiastolic.Text, chkBoxBloodPressure.Checked) ||
+                        !DataValidation.TryParseMetric("Systolic Blood Pressure", txtSystolic.Text, out systolic, chkBoxBloodPressure.Checked) ||
+                        !DataValidation.TryParseMetric("Diastolic Blood Pressure", txtDiastolic.Text, out diastolic, chkBoxBloodPressure.Checked) ||
+                        !DataValidation.ValidateMetricRange("Systolic Blood Pressure", systolic, MinBloodPressureSystolic, MaxBloodPressureSystolic) ||
+                        !DataValidation.ValidateMetricRange("Diastolic Blood Pressure", diastolic, MinBloodPressureDiastolic, MaxBloodPressureDiastolic))
+                    {
+                        return;
+                    }
+                }
 
-                // Create the HealthData object
+                // Validate Heart Rate
+                if (chkBoxHeartRate.Checked)
+                {
+                    if (!DataValidation.ValidateRequiredField("Heart Rate", txtHeartRate.Text, chkBoxHeartRate.Checked) ||
+                        !DataValidation.TryParseMetric("Heart Rate", txtHeartRate.Text, out heartRate, chkBoxHeartRate.Checked) ||
+                        !DataValidation.ValidateMetricRange("Heart Rate", heartRate, MinHeartRate, MaxHeartRate))
+                    {
+                        return;
+                    }
+                }
+
+                // Validate Sugar Level
+                if (chkBoxSugarLevel.Checked)
+                {
+                    if (!DataValidation.ValidateRequiredField("Sugar Level", txtSugarLevel.Text, chkBoxSugarLevel.Checked) ||
+                        !DataValidation.TryParseMetric("Sugar Level", txtSugarLevel.Text, out sugar, chkBoxSugarLevel.Checked) ||
+                        !DataValidation.ValidateMetricRange("Sugar Level", sugar, MinSugarLevel, MaxSugarLevel))
+                    {
+                        return;
+                    }
+                }
+
+                // Validate Oxygen Level
+                if (chkBoxOxygenLevel.Checked)
+                {
+                    if (!DataValidation.ValidateRequiredField("Oxygen Level", txtOxygenLevel.Text, chkBoxOxygenLevel.Checked) ||
+                        !DataValidation.TryParseMetric("Oxygen Level", txtOxygenLevel.Text, out oxygenLevel, chkBoxOxygenLevel.Checked) ||
+                        !DataValidation.ValidateMetricRange("Oxygen Level", oxygenLevel, MinOxygenLevel, MaxOxygenLevel))
+                    {
+                        return;
+                    }
+                }
+
                 var healthData = new HealthData
                 {
-                    UserID = currentUserId,
+                    UserID = selectedUserID,
                     DataDate = dateTimePicker1.Value,
-                    BloodPressure = chkBoxBloodPressure.Checked ? $"{textBox1.Text}/{textBox2.Text}" : null,
-                    SugarLevel = chkBoxSugarLevel.Checked ? textBox4.Text : null,
-                    HeartRate = chkBoxHeartRate.Checked && int.TryParse(textBox3.Text, out var hr) ? hr : 0,
-                    OxygenLevel = chkBoxOxygenLevel.Checked && int.TryParse(textBox5.Text, out var ol) ? ol : 0,
-                    Comments = string.IsNullOrEmpty(richTxtComments.Text) ? null : richTxtComments.Text
+                    BloodPressure = systolic.ToString() + "/" + diastolic.ToString(),
+                    SugarLevel = sugar.ToString(),
+                    HeartRate = heartRate,
+                    OxygenLevel = oxygenLevel,
+                    Comments = string.IsNullOrWhiteSpace(richTxtComments.Text.Trim()) ? null : richTxtComments.Text.Trim()
                 };
 
-                // Save the health data
                 HealthDataAccess.SaveHealthData(healthData);
                 MessageBox.Show("Health data saved successfully.");
-
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred while saving health data: {ex.Message}");
+                Console.WriteLine($"[Error]: {ex}");
+                MessageBox.Show("An unexpected error occurred while saving health data.");
             }
-            // Optionally clear the fields after saving
+
             ClearFields();
 
         }
 
         private void ClearFields()
-        {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox4.Clear();
-            textBox5.Clear();
+        { 
+            txtSystolic.Clear();
+            txtDiastolic.Clear();
+            txtSugarLevel.Clear();
+            txtHeartRate.Clear();
+            txtOxygenLevel.Clear();
 
             // Reset checkbox states
             chkBoxBloodPressure.Checked = false;
             chkBoxHeartRate.Checked = false;
             chkBoxSugarLevel.Checked = false;
             chkBoxOxygenLevel.Checked = false;
+        }
+
+        private void SetDefaultStates()
+        {
+            txtSystolic.Enabled = false;
+            txtDiastolic.Enabled = false;
+            txtSugarLevel.Enabled = false;
+            txtHeartRate.Enabled = false;
+            txtOxygenLevel.Enabled = false;
+        }
+
+        private void chkBoxBloodPressure_CheckedChanged(object sender, EventArgs e)
+        {
+            txtSystolic.Enabled = chkBoxBloodPressure.Checked;
+            txtDiastolic.Enabled = chkBoxBloodPressure.Checked;
+        }
+
+        private void chkBoxSugarLevel_CheckedChanged(object sender, EventArgs e)
+        {
+            txtSugarLevel.Enabled = chkBoxSugarLevel.Checked;
+        }
+
+        private void chkBoxHeartRate_CheckedChanged(object sender, EventArgs e)
+        {
+            txtHeartRate.Enabled = chkBoxHeartRate.Checked;
+        }
+
+        private void chkBoxOxygenLevel_CheckedChanged(object sender, EventArgs e)
+        {
+            txtOxygenLevel.Enabled = chkBoxOxygenLevel.Checked;
         }
     }
 }
