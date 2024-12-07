@@ -23,7 +23,7 @@ namespace Home_Health_Device_Data_Logger
 
         public AddHealthData()
         {
-            InitializeComponent();
+            InitializeComponent(); 
             SetDefaultStates();
         }
 
@@ -99,11 +99,15 @@ namespace Home_Health_Device_Data_Logger
                     SugarLevel = sugar.ToString(),
                     HeartRate = heartRate,
                     OxygenLevel = oxygenLevel,
-                    Comments = string.IsNullOrWhiteSpace(richTxtComments.Text.Trim()) ? null : richTxtComments.Text.Trim()
+                    Comments = string.IsNullOrWhiteSpace(richTxtComments.Text.Trim()) ? null : richTxtComments.Text.Trim(),
+                    CreatedAt = DateTime.Now
                 };
 
                 HealthDataAccess.SaveHealthData(healthData);
                 MessageBox.Show("Health data saved successfully.");
+
+                //Load recent 5 data
+                HealthDataAccess.GetRecentHealthDataByUserId(selectedUserID);
             }
             catch (Exception ex)
             {

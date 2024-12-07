@@ -16,6 +16,7 @@ namespace Home_Health_Device_Data_Logger.Models
         public int HeartRate { get; set; }
         public int OxygenLevel { get; set; }
         public string Comments { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 
 }

@@ -46,11 +46,13 @@
             chkBoxHeartRate = new CheckBox();
             chkBoxSugarLevel = new CheckBox();
             chkBoxBloodPressure = new CheckBox();
+            btnCancel = new Button();
             grpAddHealthData.SuspendLayout();
             SuspendLayout();
             // 
             // grpAddHealthData
             // 
+            grpAddHealthData.Controls.Add(btnCancel);
             grpAddHealthData.Controls.Add(lblComments);
             grpAddHealthData.Controls.Add(richTxtComments);
             grpAddHealthData.Controls.Add(cmbPatientName);
@@ -122,7 +124,7 @@
             btnSave.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSave.ForeColor = SystemColors.ButtonFace;
             btnSave.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSave.Location = new Point(192, 297);
+            btnSave.Location = new Point(149, 297);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(80, 30);
             btnSave.TabIndex = 11;
@@ -227,6 +229,20 @@
             chkBoxBloodPressure.UseVisualStyleBackColor = true;
             chkBoxBloodPressure.CheckedChanged += chkBoxBloodPressure_CheckedChanged;
             // 
+            // btnCancel
+            // 
+            btnCancel.BackColor = SystemColors.HotTrack;
+            btnCancel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCancel.ForeColor = SystemColors.ButtonFace;
+            btnCancel.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCancel.Location = new Point(263, 297);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(80, 30);
+            btnCancel.TabIndex = 17;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
+            // 
             // TechnicianAddHealthData
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -261,5 +277,6 @@
         private ComboBox cmbPatientName;
         private Label lblComments;
         private RichTextBox richTxtComments;
+        private Button btnCancel;
     }
 }

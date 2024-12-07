@@ -172,7 +172,38 @@ namespace Home_Health_Device_Data_Logger.Data
         }
 
 
+        public static bool UpdateUserProfile(User patient)
+        {
+            using (var connection = DbConnection.GetConnection())
+            {
+                try
+                {
+                    string query = "UPDATE Users SET FirstName = @FirstName, LastName = @LastName, Age = @Age, " +
+                                   "Gender = @Gender, BloodGroup = @BloodGroup, Email = @Email, Password = @Password, " +
+                                   "PasswordHint = @PasswordHint, ProfileImage = @ProfileImage WHERE UserID = @UserID";
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@FirstName", patient.FirstName);
+                    cmd.Parameters.AddWithValue("@LastName", patient.LastName);
+                    cmd.Parameters.AddWithValue("@Age", patient.Age);
+                    cmd.Parameters.AddWithValue("@Gender", patient.Gender);
+                    cmd.Parameters.AddWithValue("@BloodGroup", patient.BloodGroup);
+                    cmd.Parameters.AddWithValue("@Email", patient.Email);
+                    cmd.Parameters.AddWithValue("@Password", patient.Password);
+                    cmd.Parameters.AddWithValue("@PasswordHint", patient.PasswordHint);
+                    cmd.Parameters.AddWithValue("@ProfileImage", patient.ProfileImage);
+                    cmd.Parameters.AddWithValue("@UserID", patient.UserID);  // Make sure to include the UserID in the WHERE clause
 
+                    connection.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+                catch (Exception ex)
+                {
+                    // Handle exception
+                    return false;
+                }
+            }
+        }
 
     }
 

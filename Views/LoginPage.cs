@@ -41,7 +41,7 @@ namespace Home_Health_Device_Data_Logger.Views
             var loggedInUser = UserDataAccess.Login(email, password);
             if (loggedInUser != null)
             {
-                MessageBox.Show($"Welcome {loggedInUser.FirstName} {loggedInUser.LastName}!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show($"Welcome {loggedInUser.FirstName} {loggedInUser.LastName}!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Redirect to role-specific dashboard
                 if (loggedInUser.Role.Trim().ToLower() == "patient") // Normalize and compare role

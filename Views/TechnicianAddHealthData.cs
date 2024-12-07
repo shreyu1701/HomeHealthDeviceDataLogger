@@ -22,7 +22,7 @@ namespace Home_Health_Device_Data_Logger
         private const int MinBloodPressureSystolic = 90, MaxBloodPressureSystolic = 180;
         private const int MinBloodPressureDiastolic = 60, MaxBloodPressureDiastolic = 120;
         private const int MinSugarLevel = 70, MaxSugarLevel = 300;
-        
+
 
         public TechnicianAddHealthData()
         {
@@ -47,10 +47,10 @@ namespace Home_Health_Device_Data_Logger
                 return;
             }
 
-            
-            int systolic = 0, diastolic = 0, heartRate = 0, sugar = 0,  oxygenLevel = 0;
-            string bloodPressure = null, sugarLevel= null;
-            
+
+            int systolic = 0, diastolic = 0, heartRate = 0, sugar = 0, oxygenLevel = 0;
+            string bloodPressure = null, sugarLevel = null;
+
             try
             {
                 if (chkBoxBloodPressure.Checked)
@@ -146,7 +146,7 @@ namespace Home_Health_Device_Data_Logger
 
         private void ClearFields()
         {
-            cmbPatientName.SelectedIndex = -1 ;
+            cmbPatientName.SelectedIndex = -1;
             txtSystolic.Clear();
             txtDiastolic.Clear();
             txtSugarLevel.Clear();
@@ -190,6 +190,9 @@ namespace Home_Health_Device_Data_Logger
             txtOxygenLevel.Enabled = chkBoxOxygenLevel.Checked;
         }
 
-
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

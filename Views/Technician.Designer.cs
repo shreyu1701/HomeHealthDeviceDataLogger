@@ -28,69 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint51 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 79D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint52 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 70D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint53 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 73D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint54 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 68D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint55 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 80D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint56 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 86D);
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint57 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 179D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint58 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 150D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint59 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 204D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint60 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 168D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint61 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 180D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint62 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 186D);
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint63 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 79D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint64 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 70D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint65 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 73D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint66 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 68D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint67 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 80D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint68 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 86D);
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint69 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 90D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint70 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 99D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint71 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 95D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint72 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 89D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint73 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 99D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint74 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 95D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint75 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(7D, 91D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 79D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 70D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 73D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 68D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 80D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 86D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 179D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 150D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 204D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 168D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint11 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 180D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint12 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 186D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint13 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 79D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint14 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 70D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint15 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 73D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint16 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 68D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint17 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 80D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint18 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 86D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint19 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 90D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint20 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 99D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint21 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 95D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint22 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 89D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint23 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 99D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint24 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 95D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint25 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(7D, 91D);
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            btnRefresh = new Button();
+            btnAddPatient = new Button();
             btnTechnicianAddHealthData = new Button();
-            dataGridViewDashboard = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
+            dataGridViewTechnicianDashboard = new DataGridView();
             tabPage2 = new TabPage();
-            btnAdd = new Button();
+            btnFilter = new Button();
             lblHistoryTo = new Label();
             lblHistoryFrom = new Label();
             dateTimePickerHistoryFrom = new DateTimePicker();
             txtID = new TextBox();
             txtName = new TextBox();
-            btnDelete = new Button();
-            btnEdit = new Button();
-            dataGridViewHistory = new DataGridView();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
+            dataGridViewTechnicianHistory = new DataGridView();
             dateTimePickerHistoryTo = new DateTimePicker();
             tabPage3 = new TabPage();
             lblChartsTo = new Label();
@@ -162,9 +150,9 @@
             picProfilePic = new PictureBox();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewDashboard).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewTechnicianDashboard).BeginInit();
             tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewHistory).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewTechnicianHistory).BeginInit();
             tabPage3.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer3).BeginInit();
@@ -198,26 +186,51 @@
             tabControl1.Location = new Point(252, 2);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(554, 465);
+            tabControl1.Size = new Size(749, 553);
             tabControl1.TabIndex = 1;
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(btnRefresh);
+            tabPage1.Controls.Add(btnAddPatient);
             tabPage1.Controls.Add(btnTechnicianAddHealthData);
-            tabPage1.Controls.Add(dataGridViewDashboard);
+            tabPage1.Controls.Add(dataGridViewTechnicianDashboard);
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(546, 437);
+            tabPage1.Size = new Size(741, 525);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Dashboard";
+            // 
+            // btnRefresh
+            // 
+            btnRefresh.BackColor = SystemColors.HotTrack;
+            btnRefresh.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnRefresh.ForeColor = SystemColors.ButtonFace;
+            btnRefresh.Location = new Point(418, 4);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(148, 33);
+            btnRefresh.TabIndex = 8;
+            btnRefresh.Text = "Refresh";
+            btnRefresh.UseVisualStyleBackColor = false;
+            btnRefresh.Click += btnRefresh_Click;
+            // 
+            // btnAddPatient
+            // 
+            btnAddPatient.Location = new Point(6, 6);
+            btnAddPatient.Name = "btnAddPatient";
+            btnAddPatient.Size = new Size(124, 33);
+            btnAddPatient.TabIndex = 7;
+            btnAddPatient.Text = "Add Patient";
+            btnAddPatient.UseVisualStyleBackColor = true;
+            btnAddPatient.Click += btnAddPatient_Click;
             // 
             // btnTechnicianAddHealthData
             // 
             btnTechnicianAddHealthData.BackColor = SystemColors.HotTrack;
             btnTechnicianAddHealthData.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnTechnicianAddHealthData.ForeColor = SystemColors.ButtonFace;
-            btnTechnicianAddHealthData.Location = new Point(384, 6);
+            btnTechnicianAddHealthData.Location = new Point(584, 4);
             btnTechnicianAddHealthData.Name = "btnTechnicianAddHealthData";
             btnTechnicianAddHealthData.Size = new Size(148, 33);
             btnTechnicianAddHealthData.TabIndex = 0;
@@ -225,106 +238,47 @@
             btnTechnicianAddHealthData.UseVisualStyleBackColor = false;
             btnTechnicianAddHealthData.Click += btnTechnicianAddHealthData_Click;
             // 
-            // dataGridViewDashboard
+            // dataGridViewTechnicianDashboard
             // 
-            dataGridViewDashboard.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewDashboard.Columns.AddRange(new DataGridViewColumn[] { Column1, Column7, Column2, Column3, Column4, Column5, Column6 });
-            dataGridViewDashboard.Location = new Point(3, 45);
-            dataGridViewDashboard.Name = "dataGridViewDashboard";
-            dataGridViewDashboard.Size = new Size(534, 381);
-            dataGridViewDashboard.TabIndex = 6;
-            // 
-            // Column1
-            // 
-            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-            Column1.HeaderText = "Date";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            Column1.Width = 56;
-            // 
-            // Column7
-            // 
-            Column7.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-            Column7.HeaderText = "Name";
-            Column7.Name = "Column7";
-            Column7.Width = 64;
-            // 
-            // Column2
-            // 
-            Column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-            Column2.HeaderText = "Blood Pressure";
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            Column2.Width = 110;
-            // 
-            // Column3
-            // 
-            Column3.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-            Column3.HeaderText = "Sugar Level";
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            Column3.Width = 92;
-            // 
-            // Column4
-            // 
-            Column4.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-            Column4.HeaderText = "Heart Rate";
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
-            Column4.Width = 87;
-            // 
-            // Column5
-            // 
-            Column5.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-            Column5.HeaderText = "Oxygen Level";
-            Column5.Name = "Column5";
-            Column5.ReadOnly = true;
-            Column5.Width = 103;
-            // 
-            // Column6
-            // 
-            Column6.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-            Column6.HeaderText = "Action";
-            Column6.Name = "Column6";
-            Column6.ReadOnly = true;
-            Column6.Width = 67;
+            dataGridViewTechnicianDashboard.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewTechnicianDashboard.Location = new Point(3, 45);
+            dataGridViewTechnicianDashboard.Name = "dataGridViewTechnicianDashboard";
+            dataGridViewTechnicianDashboard.Size = new Size(732, 477);
+            dataGridViewTechnicianDashboard.TabIndex = 6;
+            dataGridViewTechnicianDashboard.CellContentClick += DataGridViewTechnicianDashboard_CellContentClick;
             // 
             // tabPage2
             // 
-            tabPage2.Controls.Add(btnAdd);
+            tabPage2.Controls.Add(btnFilter);
             tabPage2.Controls.Add(lblHistoryTo);
             tabPage2.Controls.Add(lblHistoryFrom);
             tabPage2.Controls.Add(dateTimePickerHistoryFrom);
             tabPage2.Controls.Add(txtID);
             tabPage2.Controls.Add(txtName);
-            tabPage2.Controls.Add(btnDelete);
-            tabPage2.Controls.Add(btnEdit);
-            tabPage2.Controls.Add(dataGridViewHistory);
+            tabPage2.Controls.Add(dataGridViewTechnicianHistory);
             tabPage2.Controls.Add(dateTimePickerHistoryTo);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(546, 437);
+            tabPage2.Size = new Size(741, 525);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "History";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // btnAdd
+            // btnFilter
             // 
-            btnAdd.BackColor = SystemColors.HotTrack;
-            btnAdd.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAdd.ForeColor = SystemColors.ButtonFace;
-            btnAdd.Location = new Point(285, 51);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(78, 34);
-            btnAdd.TabIndex = 19;
-            btnAdd.Text = "&Add";
-            btnAdd.UseVisualStyleBackColor = false;
+            btnFilter.Location = new Point(657, 22);
+            btnFilter.Name = "btnFilter";
+            btnFilter.Size = new Size(75, 23);
+            btnFilter.TabIndex = 19;
+            btnFilter.Text = "Filter";
+            btnFilter.UseVisualStyleBackColor = true;
+            btnFilter.Click += btnFilter_Click;
             // 
             // lblHistoryTo
             // 
             lblHistoryTo.AutoSize = true;
-            lblHistoryTo.Location = new Point(382, 3);
+            lblHistoryTo.Location = new Point(446, 4);
             lblHistoryTo.Name = "lblHistoryTo";
             lblHistoryTo.Size = new Size(25, 15);
             lblHistoryTo.TabIndex = 18;
@@ -333,7 +287,7 @@
             // lblHistoryFrom
             // 
             lblHistoryFrom.AutoSize = true;
-            lblHistoryFrom.Location = new Point(238, 3);
+            lblHistoryFrom.Location = new Point(235, 4);
             lblHistoryFrom.Name = "lblHistoryFrom";
             lblHistoryFrom.Size = new Size(41, 15);
             lblHistoryFrom.TabIndex = 17;
@@ -341,14 +295,14 @@
             // 
             // dateTimePickerHistoryFrom
             // 
-            dateTimePickerHistoryFrom.Location = new Point(236, 22);
+            dateTimePickerHistoryFrom.Location = new Point(235, 23);
             dateTimePickerHistoryFrom.Name = "dateTimePickerHistoryFrom";
-            dateTimePickerHistoryFrom.Size = new Size(128, 23);
+            dateTimePickerHistoryFrom.Size = new Size(191, 23);
             dateTimePickerHistoryFrom.TabIndex = 16;
             // 
             // txtID
             // 
-            txtID.Location = new Point(117, 22);
+            txtID.Location = new Point(115, 22);
             txtID.Name = "txtID";
             txtID.PlaceholderText = "Search #ID";
             txtID.Size = new Size(100, 23);
@@ -356,80 +310,26 @@
             // 
             // txtName
             // 
-            txtName.Location = new Point(12, 22);
+            txtName.Location = new Point(9, 22);
             txtName.Name = "txtName";
             txtName.PlaceholderText = "Search #Name";
             txtName.Size = new Size(100, 23);
             txtName.TabIndex = 14;
             // 
-            // btnDelete
+            // dataGridViewTechnicianHistory
             // 
-            btnDelete.BackColor = SystemColors.HotTrack;
-            btnDelete.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnDelete.ForeColor = SystemColors.ButtonFace;
-            btnDelete.Location = new Point(453, 51);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(75, 34);
-            btnDelete.TabIndex = 9;
-            btnDelete.Text = "&Delete";
-            btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // btnEdit
-            // 
-            btnEdit.BackColor = SystemColors.HotTrack;
-            btnEdit.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnEdit.ForeColor = SystemColors.ButtonFace;
-            btnEdit.Location = new Point(369, 51);
-            btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(78, 34);
-            btnEdit.TabIndex = 8;
-            btnEdit.Text = "&Edit";
-            btnEdit.UseVisualStyleBackColor = false;
-            // 
-            // dataGridViewHistory
-            // 
-            dataGridViewHistory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewHistory.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5 });
-            dataGridViewHistory.Location = new Point(9, 104);
-            dataGridViewHistory.Name = "dataGridViewHistory";
-            dataGridViewHistory.Size = new Size(534, 327);
-            dataGridViewHistory.TabIndex = 7;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.HeaderText = "Date";
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewTextBoxColumn2.HeaderText = "Blood Pressure";
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            dataGridViewTextBoxColumn3.HeaderText = "Sugar Level";
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            dataGridViewTextBoxColumn4.HeaderText = "Heart Rate";
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            dataGridViewTextBoxColumn5.HeaderText = "Oxygen Level";
-            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            dataGridViewTextBoxColumn5.ReadOnly = true;
+            dataGridViewTechnicianHistory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewTechnicianHistory.Location = new Point(9, 71);
+            dataGridViewTechnicianHistory.Name = "dataGridViewTechnicianHistory";
+            dataGridViewTechnicianHistory.Size = new Size(726, 448);
+            dataGridViewTechnicianHistory.TabIndex = 7;
+            dataGridViewTechnicianHistory.CellContentClick += DataGridViewTechnicianHistory_CellContentClick;
             // 
             // dateTimePickerHistoryTo
             // 
-            dateTimePickerHistoryTo.Location = new Point(381, 22);
+            dateTimePickerHistoryTo.Location = new Point(446, 22);
             dateTimePickerHistoryTo.Name = "dateTimePickerHistoryTo";
-            dateTimePickerHistoryTo.Size = new Size(154, 23);
+            dateTimePickerHistoryTo.Size = new Size(198, 23);
             dateTimePickerHistoryTo.TabIndex = 0;
             // 
             // tabPage3
@@ -443,7 +343,7 @@
             tabPage3.Controls.Add(dateTimePickerChartsTo);
             tabPage3.Location = new Point(4, 24);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(546, 437);
+            tabPage3.Size = new Size(741, 525);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Charts & Reports";
             tabPage3.UseVisualStyleBackColor = true;
@@ -451,7 +351,7 @@
             // lblChartsTo
             // 
             lblChartsTo.AutoSize = true;
-            lblChartsTo.Location = new Point(393, 4);
+            lblChartsTo.Location = new Point(522, 8);
             lblChartsTo.Name = "lblChartsTo";
             lblChartsTo.Size = new Size(25, 15);
             lblChartsTo.TabIndex = 20;
@@ -460,7 +360,7 @@
             // lblChartsFrom
             // 
             lblChartsFrom.AutoSize = true;
-            lblChartsFrom.Location = new Point(249, 4);
+            lblChartsFrom.Location = new Point(302, 8);
             lblChartsFrom.Name = "lblChartsFrom";
             lblChartsFrom.Size = new Size(41, 15);
             lblChartsFrom.TabIndex = 19;
@@ -468,14 +368,14 @@
             // 
             // dateTimePickerChartsFrom
             // 
-            dateTimePickerChartsFrom.Location = new Point(247, 26);
+            dateTimePickerChartsFrom.Location = new Point(302, 26);
             dateTimePickerChartsFrom.Name = "dateTimePickerChartsFrom";
-            dateTimePickerChartsFrom.Size = new Size(128, 23);
+            dateTimePickerChartsFrom.Size = new Size(208, 23);
             dateTimePickerChartsFrom.TabIndex = 18;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(127, 26);
+            textBox4.Location = new Point(185, 26);
             textBox4.Name = "textBox4";
             textBox4.PlaceholderText = "Search #ID";
             textBox4.Size = new Size(100, 23);
@@ -483,7 +383,7 @@
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(17, 26);
+            textBox5.Location = new Point(13, 26);
             textBox5.Name = "textBox5";
             textBox5.PlaceholderText = "Search #Name";
             textBox5.Size = new Size(100, 23);
@@ -494,7 +394,7 @@
             flowLayoutPanel1.Controls.Add(splitContainer3);
             flowLayoutPanel1.Location = new Point(3, 70);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(540, 364);
+            flowLayoutPanel1.Size = new Size(735, 452);
             flowLayoutPanel1.TabIndex = 0;
             // 
             // splitContainer3
@@ -515,8 +415,8 @@
             splitContainer3.Panel2.Controls.Add(dateTimePickerTechnicianGenerateFrom);
             splitContainer3.Panel2.Controls.Add(lblTechnicianGenerateFrom);
             splitContainer3.Panel2.Controls.Add(lblTechnicianGeneReport);
-            splitContainer3.Size = new Size(537, 361);
-            splitContainer3.SplitterDistance = 325;
+            splitContainer3.Size = new Size(732, 449);
+            splitContainer3.SplitterDistance = 507;
             splitContainer3.TabIndex = 0;
             // 
             // tabControl2
@@ -528,7 +428,7 @@
             tabControl2.Location = new Point(3, 3);
             tabControl2.Name = "tabControl2";
             tabControl2.SelectedIndex = 0;
-            tabControl2.Size = new Size(323, 355);
+            tabControl2.Size = new Size(501, 443);
             tabControl2.TabIndex = 0;
             // 
             // tabPage5
@@ -537,29 +437,29 @@
             tabPage5.Location = new Point(4, 24);
             tabPage5.Name = "tabPage5";
             tabPage5.Padding = new Padding(3);
-            tabPage5.Size = new Size(315, 327);
+            tabPage5.Size = new Size(493, 415);
             tabPage5.TabIndex = 0;
             tabPage5.Text = "Blood Pressure";
             tabPage5.UseVisualStyleBackColor = true;
             // 
             // chtBloodPressure
             // 
-            chartArea9.Name = "ChartArea1";
-            chtBloodPressure.ChartAreas.Add(chartArea9);
-            legend9.Name = "Legend1";
-            chtBloodPressure.Legends.Add(legend9);
-            chtBloodPressure.Location = new Point(6, 56);
+            chartArea1.Name = "ChartArea1";
+            chtBloodPressure.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            chtBloodPressure.Legends.Add(legend1);
+            chtBloodPressure.Location = new Point(71, 84);
             chtBloodPressure.Name = "chtBloodPressure";
-            series9.ChartArea = "ChartArea1";
-            series9.Legend = "Legend1";
-            series9.Name = "BloodPressure";
-            series9.Points.Add(dataPoint51);
-            series9.Points.Add(dataPoint52);
-            series9.Points.Add(dataPoint53);
-            series9.Points.Add(dataPoint54);
-            series9.Points.Add(dataPoint55);
-            series9.Points.Add(dataPoint56);
-            chtBloodPressure.Series.Add(series9);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "BloodPressure";
+            series1.Points.Add(dataPoint1);
+            series1.Points.Add(dataPoint2);
+            series1.Points.Add(dataPoint3);
+            series1.Points.Add(dataPoint4);
+            series1.Points.Add(dataPoint5);
+            series1.Points.Add(dataPoint6);
+            chtBloodPressure.Series.Add(series1);
             chtBloodPressure.Size = new Size(303, 196);
             chtBloodPressure.TabIndex = 0;
             chtBloodPressure.Text = "Blood Pressure";
@@ -570,29 +470,29 @@
             tabPage6.Location = new Point(4, 24);
             tabPage6.Name = "tabPage6";
             tabPage6.Padding = new Padding(3);
-            tabPage6.Size = new Size(315, 327);
+            tabPage6.Size = new Size(493, 415);
             tabPage6.TabIndex = 1;
             tabPage6.Text = "Sugar Level";
             tabPage6.UseVisualStyleBackColor = true;
             // 
             // chtSugarLevel
             // 
-            chartArea10.Name = "ChartArea1";
-            chtSugarLevel.ChartAreas.Add(chartArea10);
-            legend10.Name = "Legend1";
-            chtSugarLevel.Legends.Add(legend10);
-            chtSugarLevel.Location = new Point(6, 65);
+            chartArea2.Name = "ChartArea1";
+            chtSugarLevel.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            chtSugarLevel.Legends.Add(legend2);
+            chtSugarLevel.Location = new Point(140, 72);
             chtSugarLevel.Name = "chtSugarLevel";
-            series10.ChartArea = "ChartArea1";
-            series10.Legend = "Legend1";
-            series10.Name = "Sugar Level";
-            series10.Points.Add(dataPoint57);
-            series10.Points.Add(dataPoint58);
-            series10.Points.Add(dataPoint59);
-            series10.Points.Add(dataPoint60);
-            series10.Points.Add(dataPoint61);
-            series10.Points.Add(dataPoint62);
-            chtSugarLevel.Series.Add(series10);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Sugar Level";
+            series2.Points.Add(dataPoint7);
+            series2.Points.Add(dataPoint8);
+            series2.Points.Add(dataPoint9);
+            series2.Points.Add(dataPoint10);
+            series2.Points.Add(dataPoint11);
+            series2.Points.Add(dataPoint12);
+            chtSugarLevel.Series.Add(series2);
             chtSugarLevel.Size = new Size(303, 196);
             chtSugarLevel.TabIndex = 1;
             chtSugarLevel.Text = "Sugar Level";
@@ -602,29 +502,29 @@
             tabPage7.Controls.Add(chtHeartRate);
             tabPage7.Location = new Point(4, 24);
             tabPage7.Name = "tabPage7";
-            tabPage7.Size = new Size(315, 327);
+            tabPage7.Size = new Size(493, 415);
             tabPage7.TabIndex = 2;
             tabPage7.Text = "Heart Rate";
             tabPage7.UseVisualStyleBackColor = true;
             // 
             // chtHeartRate
             // 
-            chartArea11.Name = "ChartArea1";
-            chtHeartRate.ChartAreas.Add(chartArea11);
-            legend11.Name = "Legend1";
-            chtHeartRate.Legends.Add(legend11);
-            chtHeartRate.Location = new Point(6, 65);
+            chartArea3.Name = "ChartArea1";
+            chtHeartRate.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            chtHeartRate.Legends.Add(legend3);
+            chtHeartRate.Location = new Point(145, 100);
             chtHeartRate.Name = "chtHeartRate";
-            series11.ChartArea = "ChartArea1";
-            series11.Legend = "Legend1";
-            series11.Name = "Heart Rate";
-            series11.Points.Add(dataPoint63);
-            series11.Points.Add(dataPoint64);
-            series11.Points.Add(dataPoint65);
-            series11.Points.Add(dataPoint66);
-            series11.Points.Add(dataPoint67);
-            series11.Points.Add(dataPoint68);
-            chtHeartRate.Series.Add(series11);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Heart Rate";
+            series3.Points.Add(dataPoint13);
+            series3.Points.Add(dataPoint14);
+            series3.Points.Add(dataPoint15);
+            series3.Points.Add(dataPoint16);
+            series3.Points.Add(dataPoint17);
+            series3.Points.Add(dataPoint18);
+            chtHeartRate.Series.Add(series3);
             chtHeartRate.Size = new Size(303, 196);
             chtHeartRate.TabIndex = 1;
             chtHeartRate.Text = "Heart Rate";
@@ -634,30 +534,30 @@
             tabPage8.Controls.Add(chtOxygenLevel);
             tabPage8.Location = new Point(4, 24);
             tabPage8.Name = "tabPage8";
-            tabPage8.Size = new Size(315, 327);
+            tabPage8.Size = new Size(493, 415);
             tabPage8.TabIndex = 3;
             tabPage8.Text = "Oxygen Level";
             tabPage8.UseVisualStyleBackColor = true;
             // 
             // chtOxygenLevel
             // 
-            chartArea12.Name = "ChartArea1";
-            chtOxygenLevel.ChartAreas.Add(chartArea12);
-            legend12.Name = "Legend1";
-            chtOxygenLevel.Legends.Add(legend12);
-            chtOxygenLevel.Location = new Point(6, 65);
+            chartArea4.Name = "ChartArea1";
+            chtOxygenLevel.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            chtOxygenLevel.Legends.Add(legend4);
+            chtOxygenLevel.Location = new Point(134, 141);
             chtOxygenLevel.Name = "chtOxygenLevel";
-            series12.ChartArea = "ChartArea1";
-            series12.Legend = "Legend1";
-            series12.Name = "Oxygen Level";
-            series12.Points.Add(dataPoint69);
-            series12.Points.Add(dataPoint70);
-            series12.Points.Add(dataPoint71);
-            series12.Points.Add(dataPoint72);
-            series12.Points.Add(dataPoint73);
-            series12.Points.Add(dataPoint74);
-            series12.Points.Add(dataPoint75);
-            chtOxygenLevel.Series.Add(series12);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Oxygen Level";
+            series4.Points.Add(dataPoint19);
+            series4.Points.Add(dataPoint20);
+            series4.Points.Add(dataPoint21);
+            series4.Points.Add(dataPoint22);
+            series4.Points.Add(dataPoint23);
+            series4.Points.Add(dataPoint24);
+            series4.Points.Add(dataPoint25);
+            chtOxygenLevel.Series.Add(series4);
             chtOxygenLevel.Size = new Size(303, 196);
             chtOxygenLevel.TabIndex = 1;
             chtOxygenLevel.Text = "Oxygen Level";
@@ -750,9 +650,9 @@
             // 
             // dateTimePickerChartsTo
             // 
-            dateTimePickerChartsTo.Location = new Point(389, 26);
+            dateTimePickerChartsTo.Location = new Point(522, 26);
             dateTimePickerChartsTo.Name = "dateTimePickerChartsTo";
-            dateTimePickerChartsTo.Size = new Size(146, 23);
+            dateTimePickerChartsTo.Size = new Size(210, 23);
             dateTimePickerChartsTo.TabIndex = 14;
             // 
             // tabPage4
@@ -760,7 +660,7 @@
             tabPage4.Controls.Add(panel1);
             tabPage4.Location = new Point(4, 24);
             tabPage4.Name = "tabPage4";
-            tabPage4.Size = new Size(546, 437);
+            tabPage4.Size = new Size(741, 525);
             tabPage4.TabIndex = 3;
             tabPage4.Text = "Profile";
             tabPage4.UseVisualStyleBackColor = true;
@@ -771,7 +671,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(546, 437);
+            panel1.Size = new Size(741, 525);
             panel1.TabIndex = 0;
             // 
             // tabControl4
@@ -781,7 +681,7 @@
             tabControl4.Location = new Point(3, 3);
             tabControl4.Name = "tabControl4";
             tabControl4.SelectedIndex = 0;
-            tabControl4.Size = new Size(540, 434);
+            tabControl4.Size = new Size(735, 519);
             tabControl4.TabIndex = 0;
             // 
             // tabPage13
@@ -807,7 +707,7 @@
             tabPage13.Location = new Point(4, 24);
             tabPage13.Name = "tabPage13";
             tabPage13.Padding = new Padding(3);
-            tabPage13.Size = new Size(532, 406);
+            tabPage13.Size = new Size(727, 491);
             tabPage13.TabIndex = 0;
             tabPage13.Text = "Personal Information";
             tabPage13.UseVisualStyleBackColor = true;
@@ -899,7 +799,7 @@
             btnUploadImage.BackColor = SystemColors.HotTrack;
             btnUploadImage.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnUploadImage.ForeColor = SystemColors.ButtonFace;
-            btnUploadImage.Location = new Point(385, 20);
+            btnUploadImage.Location = new Point(579, 23);
             btnUploadImage.Name = "btnUploadImage";
             btnUploadImage.Size = new Size(115, 35);
             btnUploadImage.TabIndex = 8;
@@ -992,7 +892,7 @@
             tabPage16.Controls.Add(lblAccountEmail);
             tabPage16.Location = new Point(4, 24);
             tabPage16.Name = "tabPage16";
-            tabPage16.Size = new Size(532, 406);
+            tabPage16.Size = new Size(727, 491);
             tabPage16.TabIndex = 3;
             tabPage16.Text = "Account Information";
             tabPage16.UseVisualStyleBackColor = true;
@@ -1092,9 +992,9 @@
             btnLogout.BackColor = SystemColors.HotTrack;
             btnLogout.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnLogout.ForeColor = SystemColors.ButtonFace;
-            btnLogout.Location = new Point(67, 401);
+            btnLogout.Location = new Point(67, 484);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(92, 38);
+            btnLogout.Size = new Size(116, 43);
             btnLogout.TabIndex = 20;
             btnLogout.Text = "Lo&gout";
             btnLogout.UseVisualStyleBackColor = false;
@@ -1103,7 +1003,7 @@
             // lblBlood
             // 
             lblBlood.AutoSize = true;
-            lblBlood.Location = new Point(89, 355);
+            lblBlood.Location = new Point(95, 399);
             lblBlood.Name = "lblBlood";
             lblBlood.Size = new Size(30, 15);
             lblBlood.TabIndex = 19;
@@ -1112,7 +1012,7 @@
             // lblBloodGroup
             // 
             lblBloodGroup.AutoSize = true;
-            lblBloodGroup.Location = new Point(9, 355);
+            lblBloodGroup.Location = new Point(9, 399);
             lblBloodGroup.Name = "lblBloodGroup";
             lblBloodGroup.Size = new Size(80, 15);
             lblBloodGroup.TabIndex = 18;
@@ -1121,7 +1021,7 @@
             // lblGenderOption
             // 
             lblGenderOption.AutoSize = true;
-            lblGenderOption.Location = new Point(67, 329);
+            lblGenderOption.Location = new Point(95, 355);
             lblGenderOption.Name = "lblGenderOption";
             lblGenderOption.Size = new Size(33, 15);
             lblGenderOption.TabIndex = 17;
@@ -1130,7 +1030,7 @@
             // lblGender
             // 
             lblGender.AutoSize = true;
-            lblGender.Location = new Point(8, 328);
+            lblGender.Location = new Point(9, 355);
             lblGender.Name = "lblGender";
             lblGender.Size = new Size(51, 15);
             lblGender.TabIndex = 16;
@@ -1139,7 +1039,7 @@
             // lblAgeNumber
             // 
             lblAgeNumber.AutoSize = true;
-            lblAgeNumber.Location = new Point(51, 302);
+            lblAgeNumber.Location = new Point(95, 318);
             lblAgeNumber.Name = "lblAgeNumber";
             lblAgeNumber.Size = new Size(19, 15);
             lblAgeNumber.TabIndex = 15;
@@ -1148,7 +1048,7 @@
             // lblAge
             // 
             lblAge.AutoSize = true;
-            lblAge.Location = new Point(9, 302);
+            lblAge.Location = new Point(9, 318);
             lblAge.Name = "lblAge";
             lblAge.Size = new Size(34, 15);
             lblAge.TabIndex = 14;
@@ -1157,7 +1057,7 @@
             // lblFullName
             // 
             lblFullName.AutoSize = true;
-            lblFullName.Location = new Point(50, 278);
+            lblFullName.Location = new Point(95, 281);
             lblFullName.Name = "lblFullName";
             lblFullName.Size = new Size(109, 15);
             lblFullName.TabIndex = 13;
@@ -1166,7 +1066,7 @@
             // lblName
             // 
             lblName.AutoSize = true;
-            lblName.Location = new Point(6, 278);
+            lblName.Location = new Point(12, 278);
             lblName.Name = "lblName";
             lblName.Size = new Size(45, 15);
             lblName.TabIndex = 12;
@@ -1186,7 +1086,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1000, 550);
             Controls.Add(label50);
             Controls.Add(btnLogout);
             Controls.Add(lblBlood);
@@ -1203,10 +1103,10 @@
             Text = "Technician";
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridViewDashboard).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewTechnicianDashboard).EndInit();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewHistory).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewTechnicianHistory).EndInit();
             tabPage3.ResumeLayout(false);
             tabPage3.PerformLayout();
             flowLayoutPanel1.ResumeLayout(false);
@@ -1243,16 +1143,9 @@
         private TabControl tabControl1;
         private TabPage tabPage1;
         private Button btnTechnicianAddHealthData;
-        private DataGridView dataGridViewDashboard;
+        private DataGridView dataGridViewTechnicianDashboard;
         private TabPage tabPage2;
-        private Button btnDelete;
-        private Button btnEdit;
-        private DataGridView dataGridViewHistory;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private DataGridView dataGridViewTechnicianHistory;
         private DateTimePicker dateTimePickerHistoryTo;
         private TabPage tabPage3;
         private FlowLayoutPanel flowLayoutPanel1;
@@ -1290,13 +1183,6 @@
         private TextBox txtName;
         private TextBox textBox4;
         private TextBox textBox5;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column7;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
         private TabControl tabControl4;
         private TabPage tabPage13;
         private Button btnPersonalSave;
@@ -1335,9 +1221,11 @@
         private Label lblChartsFrom;
         private TextBox txtTechnicianConfirmPassword;
         private Label lblAccountConfirmPassword;
-        private Button btnAdd;
         private System.Windows.Forms.DataVisualization.Charting.Chart chtSugarLevel;
         private System.Windows.Forms.DataVisualization.Charting.Chart chtHeartRate;
         private System.Windows.Forms.DataVisualization.Charting.Chart chtOxygenLevel;
+        private Button btnAddPatient;
+        private Button btnRefresh;
+        private Button btnFilter;
     }
 }
