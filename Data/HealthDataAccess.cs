@@ -456,7 +456,7 @@ namespace Home_Health_Device_Data_Logger.Data
 
 
         //Report generator by Patient Name
-        public static DataTable GetHealthDataForPatient(int userID, DateTime startDate, DateTime endDate)
+        public static DataTable GetHealthDataForPatient(string userID, DateTime startDate, DateTime endDate)
         {
             DataTable healthData = new DataTable();
 

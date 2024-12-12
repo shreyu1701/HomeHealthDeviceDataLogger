@@ -10,6 +10,137 @@ namespace Home_Health_Device_Data_Logger.Services
 {
     internal class ChartsService
     {
+
+        public void UpdateOverallHealthChart(Chart overallHealthChart, List<HealthData> healthData, DateTime fromDate, DateTime toDate)
+        {
+            // Filter health data by the specified date range for each metric
+            var filteredData = healthData
+                .Where(h => h.DataDate >= fromDate && h.DataDate <= toDate)
+                .OrderBy(h => h.DataDate)
+                .ToList();
+
+            // Clear the existing series and reset the chart
+            overallHealthChart.Series.Clear();
+            overallHealthChart.ChartAreas.Clear();
+            overallHealthChart.Legends.Clear();
+
+            // Add a ChartArea
+            var chartArea = new ChartArea("ChartArea1")
+            {
+                AxisX = { Title = "Date", IntervalAutoMode = IntervalAutoMode.VariableCount },
+                AxisY = { Title = "Health Metrics" }
+            };
+            overallHealthChart.ChartAreas.Add(chartArea);
+
+            // Add a Legend
+            var legend = new Legend("Legend1")
+            {
+                Docking = Docking.Top,
+                Alignment = System.Drawing.StringAlignment.Center
+            };
+            overallHealthChart.Legends.Add(legend);
+
+            // Create the series for each health metric (Blood Pressure, Sugar Level, Heart Rate, Oxygen Level)
+            var bloodPressureSeries = new Series("Blood Pressure")
+            {
+                ChartType = SeriesChartType.Line,
+                Color = System.Drawing.Color.Blue,
+                BorderWidth = 2,
+                MarkerStyle = MarkerStyle.Circle,
+                MarkerSize = 8
+            };
+
+            var sugarLevelSeries = new Series("Sugar Level")
+            {
+                ChartType = SeriesChartType.Line,
+                Color = System.Drawing.Color.Green,
+                BorderWidth = 2,
+                MarkerStyle = MarkerStyle.Square,
+                MarkerSize = 6
+            };
+
+            var heartRateSeries = new Series("Heart Rate")
+            {
+                ChartType = SeriesChartType.Line,
+                Color = System.Drawing.Color.Red,
+                BorderWidth = 2,
+                MarkerStyle = MarkerStyle.Diamond,
+                MarkerSize = 6
+            };
+
+            var oxygenLevelSeries = new Series("Oxygen Level")
+            {
+                ChartType = SeriesChartType.Line,
+                Color = System.Drawing.Color.Orange,
+                BorderWidth = 2,
+                MarkerStyle = MarkerStyle.Triangle,
+                MarkerSize = 6
+            };
+
+            // Add data points for each series
+            foreach (var data in filteredData)
+            {
+                double xValue = data.DataDate.ToOADate(); // Convert date to OLE Automation Date format for X-axis
+
+                // Add the health metric data to the corresponding series
+                if (!string.IsNullOrEmpty(data.BloodPressure))
+                {
+                    try
+                    {
+                        string[] bloodPressureValues = data.BloodPressure.Split('/');
+                        double systolic = double.Parse(bloodPressureValues[0]);
+                        double diastolic = double.Parse(bloodPressureValues[1]);
+
+                        bloodPressureSeries.Points.AddXY(xValue, systolic); // Example: plotting systolic BP
+                    }
+                    catch (FormatException ex)
+                    {
+                        // Handle invalid format, log or show message
+                        Console.WriteLine($"Error parsing BloodPressure data: {ex.Message}");
+                    }
+                }
+
+                if (!string.IsNullOrEmpty(data.SugarLevel))
+                {
+                    try
+                    {
+                        double sugarLevel = double.Parse(data.SugarLevel);
+                        sugarLevelSeries.Points.AddXY(xValue, sugarLevel);
+                    }
+                    catch (FormatException ex)
+                    {
+                        // Handle invalid format, log or show message
+                        Console.WriteLine($"Error parsing SugarLevel data: {ex.Message}");
+                    }
+                }
+
+                if (data.HeartRate > 0)
+                {
+                    heartRateSeries.Points.AddXY(xValue, data.HeartRate);
+                }
+                else
+                {
+                    Console.WriteLine($"Invalid HeartRate data for Date: {data.DataDate}");
+                }
+
+                if (data.OxygenLevel > 0)
+                {
+                    oxygenLevelSeries.Points.AddXY(xValue, data.OxygenLevel);
+                }
+                else
+                {
+                    Console.WriteLine($"Invalid OxygenLevel data for Date: {data.DataDate}");
+                }
+            }
+
+            // Add the series to the chart
+            overallHealthChart.Series.Add(bloodPressureSeries);
+            overallHealthChart.Series.Add(sugarLevelSeries);
+            overallHealthChart.Series.Add(heartRateSeries);
+            overallHealthChart.Series.Add(oxygenLevelSeries);
+        }
+
+
         public void UpdateBloodPressureChart(Chart bloodPressureChart, List<HealthData> healthData, DateTime fromDate, DateTime toDate)
         {
             // Filter health data by the specified date range

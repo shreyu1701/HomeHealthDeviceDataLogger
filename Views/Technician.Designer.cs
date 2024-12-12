@@ -73,23 +73,7 @@
             tabPage4 = new TabPage();
             panel1 = new Panel();
             tabControlProfile = new TabControl();
-            tabPage13 = new TabPage();
-            btnPersonalSave = new Button();
-            btnPersonalEdit = new Button();
-            btnUploadImage = new Button();
-            label23 = new Label();
-            label22 = new Label();
-            label50 = new Label();
-            btnLogout = new Button();
-            lblBlood = new Label();
-            lblBloodGroup = new Label();
-            lblGenderOption = new Label();
-            lblGender = new Label();
-            lblAgeNumber = new Label();
-            lblAge = new Label();
-            lblFullName = new Label();
-            lblName = new Label();
-            picProfilePic = new PictureBox();
+            PersonalInfoTab = new TabPage();
             LFirstName = new Label();
             LLastname = new Label();
             LUserID = new Label();
@@ -108,6 +92,26 @@
             LAge = new Label();
             LBloodGroup = new Label();
             LGender = new Label();
+            btnPersonalSave = new Button();
+            btnPersonalEdit = new Button();
+            btnUploadImage = new Button();
+            label23 = new Label();
+            label22 = new Label();
+            PatientManagementTab = new TabPage();
+            dataGridViewPatientManagement = new DataGridView();
+            label50 = new Label();
+            btnLogout = new Button();
+            lblBlood = new Label();
+            lblBloodGroup = new Label();
+            lblGenderOption = new Label();
+            lblGender = new Label();
+            lblAgeNumber = new Label();
+            lblAge = new Label();
+            lblFullName = new Label();
+            lblName = new Label();
+            picProfilePic = new PictureBox();
+            btnUpdatePatient = new Button();
+            btnDeletePatient = new Button();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewTechnicianDashboard).BeginInit();
@@ -132,7 +136,9 @@
             tabPage4.SuspendLayout();
             panel1.SuspendLayout();
             tabControlProfile.SuspendLayout();
-            tabPage13.SuspendLayout();
+            PersonalInfoTab.SuspendLayout();
+            PatientManagementTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPatientManagement).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picProfilePic).BeginInit();
             SuspendLayout();
             // 
@@ -591,202 +597,47 @@
             // 
             // tabControlProfile
             // 
-            tabControlProfile.Controls.Add(tabPage13);
+            tabControlProfile.Controls.Add(PersonalInfoTab);
+            tabControlProfile.Controls.Add(PatientManagementTab);
             tabControlProfile.Location = new Point(3, 3);
             tabControlProfile.Name = "tabControlProfile";
             tabControlProfile.SelectedIndex = 0;
             tabControlProfile.Size = new Size(735, 519);
             tabControlProfile.TabIndex = 0;
             // 
-            // tabPage13
+            // PersonalInfoTab
             // 
-            tabPage13.Controls.Add(LFirstName);
-            tabPage13.Controls.Add(LLastname);
-            tabPage13.Controls.Add(LUserID);
-            tabPage13.Controls.Add(label4);
-            tabPage13.Controls.Add(LPassword);
-            tabPage13.Controls.Add(LEmail);
-            tabPage13.Controls.Add(txtPasswordHint);
-            tabPage13.Controls.Add(txtPassword);
-            tabPage13.Controls.Add(txtEmail);
-            tabPage13.Controls.Add(cmbBloodGroup);
-            tabPage13.Controls.Add(cmbGender);
-            tabPage13.Controls.Add(txtAge);
-            tabPage13.Controls.Add(txtLastName);
-            tabPage13.Controls.Add(txtFirstName);
-            tabPage13.Controls.Add(lblUserID);
-            tabPage13.Controls.Add(LAge);
-            tabPage13.Controls.Add(LBloodGroup);
-            tabPage13.Controls.Add(LGender);
-            tabPage13.Controls.Add(btnPersonalSave);
-            tabPage13.Controls.Add(btnPersonalEdit);
-            tabPage13.Controls.Add(btnUploadImage);
-            tabPage13.Controls.Add(label23);
-            tabPage13.Controls.Add(label22);
-            tabPage13.Font = new Font("Segoe UI", 11.25F);
-            tabPage13.Location = new Point(4, 24);
-            tabPage13.Name = "tabPage13";
-            tabPage13.Padding = new Padding(3);
-            tabPage13.Size = new Size(727, 491);
-            tabPage13.TabIndex = 0;
-            tabPage13.Text = "Personal Information";
-            tabPage13.UseVisualStyleBackColor = true;
-            // 
-            // btnPersonalSave
-            // 
-            btnPersonalSave.BackColor = SystemColors.HotTrack;
-            btnPersonalSave.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnPersonalSave.ForeColor = SystemColors.ButtonFace;
-            btnPersonalSave.Location = new Point(579, 421);
-            btnPersonalSave.Name = "btnPersonalSave";
-            btnPersonalSave.Size = new Size(78, 29);
-            btnPersonalSave.TabIndex = 17;
-            btnPersonalSave.Text = "Save";
-            btnPersonalSave.UseVisualStyleBackColor = false;
-            // 
-            // btnPersonalEdit
-            // 
-            btnPersonalEdit.BackColor = SystemColors.HotTrack;
-            btnPersonalEdit.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnPersonalEdit.ForeColor = SystemColors.ButtonFace;
-            btnPersonalEdit.Location = new Point(408, 421);
-            btnPersonalEdit.Name = "btnPersonalEdit";
-            btnPersonalEdit.Size = new Size(76, 29);
-            btnPersonalEdit.TabIndex = 16;
-            btnPersonalEdit.Text = "Edit";
-            btnPersonalEdit.UseVisualStyleBackColor = false;
-            // 
-            // btnUploadImage
-            // 
-            btnUploadImage.BackColor = SystemColors.HotTrack;
-            btnUploadImage.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnUploadImage.ForeColor = SystemColors.ButtonFace;
-            btnUploadImage.Location = new Point(579, 23);
-            btnUploadImage.Name = "btnUploadImage";
-            btnUploadImage.Size = new Size(115, 35);
-            btnUploadImage.TabIndex = 8;
-            btnUploadImage.Text = "Upload Image";
-            btnUploadImage.UseVisualStyleBackColor = false;
-            btnUploadImage.Click += btnUploadImage_Click;
-            // 
-            // label23
-            // 
-            label23.Location = new Point(0, 0);
-            label23.Name = "label23";
-            label23.Size = new Size(100, 23);
-            label23.TabIndex = 12;
-            // 
-            // label22
-            // 
-            label22.Location = new Point(0, 0);
-            label22.Name = "label22";
-            label22.Size = new Size(100, 23);
-            label22.TabIndex = 13;
-            // 
-            // label50
-            // 
-            label50.AutoSize = true;
-            label50.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label50.Location = new Point(78, 10);
-            label50.Name = "label50";
-            label50.Size = new Size(116, 30);
-            label50.TabIndex = 21;
-            label50.Text = "Technician";
-            // 
-            // btnLogout
-            // 
-            btnLogout.BackColor = SystemColors.HotTrack;
-            btnLogout.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnLogout.ForeColor = SystemColors.ButtonFace;
-            btnLogout.Location = new Point(67, 484);
-            btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(116, 43);
-            btnLogout.TabIndex = 20;
-            btnLogout.Text = "Lo&gout";
-            btnLogout.UseVisualStyleBackColor = false;
-            btnLogout.Click += button1_Click;
-            // 
-            // lblBlood
-            // 
-            lblBlood.AutoSize = true;
-            lblBlood.Location = new Point(95, 399);
-            lblBlood.Name = "lblBlood";
-            lblBlood.Size = new Size(30, 15);
-            lblBlood.TabIndex = 19;
-            lblBlood.Text = "AB+";
-            // 
-            // lblBloodGroup
-            // 
-            lblBloodGroup.AutoSize = true;
-            lblBloodGroup.Location = new Point(9, 399);
-            lblBloodGroup.Name = "lblBloodGroup";
-            lblBloodGroup.Size = new Size(80, 15);
-            lblBloodGroup.TabIndex = 18;
-            lblBloodGroup.Text = "&Blood Group :";
-            // 
-            // lblGenderOption
-            // 
-            lblGenderOption.AutoSize = true;
-            lblGenderOption.Location = new Point(95, 355);
-            lblGenderOption.Name = "lblGenderOption";
-            lblGenderOption.Size = new Size(33, 15);
-            lblGenderOption.TabIndex = 17;
-            lblGenderOption.Text = "Male";
-            // 
-            // lblGender
-            // 
-            lblGender.AutoSize = true;
-            lblGender.Location = new Point(9, 355);
-            lblGender.Name = "lblGender";
-            lblGender.Size = new Size(51, 15);
-            lblGender.TabIndex = 16;
-            lblGender.Text = "&Gender :";
-            // 
-            // lblAgeNumber
-            // 
-            lblAgeNumber.AutoSize = true;
-            lblAgeNumber.Location = new Point(95, 318);
-            lblAgeNumber.Name = "lblAgeNumber";
-            lblAgeNumber.Size = new Size(19, 15);
-            lblAgeNumber.TabIndex = 15;
-            lblAgeNumber.Text = "22";
-            // 
-            // lblAge
-            // 
-            lblAge.AutoSize = true;
-            lblAge.Location = new Point(9, 318);
-            lblAge.Name = "lblAge";
-            lblAge.Size = new Size(34, 15);
-            lblAge.TabIndex = 14;
-            lblAge.Text = "&Age :";
-            // 
-            // lblFullName
-            // 
-            lblFullName.AutoSize = true;
-            lblFullName.Location = new Point(95, 281);
-            lblFullName.Name = "lblFullName";
-            lblFullName.Size = new Size(109, 15);
-            lblFullName.TabIndex = 13;
-            lblFullName.Text = "Shreyansh Koladiya";
-            // 
-            // lblName
-            // 
-            lblName.AutoSize = true;
-            lblName.Location = new Point(12, 278);
-            lblName.Name = "lblName";
-            lblName.Size = new Size(45, 15);
-            lblName.TabIndex = 12;
-            lblName.Text = "&Name :";
-            // 
-            // picProfilePic
-            // 
-            picProfilePic.Image = Properties.Resources.images;
-            picProfilePic.Location = new Point(15, 52);
-            picProfilePic.Name = "picProfilePic";
-            picProfilePic.Size = new Size(221, 209);
-            picProfilePic.SizeMode = PictureBoxSizeMode.StretchImage;
-            picProfilePic.TabIndex = 22;
-            picProfilePic.TabStop = false;
+            PersonalInfoTab.Controls.Add(LFirstName);
+            PersonalInfoTab.Controls.Add(LLastname);
+            PersonalInfoTab.Controls.Add(LUserID);
+            PersonalInfoTab.Controls.Add(label4);
+            PersonalInfoTab.Controls.Add(LPassword);
+            PersonalInfoTab.Controls.Add(LEmail);
+            PersonalInfoTab.Controls.Add(txtPasswordHint);
+            PersonalInfoTab.Controls.Add(txtPassword);
+            PersonalInfoTab.Controls.Add(txtEmail);
+            PersonalInfoTab.Controls.Add(cmbBloodGroup);
+            PersonalInfoTab.Controls.Add(cmbGender);
+            PersonalInfoTab.Controls.Add(txtAge);
+            PersonalInfoTab.Controls.Add(txtLastName);
+            PersonalInfoTab.Controls.Add(txtFirstName);
+            PersonalInfoTab.Controls.Add(lblUserID);
+            PersonalInfoTab.Controls.Add(LAge);
+            PersonalInfoTab.Controls.Add(LBloodGroup);
+            PersonalInfoTab.Controls.Add(LGender);
+            PersonalInfoTab.Controls.Add(btnPersonalSave);
+            PersonalInfoTab.Controls.Add(btnPersonalEdit);
+            PersonalInfoTab.Controls.Add(btnUploadImage);
+            PersonalInfoTab.Controls.Add(label23);
+            PersonalInfoTab.Controls.Add(label22);
+            PersonalInfoTab.Font = new Font("Segoe UI", 11.25F);
+            PersonalInfoTab.Location = new Point(4, 24);
+            PersonalInfoTab.Name = "PersonalInfoTab";
+            PersonalInfoTab.Padding = new Padding(3);
+            PersonalInfoTab.Size = new Size(727, 491);
+            PersonalInfoTab.TabIndex = 0;
+            PersonalInfoTab.Text = "Personal Information";
+            PersonalInfoTab.UseVisualStyleBackColor = true;
             // 
             // LFirstName
             // 
@@ -949,6 +800,203 @@
             LGender.TabIndex = 36;
             LGender.Text = "&Gender :";
             // 
+            // btnPersonalSave
+            // 
+            btnPersonalSave.BackColor = SystemColors.HotTrack;
+            btnPersonalSave.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPersonalSave.ForeColor = SystemColors.ButtonFace;
+            btnPersonalSave.Location = new Point(579, 421);
+            btnPersonalSave.Name = "btnPersonalSave";
+            btnPersonalSave.Size = new Size(78, 29);
+            btnPersonalSave.TabIndex = 17;
+            btnPersonalSave.Text = "Save";
+            btnPersonalSave.UseVisualStyleBackColor = false;
+            btnPersonalSave.Click += btnPersonalSave_Click;
+            // 
+            // btnPersonalEdit
+            // 
+            btnPersonalEdit.BackColor = SystemColors.HotTrack;
+            btnPersonalEdit.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPersonalEdit.ForeColor = SystemColors.ButtonFace;
+            btnPersonalEdit.Location = new Point(408, 421);
+            btnPersonalEdit.Name = "btnPersonalEdit";
+            btnPersonalEdit.Size = new Size(76, 29);
+            btnPersonalEdit.TabIndex = 16;
+            btnPersonalEdit.Text = "Edit";
+            btnPersonalEdit.UseVisualStyleBackColor = false;
+            btnPersonalEdit.Click += btnPersonalEdit_Click;
+            // 
+            // btnUploadImage
+            // 
+            btnUploadImage.BackColor = SystemColors.HotTrack;
+            btnUploadImage.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnUploadImage.ForeColor = SystemColors.ButtonFace;
+            btnUploadImage.Location = new Point(579, 23);
+            btnUploadImage.Name = "btnUploadImage";
+            btnUploadImage.Size = new Size(115, 35);
+            btnUploadImage.TabIndex = 8;
+            btnUploadImage.Text = "Upload Image";
+            btnUploadImage.UseVisualStyleBackColor = false;
+            btnUploadImage.Click += btnUploadImage_Click;
+            // 
+            // label23
+            // 
+            label23.Location = new Point(0, 0);
+            label23.Name = "label23";
+            label23.Size = new Size(100, 23);
+            label23.TabIndex = 12;
+            // 
+            // label22
+            // 
+            label22.Location = new Point(0, 0);
+            label22.Name = "label22";
+            label22.Size = new Size(100, 23);
+            label22.TabIndex = 13;
+            // 
+            // PatientManagementTab
+            // 
+            PatientManagementTab.Controls.Add(btnDeletePatient);
+            PatientManagementTab.Controls.Add(btnUpdatePatient);
+            PatientManagementTab.Controls.Add(dataGridViewPatientManagement);
+            PatientManagementTab.Location = new Point(4, 24);
+            PatientManagementTab.Name = "PatientManagementTab";
+            PatientManagementTab.Size = new Size(727, 491);
+            PatientManagementTab.TabIndex = 1;
+            PatientManagementTab.Text = "Patient Management";
+            PatientManagementTab.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewPatientManagement
+            // 
+            dataGridViewPatientManagement.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewPatientManagement.Location = new Point(0, 46);
+            dataGridViewPatientManagement.Name = "dataGridViewPatientManagement";
+            dataGridViewPatientManagement.Size = new Size(727, 445);
+            dataGridViewPatientManagement.TabIndex = 0;
+            // 
+            // label50
+            // 
+            label50.AutoSize = true;
+            label50.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label50.Location = new Point(78, 10);
+            label50.Name = "label50";
+            label50.Size = new Size(116, 30);
+            label50.TabIndex = 21;
+            label50.Text = "Technician";
+            // 
+            // btnLogout
+            // 
+            btnLogout.BackColor = SystemColors.HotTrack;
+            btnLogout.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLogout.ForeColor = SystemColors.ButtonFace;
+            btnLogout.Location = new Point(67, 484);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(116, 43);
+            btnLogout.TabIndex = 20;
+            btnLogout.Text = "Lo&gout";
+            btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += button1_Click;
+            // 
+            // lblBlood
+            // 
+            lblBlood.AutoSize = true;
+            lblBlood.Location = new Point(95, 399);
+            lblBlood.Name = "lblBlood";
+            lblBlood.Size = new Size(0, 15);
+            lblBlood.TabIndex = 19;
+            // 
+            // lblBloodGroup
+            // 
+            lblBloodGroup.AutoSize = true;
+            lblBloodGroup.Location = new Point(9, 399);
+            lblBloodGroup.Name = "lblBloodGroup";
+            lblBloodGroup.Size = new Size(80, 15);
+            lblBloodGroup.TabIndex = 18;
+            lblBloodGroup.Text = "&Blood Group :";
+            // 
+            // lblGenderOption
+            // 
+            lblGenderOption.AutoSize = true;
+            lblGenderOption.Location = new Point(95, 355);
+            lblGenderOption.Name = "lblGenderOption";
+            lblGenderOption.Size = new Size(0, 15);
+            lblGenderOption.TabIndex = 17;
+            // 
+            // lblGender
+            // 
+            lblGender.AutoSize = true;
+            lblGender.Location = new Point(9, 355);
+            lblGender.Name = "lblGender";
+            lblGender.Size = new Size(51, 15);
+            lblGender.TabIndex = 16;
+            lblGender.Text = "&Gender :";
+            // 
+            // lblAgeNumber
+            // 
+            lblAgeNumber.AutoSize = true;
+            lblAgeNumber.Location = new Point(95, 318);
+            lblAgeNumber.Name = "lblAgeNumber";
+            lblAgeNumber.Size = new Size(0, 15);
+            lblAgeNumber.TabIndex = 15;
+            // 
+            // lblAge
+            // 
+            lblAge.AutoSize = true;
+            lblAge.Location = new Point(9, 318);
+            lblAge.Name = "lblAge";
+            lblAge.Size = new Size(34, 15);
+            lblAge.TabIndex = 14;
+            lblAge.Text = "&Age :";
+            // 
+            // lblFullName
+            // 
+            lblFullName.AutoSize = true;
+            lblFullName.Location = new Point(95, 281);
+            lblFullName.Name = "lblFullName";
+            lblFullName.Size = new Size(0, 15);
+            lblFullName.TabIndex = 13;
+            // 
+            // lblName
+            // 
+            lblName.AutoSize = true;
+            lblName.Location = new Point(12, 278);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(45, 15);
+            lblName.TabIndex = 12;
+            lblName.Text = "&Name :";
+            // 
+            // picProfilePic
+            // 
+            picProfilePic.Image = Properties.Resources.images;
+            picProfilePic.Location = new Point(15, 52);
+            picProfilePic.Name = "picProfilePic";
+            picProfilePic.Size = new Size(221, 209);
+            picProfilePic.SizeMode = PictureBoxSizeMode.StretchImage;
+            picProfilePic.TabIndex = 22;
+            picProfilePic.TabStop = false;
+            // 
+            // btnUpdatePatient
+            // 
+            btnUpdatePatient.BackColor = Color.Green;
+            btnUpdatePatient.ForeColor = SystemColors.Control;
+            btnUpdatePatient.Location = new Point(501, 7);
+            btnUpdatePatient.Name = "btnUpdatePatient";
+            btnUpdatePatient.Size = new Size(100, 31);
+            btnUpdatePatient.TabIndex = 1;
+            btnUpdatePatient.Text = "Update";
+            btnUpdatePatient.UseVisualStyleBackColor = false;
+            // 
+            // btnDeletePatient
+            // 
+            btnDeletePatient.BackColor = Color.Red;
+            btnDeletePatient.ForeColor = SystemColors.Control;
+            btnDeletePatient.Location = new Point(617, 7);
+            btnDeletePatient.Name = "btnDeletePatient";
+            btnDeletePatient.Size = new Size(95, 31);
+            btnDeletePatient.TabIndex = 2;
+            btnDeletePatient.Text = "Delete";
+            btnDeletePatient.UseVisualStyleBackColor = false;
+            btnDeletePatient.Click += btnDeletePatient_Click;
+            // 
             // Technician
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -996,8 +1044,10 @@
             tabPage4.ResumeLayout(false);
             panel1.ResumeLayout(false);
             tabControlProfile.ResumeLayout(false);
-            tabPage13.ResumeLayout(false);
-            tabPage13.PerformLayout();
+            PersonalInfoTab.ResumeLayout(false);
+            PersonalInfoTab.PerformLayout();
+            PatientManagementTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPatientManagement).EndInit();
             ((System.ComponentModel.ISupportInitialize)picProfilePic).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -1047,7 +1097,7 @@
         private TextBox txtID;
         private TextBox txtName;
         private TabControl tabControlProfile;
-        private TabPage tabPage13;
+        private TabPage PersonalInfoTab;
         private Button btnPersonalSave;
         private Button btnPersonalEdit;
         private Button btnUploadImage;
@@ -1090,5 +1140,9 @@
         private Label LAge;
         private Label LBloodGroup;
         private Label LGender;
+        private TabPage PatientManagementTab;
+        private DataGridView dataGridViewPatientManagement;
+        private Button btnDeletePatient;
+        private Button btnUpdatePatient;
     }
 }

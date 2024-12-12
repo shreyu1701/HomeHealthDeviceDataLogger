@@ -132,7 +132,8 @@ namespace Home_Health_Device_Data_Logger.Data
 
             using (var connection = DbConnection.GetConnection())
             {
-                string query = "SELECT UserID, FirstName, LastName FROM Users WHERE Role = 'Patient'";
+                
+                string query = "SELECT UserID, FirstName, LastName, Email, Age, Gender, BloodGroup FROM Users WHERE Role = 'Patient'";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -206,28 +207,6 @@ namespace Home_Health_Device_Data_Logger.Data
             }
         }
 
-        //public static List<string> GetPatientNames()
-        //{
-        //    var patientNames = new List<string>();
-        //    using (var connection = DbConnection.GetConnection())
-        //    {
-        //        var query = "SELECT CONCAT(FirstName, ' ', LastName) AS FullName FROM Users WHERE Role = 'Patient'";
-
-        //        using (var command = new SqlCommand(query, connection))
-        //        {
-        //            connection.Open();
-        //            using (var reader = command.ExecuteReader())
-        //            {
-        //                while (reader.Read())
-        //                {
-        //                    patientNames.Add(reader.GetString("FullName"));
-        //                }
-        //            }
-        //        }
-        //    }
-        //    return patientNames;
-        //}
-
         public static List<PatientInfo> GetPatientNames()
         {
             var patientList = new List<PatientInfo>();
@@ -254,6 +233,48 @@ namespace Home_Health_Device_Data_Logger.Data
             }
             return patientList;
         }
+
+
+
+        public static bool DeletePatient(int userID)
+        {
+            bool isDeleted = false;
+
+            using (var connection = DbConnection.GetConnection())
+            {
+                // First, delete associated health data
+                string deleteHealthDataQuery = "DELETE FROM HealthData WHERE UserID = @UserID";
+                SqlCommand cmdHealthData = new SqlCommand(deleteHealthDataQuery, connection);
+                cmdHealthData.Parameters.AddWithValue("@UserID", userID);
+
+                try
+                {
+                    connection.Open();
+
+                    // Execute the health data deletion
+                    cmdHealthData.ExecuteNonQuery();
+
+                    // Then delete the patient from Users table
+                    string deletePatientQuery = "DELETE FROM Users WHERE UserID = @UserID AND Role = 'Patient'";
+                    SqlCommand cmdPatient = new SqlCommand(deletePatientQuery, connection);
+                    cmdPatient.Parameters.AddWithValue("@UserID", userID);
+
+                    int rowsAffected = cmdPatient.ExecuteNonQuery();
+                    isDeleted = rowsAffected > 0;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error deleting patient: " + ex.Message);
+                }
+            }
+
+            return isDeleted;
+        }
+
+
+
+
+
 
 
     }

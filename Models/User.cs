@@ -19,5 +19,4 @@ namespace Home_Health_Device_Data_Logger.Models
         public byte[]? ProfileImage { get; set; }
         public DateTime CreatedAt { get; set; }
     }
-
 }

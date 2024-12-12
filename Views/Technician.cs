@@ -28,6 +28,8 @@ namespace Home_Health_Device_Data_Logger
             LoadPatientNames();
             SetEditMode(false);
             LoadProfileData();
+            DisplaySideProfile();
+            LoadPatients();
 
         }
 
@@ -418,7 +420,7 @@ namespace Home_Health_Device_Data_Logger
             PatientInfo selectedPatient = cmbPatientNames.SelectedItem as PatientInfo;
             if (selectedPatient != null)
             {
-                int selectedPatientUserID = selectedPatient.UserID;
+                string selectedPatientUserID = selectedPatient.UserID.ToString();
                 string patientName = cmbPatientNames.Text;  // Or get from the selected item
                 string userId = cmbPatientNames.SelectedValue.ToString();
 
@@ -499,6 +501,109 @@ namespace Home_Health_Device_Data_Logger
             LoadAllHealthData();
         }
 
-       
+        private void btnPersonalEdit_Click(object sender, EventArgs e)
+        {
+            if (_isEditing)
+            {
+                // Cancel editing, reload data, and disable fields
+                LoadProfileData();
+                SetEditMode(false);
+            }
+            else
+            {
+                // Enable editing mode
+                SetEditMode(true);
+            }
+        }
+
+        private void btnPersonalSave_Click(object sender, EventArgs e)
+        {
+            LoggedInUser.FirstName = txtFirstName.Text;
+            LoggedInUser.LastName = txtLastName.Text;
+            LoggedInUser.Age = txtAge.Text;
+            LoggedInUser.Gender = cmbGender.SelectedItem.ToString();
+            LoggedInUser.BloodGroup = cmbBloodGroup.SelectedItem.ToString();
+            LoggedInUser.Email = txtEmail.Text;
+            LoggedInUser.Password = txtPassword.Text;
+            LoggedInUser.PasswordHint = txtPasswordHint.Text;
+
+
+            // Profile Image
+            if (picProfilePic.Image != null)
+            {
+                using (var ms = new MemoryStream())
+                {
+                    picProfilePic.Image.Save(ms, picProfilePic.Image.RawFormat);
+                    LoggedInUser.ProfileImage = ms.ToArray();
+                }
+            }
+
+            // Save updated data to the database
+            bool success = UserDataAccess.UpdateUserProfile(LoggedInUser);
+            if (success)
+            {
+
+
+                MessageBox.Show("Profile updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                SetEditMode(false); // Disable editing after saving
+                DisplaySideProfile();
+            }
+            else
+            {
+                MessageBox.Show("Failed to update profile. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void DisplaySideProfile()
+        {
+            lblFullName.Text = $"{LoggedInUser.FirstName} {LoggedInUser.LastName}";
+            lblAgeNumber.Text = $"{LoggedInUser.Age}";
+            lblGenderOption.Text = $"{LoggedInUser.Gender}";
+            lblBlood.Text = $"{LoggedInUser.BloodGroup}";
+
+            // Load profile image if available
+            if (LoggedInUser.ProfileImage != null)
+            {
+                picProfilePic.Image = Image.FromStream(new MemoryStream(LoggedInUser.ProfileImage));
+            }
+            else
+            {
+                // Default image if no profile image is available
+                picProfilePic.Image = Properties.Resources.images;
+            }
+        }
+
+        private void LoadPatients()
+        {
+            List<User> patients = UserDataAccess.GetAllPatients();
+            dataGridViewPatientManagement.DataSource = patients;
+        }
+
+        private void btnDeletePatient_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewPatientManagement.SelectedRows.Count > 0)
+            {
+                int selectedUserID = Convert.ToInt32(dataGridViewPatientManagement.SelectedRows[0].Cells["UserID"].Value);
+
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this patient?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    if (UserDataAccess.DeletePatient(selectedUserID))
+                    {
+                        MessageBox.Show("Patient deleted successfully.");
+                        LoadPatients();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to delete patient.");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a patient to delete.");
+            }
+        }
     }
 }

@@ -15,6 +15,8 @@ namespace Home_Health_Device_Data_Logger
         private User LoggedInUser;
         private bool _isEditing;
         private ChartsService _chartService;
+        private HealthDataAccess _healthDataAccess;
+        private List<HealthData> _healthData;
 
         public Patient(User user)
         {
@@ -29,8 +31,8 @@ namespace Home_Health_Device_Data_Logger
             LoadProfileData();
             DisplaySideProfile();
             LoadAndUpdateCharts();
-
-
+            SetDefaultDateRange();
+            LoadHealthData();
         }
 
 
@@ -47,12 +49,45 @@ namespace Home_Health_Device_Data_Logger
 
         //-------------------------------------------------------DASHBOARD-------------------------------------------------------------------
 
+        private void LoadHealthData()
+        {
+            // Assuming you have a data access layer to retrieve health data
+            _healthData = HealthDataAccess.GetHealthDataByUserId(LoggedInUser.UserID); // Adjust according to your data access layer
+        }
 
         // Refresh Button
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            
+            DateTime toDate = DateTime.Now;
+            DateTime fromDate = toDate.AddDays(-7);
+
+            LoadHealthData();
+
+            if (_healthData != null && _healthData.Any())
+            {
+                _chartService.UpdateOverallHealthChart(chtOverallHealth, _healthData, fromDate, toDate);
+            }
+            else
+            {
+                MessageBox.Show("No health data available for the selected date range.");
+            }
             LoadPatientDashboard();
         }
+
+        //Charts
+        private void SetDefaultDateRange()
+        {
+            // Set the default date range to the last 1 week
+            DateTime toDate = DateTime.Now;
+            DateTime fromDate = toDate.AddDays(-7); // 1 week ago
+
+
+            // Update the chart
+            btnRefresh_Click(null, null); // Trigger refresh button click to update chart
+        }
+
+
 
         // Load Patient Dashboard
         private void LoadPatientDashboard()
@@ -267,14 +302,24 @@ namespace Home_Health_Device_Data_Logger
         {
             try
             {
+
+                // Validate date range selection
+                DateTime fromDate = dateTimePickerFromCharts.Value;
+                DateTime toDate = dateTimePickerToCharts.Value;
+
+                if (fromDate > toDate)
+                {
+                    MessageBox.Show("The 'From' date cannot be later than the 'To' date.");
+                    return;
+                }
                 // Fetch health data for the logged-in user from the database (or service)
                 var healthData = HealthDataAccess.GetHealthDataByUserId(LoggedInUser.UserID);
 
                 //// Assuming the healthData contains a list of HealthData objects
-                //_chartService.UpdateBloodPressureChart(BloodPressureLineCharts, healthData);
-                //_chartService.UpdateSugarLevelChart(SugarLevelLineCharts, healthData);
-                //_chartService.UpdateHeartRateChart(HeartRateLineCharts, healthData);
-                //_chartService.UpdateOxygenLevelChart(OxygenLevelLineCharts, healthData);
+                _chartService.UpdateBloodPressureChart(BloodPressureLineCharts, healthData, fromDate, toDate);
+                _chartService.UpdateSugarLevelChart(SugarLevelLineCharts, healthData, fromDate, toDate);
+                _chartService.UpdateHeartRateChart(HeartRateLineCharts, healthData, fromDate, toDate);
+                _chartService.UpdateOxygenLevelChart(OxygenLevelLineCharts, healthData, fromDate, toDate);
             }
             catch (Exception ex)
             {
@@ -286,44 +331,26 @@ namespace Home_Health_Device_Data_Logger
         {
             using (SaveFileDialog saveFileDialog = new SaveFileDialog())
             {
-                saveFileDialog.Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*";
-                saveFileDialog.Title = "Save Health History";
+                string userId = LoggedInUser.UserID.ToString();
+                string patientName = LoggedInUser.FullName;
 
-                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                DateTime startDate = dateTimePickerFromReports.Value;
+                DateTime endDate = dateTimePickerToReports.Value;
+
+                DataTable healthData = HealthDataAccess.GetHealthDataForPatient(userId, startDate, endDate);
+
+                // Generate the report (PDF or Excel) based on selected format
+                if (rdoPDF.Checked)
                 {
-                    try
-                    {
-                        var data = dataGridViewPatientHistory.DataSource as DataTable;
-                        if (data == null)
-                        {
-                            MessageBox.Show("No data available to export.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return;
-                        }
-                        DateTime fromDate = dateTimePickerFromReports.Value.Date;
-                        DateTime toDate = dateTimePickerToReports.Value.Date;
-
-                        DataView dv = new DataView(data);
-                        dv.RowFilter = $"Date >= #{fromDate.ToString("yyyy-MM-dd")}# AND Date <= #{toDate.ToString("yyyy-MM-dd")}#";
-                        DataTable filteredData = dv.ToTable();
-
-                        if (filteredData.Rows.Count == 0)
-                        {
-                            MessageBox.Show("No records found in the selected date range.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            return;
-                        }
-
-                        //ReportGenerationService.ExportToCsv(filteredData, saveFileDialog.FileName);
-                        MessageBox.Show("Data exported successfully!", "Export Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    catch (UnauthorizedAccessException)
-                    {
-                        MessageBox.Show("Access denied. Please choose a different location or file name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Failed to export data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    ReportGenerationService.ExportReport(healthData, true, patientName, userId);
                 }
+                else if (rdoExcel.Checked)
+                {
+                    ReportGenerationService.ExportReport(healthData, false, patientName, userId);
+                }
+
+
+
             }
         }
 
@@ -399,7 +426,7 @@ namespace Home_Health_Device_Data_Logger
             bool success = UserDataAccess.UpdateUserProfile(LoggedInUser);
             if (success)
             {
-                
+
 
                 MessageBox.Show("Profile updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 SetEditMode(false); // Disable editing after saving
@@ -470,6 +497,11 @@ namespace Home_Health_Device_Data_Logger
                 // Enable editing mode
                 SetEditMode(true);
             }
+        }
+
+        private void btnFilterCharts_Click(object sender, EventArgs e)
+        {
+            LoadAndUpdateCharts();
         }
     }
 }
