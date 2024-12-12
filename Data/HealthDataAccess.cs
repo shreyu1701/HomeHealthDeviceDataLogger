@@ -262,14 +262,15 @@ namespace Home_Health_Device_Data_Logger.Data
         public static DataTable GetHealthHistoryByUserId(int userId, DateTime? startDate = null, DateTime? endDate = null)
         {
             string query = @"SELECT 
-                        DataDate AS Date,
-                        BloodPressure AS BloodPressure,
-                        SugarLevel AS SugarLevel,
-                        HeartRate AS HeartRate,
-                        OxygenLevel AS OxygenLevel,
-                        Comments AS Comments
-                     FROM HealthData
-                     WHERE UserId = @UserID";
+                 DataID,
+                 DataDate AS Date,
+                 BloodPressure AS BloodPressure,
+                 SugarLevel AS SugarLevel,
+                 HeartRate AS HeartRate,
+                 OxygenLevel AS OxygenLevel,
+                 Comments AS Comments
+              FROM HealthData
+              WHERE UserId = @UserID";
 
             if (startDate.HasValue && endDate.HasValue)
             {
@@ -277,6 +278,7 @@ namespace Home_Health_Device_Data_Logger.Data
             }
 
             query += " ORDER BY DataDate DESC";
+
 
             using (var conn = DbConnection.GetConnection())
             {
@@ -360,6 +362,41 @@ namespace Home_Health_Device_Data_Logger.Data
                     cmd.ExecuteNonQuery();
                 }
             }
+        }
+
+
+        // Example: Fetch health data based on the date range selected for the chart
+        public List<HealthData> GetHealthData(DateTime startDate, DateTime endDate, string userId)
+        {
+            List<HealthData> healthDataList = new List<HealthData>();
+
+            using (SqlConnection connection = DbConnection.GetConnection())
+            {
+                connection.Open();
+                string query = "SELECT * FROM HealthData WHERE user_id = @UserId AND data_date BETWEEN @StartDate AND @EndDate";
+
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@UserId", userId);
+                    cmd.Parameters.AddWithValue("@StartDate", startDate);
+                    cmd.Parameters.AddWithValue("@EndDate", endDate);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        healthDataList.Add(new HealthData
+                        {
+                            DataDate = reader.GetDateTime(2),
+                            BloodPressure = reader.IsDBNull(3) ? null : reader.GetString(3),
+                            SugarLevel = reader.IsDBNull(4) ? null : reader.GetString(4),
+                            HeartRate = reader.IsDBNull(5) ? 0 : reader.GetInt32(5),
+                            OxygenLevel = reader.IsDBNull(6) ? 0 : reader.GetInt32(6)
+                        });
+                    }
+                }
+            }
+
+            return healthDataList;
         }
 
 

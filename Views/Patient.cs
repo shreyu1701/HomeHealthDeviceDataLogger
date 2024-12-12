@@ -14,18 +14,21 @@ namespace Home_Health_Device_Data_Logger
         private User _user;
         private User LoggedInUser;
         private bool _isEditing;
+        private ChartsService _chartService;
 
         public Patient(User user)
         {
             InitializeComponent();
             _user = user;
             LoggedInUser = user;
+            _chartService = new ChartsService();
             DisableActionButtonsAfterTimeLimit();
             LoadPatientDashboard();
             LoadHealthHistory();
             SetEditMode(false);
             LoadProfileData();
             DisplaySideProfile();
+            LoadAndUpdateCharts();
 
 
         }
@@ -60,7 +63,7 @@ namespace Home_Health_Device_Data_Logger
                 var healthMetrics = HealthDataAccess.GetRecentHealthDataByUserId(LoggedInUser.UserID);
                 dataGridViewPatientDashboard.DataSource = healthMetrics.Select(h => new
                 {
-                    h.DataID,
+                    //h.DataID,
                     Date = h.DataDate.ToString("yyyy-MM-dd"),
                     h.BloodPressure,
                     h.SugarLevel,
@@ -259,6 +262,26 @@ namespace Home_Health_Device_Data_Logger
         }
         //-------------------------------------------------------CHARTS AND REPORTS-------------------------------------------------------------------
 
+
+        private void LoadAndUpdateCharts()
+        {
+            try
+            {
+                // Fetch health data for the logged-in user from the database (or service)
+                var healthData = HealthDataAccess.GetHealthDataByUserId(LoggedInUser.UserID);
+
+                // Assuming the healthData contains a list of HealthData objects
+                _chartService.UpdateBloodPressureChart(BloodPressureLineCharts, healthData);
+                _chartService.UpdateSugarLevelChart(SugarLevelLineCharts, healthData);
+                _chartService.UpdateHeartRateChart(HeartRateLineCharts, healthData);
+                _chartService.UpdateOxygenLevelChart(OxygenLevelLineCharts, healthData);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+        }
+
         private void btnDownload_Click(object sender, EventArgs e)
         {
             using (SaveFileDialog saveFileDialog = new SaveFileDialog())
@@ -276,8 +299,8 @@ namespace Home_Health_Device_Data_Logger
                             MessageBox.Show("No data available to export.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             return;
                         }
-                        DateTime fromDate = dateTimePicker3.Value.Date;
-                        DateTime toDate = dateTimePicker4.Value.Date;
+                        DateTime fromDate = dateTimePickerFromReports.Value.Date;
+                        DateTime toDate = dateTimePickerToReports.Value.Date;
 
                         DataView dv = new DataView(data);
                         dv.RowFilter = $"Date >= #{fromDate.ToString("yyyy-MM-dd")}# AND Date <= #{toDate.ToString("yyyy-MM-dd")}#";

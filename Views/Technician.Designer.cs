@@ -77,7 +77,6 @@
             lblHistoryFrom = new Label();
             dateTimePickerHistoryFrom = new DateTimePicker();
             txtID = new TextBox();
-            txtName = new TextBox();
             dataGridViewTechnicianHistory = new DataGridView();
             dateTimePickerHistoryTo = new DateTimePicker();
             tabPage3 = new TabPage();
@@ -254,7 +253,6 @@
             tabPage2.Controls.Add(lblHistoryFrom);
             tabPage2.Controls.Add(dateTimePickerHistoryFrom);
             tabPage2.Controls.Add(txtID);
-            tabPage2.Controls.Add(txtName);
             tabPage2.Controls.Add(dataGridViewTechnicianHistory);
             tabPage2.Controls.Add(dateTimePickerHistoryTo);
             tabPage2.Location = new Point(4, 24);
@@ -302,19 +300,11 @@
             // 
             // txtID
             // 
-            txtID.Location = new Point(115, 22);
+            txtID.Location = new Point(9, 22);
             txtID.Name = "txtID";
             txtID.PlaceholderText = "Search #ID";
-            txtID.Size = new Size(100, 23);
+            txtID.Size = new Size(206, 23);
             txtID.TabIndex = 15;
-            // 
-            // txtName
-            // 
-            txtName.Location = new Point(9, 22);
-            txtName.Name = "txtName";
-            txtName.PlaceholderText = "Search #Name";
-            txtName.Size = new Size(100, 23);
-            txtName.TabIndex = 14;
             // 
             // dataGridViewTechnicianHistory
             // 
@@ -323,7 +313,7 @@
             dataGridViewTechnicianHistory.Name = "dataGridViewTechnicianHistory";
             dataGridViewTechnicianHistory.Size = new Size(726, 448);
             dataGridViewTechnicianHistory.TabIndex = 7;
-            dataGridViewTechnicianHistory.CellContentClick += DataGridViewTechnicianHistory_CellContentClick;
+            dataGridViewTechnicianHistory.CellContentClick += dataGridViewTechnicianHistory_CellContentClick;
             // 
             // dateTimePickerHistoryTo
             // 

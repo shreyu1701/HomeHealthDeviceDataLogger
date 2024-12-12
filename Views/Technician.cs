@@ -3,6 +3,7 @@ using Home_Health_Device_Data_Logger.Models;
 using Home_Health_Device_Data_Logger.Views;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -28,7 +29,6 @@ namespace Home_Health_Device_Data_Logger
             this.Hide();  // Hide the current form
         }
 
-        // Upload Image
         // Upload Image
         private void btnUploadImage_Click(object sender, EventArgs e)
         {
@@ -59,11 +59,14 @@ namespace Home_Health_Device_Data_Logger
         // Load all health data for all patients (for Technician Dashboard)
         private void LoadAllHealthData()
         {
+
             // Assuming HealthDataAccess.GetAllHealthData() returns a list of health data objects
             var healthDataList = HealthDataAccess.GetAllHealthData();
+
             dataGridViewTechnicianDashboard.DataSource = healthDataList.Select(h => new
             {
                 h.DataID,
+                h.UserID,
                 Date = h.DataDate.ToString("yyyy-MM-dd"),
                 h.BloodPressure,
                 h.SugarLevel,
@@ -71,12 +74,20 @@ namespace Home_Health_Device_Data_Logger
                 h.OxygenLevel,
                 //h.Comments
             }).ToList();
+
+            // Hide DataID column in Technician Dashboard
+            if (dataGridViewTechnicianDashboard.Columns.Contains("DataID"))
+            {
+                dataGridViewTechnicianDashboard.Columns["DataID"].Visible = false;
+            }
+
             // Add action buttons dynamically
             AddActionButtonsDashboard();
 
             dataGridViewTechnicianHistory.DataSource = healthDataList.Select(h => new
             {
                 h.DataID,
+                //h.UserID,
                 Date = h.DataDate.ToString("yyyy-MM-dd"),
                 h.BloodPressure,
                 h.SugarLevel,
@@ -84,6 +95,13 @@ namespace Home_Health_Device_Data_Logger
                 h.OxygenLevel,
                 //h.Comments
             }).ToList();
+
+            // Hide DataID column in Technician History
+            if (dataGridViewTechnicianHistory.Columns.Contains("DataID"))
+            {
+                dataGridViewTechnicianHistory.Columns["DataID"].Visible = false;
+            }
+
             // Add action buttons dynamically
             AddActionButtonsHistory();
         }
@@ -117,28 +135,35 @@ namespace Home_Health_Device_Data_Logger
 
         private void AddActionButtonsHistory()
         {
+            // Add Update Button if not already present
             if (!dataGridViewTechnicianHistory.Columns.Contains("Update"))
             {
-                dataGridViewTechnicianHistory.Columns.Add(new DataGridViewButtonColumn
+                var updateButtonColumn = new DataGridViewButtonColumn
                 {
-                    HeaderText = "Update",
+                    HeaderText = "Actions",
                     Text = "Update",
                     UseColumnTextForButtonValue = true,
-                    Name = "Update"
-                });
+                    Name = "Update",
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+                };
+                dataGridViewTechnicianHistory.Columns.Add(updateButtonColumn);
             }
 
+            // Add Delete Button if not already present
             if (!dataGridViewTechnicianHistory.Columns.Contains("Delete"))
             {
-                dataGridViewTechnicianHistory.Columns.Add(new DataGridViewButtonColumn
+                var deleteButtonColumn = new DataGridViewButtonColumn
                 {
-                    HeaderText = "Delete",
+                    HeaderText = "Actions",
                     Text = "Delete",
                     UseColumnTextForButtonValue = true,
-                    Name = "Delete"
-                });
+                    Name = "Delete",
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+                };
+                dataGridViewTechnicianHistory.Columns.Add(deleteButtonColumn);
             }
         }
+
 
         private void DataGridViewTechnicianDashboard_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -165,31 +190,25 @@ namespace Home_Health_Device_Data_Logger
                 }
             }
         }
-        private void DataGridViewTechnicianHistory_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridViewTechnicianHistory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Ensure the click is on a valid cell (not the header or outside the grid)
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            // Ensure the click is not on the header row or a non-button column
+            if (e.RowIndex < 0) return;
+
+            string columnName = dataGridViewTechnicianHistory.Columns[e.ColumnIndex].Name;
+
+            if (columnName == "Update")
             {
-                // Get the column name to determine which button was clicked
-                string columnName = dataGridViewTechnicianHistory.Columns[e.ColumnIndex].Name;
-
-                // Retrieve the DataID from the clicked row (assuming DataID is a column)
-                int selectedDataID = Convert.ToInt32(dataGridViewTechnicianHistory.Rows[e.RowIndex].Cells["DataID"].Value);
-
-                // Check if the clicked column is the "Update" button
-                if (columnName == "btnUpdate")
-                {
-                    // Handle the update logic
-                    HandleUpdateButtonClick(selectedDataID);
-                }
-                // Check if the clicked column is the "Delete" button
-                else if (columnName == "btnDelete")
-                {
-                    // Handle the delete logic
-                    HandleDeleteButtonClick(selectedDataID);
-                }
+                int dataID = Convert.ToInt32(dataGridViewTechnicianHistory.Rows[e.RowIndex].Cells["DataID"].Value);
+                HandleUpdateButtonClick(dataID);
+            }
+            else if (columnName == "Delete")
+            {
+                int dataID = Convert.ToInt32(dataGridViewTechnicianHistory.Rows[e.RowIndex].Cells["DataID"].Value);
+                HandleDeleteButtonClick(dataID);
             }
         }
+
 
 
         private void HandleUpdateButtonClick(int dataID)
@@ -231,54 +250,87 @@ namespace Home_Health_Device_Data_Logger
                                                 MessageBoxIcon.Warning);
             if (confirmResult == DialogResult.Yes)
             {
-                bool isDeleted = HealthDataAccess.DeleteHealthData(dataID);
+                try
+                {
+                    bool isDeleted = HealthDataAccess.DeleteHealthData(dataID);
 
-                if (isDeleted)
-                {
-                    MessageBox.Show("Record deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadAllHealthData(); // Refresh the DataGridView
+                    if (isDeleted)
+                    {
+                        MessageBox.Show("Record deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadAllHealthData(); // Refresh the DataGridView
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to delete the record. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Failed to delete the record. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Log the exception for debugging
+                    Console.WriteLine($"Error while deleting record: {ex.Message}");
+                    MessageBox.Show("An unexpected error occurred. Please contact support.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
-
-
 
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
-            var healthDataList = HealthDataAccess.GetAllHealthData();
-            var filteredData = healthDataList;
+            string userIdInput = txtID.Text.Trim();
 
-            // Apply Date Range Filter
-            if (dateTimePickerHistoryFrom.Value <= dateTimePickerHistoryTo.Value)
+            // Validate User ID input
+            if (string.IsNullOrWhiteSpace(userIdInput))
             {
-                filteredData = filteredData.Where(h =>
-                    h.DataDate >= dateTimePickerHistoryFrom.Value && h.DataDate <= dateTimePickerHistoryTo.Value).ToList();
+                MessageBox.Show("Please enter a User ID.");
+                return;
             }
 
-            // Update DataGridView
-            dataGridViewTechnicianHistory.DataSource = filteredData.Select(h => new
+            if (!int.TryParse(userIdInput, out int userId))
             {
-                h.DataID,
-                Date = h.DataDate.ToString("yyyy-MM-dd"),
-                h.BloodPressure,
-                h.SugarLevel,
-                h.HeartRate,
-                h.OxygenLevel,
-                h.Comments,
-                h.CreatedAt
-            }).ToList();
+                MessageBox.Show("Invalid User ID. Please enter a valid integer.");
+                return;
+            }
+
+            // Validate date range
+            DateTime? startDate = dateTimePickerHistoryFrom.Checked ? dateTimePickerHistoryFrom.Value.Date : (DateTime?)null;
+            DateTime? endDate = dateTimePickerHistoryTo.Checked ? dateTimePickerHistoryTo.Value.Date : (DateTime?)null;
+
+            if (startDate.HasValue && endDate.HasValue && startDate > endDate)
+            {
+                MessageBox.Show("Invalid date range. Please select a valid 'From' and 'To' date.");
+                return;
+            }
+
+            try
+            {
+                // Fetch data from database
+                DataTable healthDataTable = HealthDataAccess.GetHealthHistoryByUserId(userId, startDate, endDate);
+
+                // Check if data exists
+                if (healthDataTable.Rows.Count == 0)
+                {
+                    MessageBox.Show("No data found for the specified criteria.");
+                    dataGridViewTechnicianHistory.DataSource = null; // Clear DataGridView
+                    return;
+                }
+
+                // Bind data to DataGridView
+                dataGridViewTechnicianHistory.DataSource = healthDataTable;
+                dataGridViewTechnicianHistory.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while retrieving health data: {ex.Message}");
+            }
         }
+
 
         // Add Patient Button - You can implement your patient addition logic here
         private void btnAddPatient_Click(object sender, EventArgs e)
         {
-            // Example placeholder for adding a patient
-            MessageBox.Show("Add Patient button clicked.");
+            Signup signup = new Signup();
+            signup.Show();
+            Visible = true;
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)

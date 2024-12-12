@@ -29,77 +29,77 @@ namespace Home_Health_Device_Data_Logger
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 75D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 86D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 90D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 86D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 99D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 75D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(7D, 80D);
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 150D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 180D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 190D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint11 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 186D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint12 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 165D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint13 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 174D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint14 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(7D, 175D);
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint15 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 88D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint16 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 95D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint17 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 76D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint18 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 85D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint19 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 76D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint20 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 86D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint21 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(7D, 95D);
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint22 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 96D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint23 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 89D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint24 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 95D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint25 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 79D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint26 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 82D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint27 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 96D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint28 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(7D, 99D);
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint29 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 79D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint30 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 70D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint31 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 73D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint32 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 68D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint33 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 80D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint34 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 86D);
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint35 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 179D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint36 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 150D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint37 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 204D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint38 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 168D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint39 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 180D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint40 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 186D);
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint41 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 79D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint42 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 70D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint43 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 73D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint44 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 68D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint45 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 80D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint46 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 86D);
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint47 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 90D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint48 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 99D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint49 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 95D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint50 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 89D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint51 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 99D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint52 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 95D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint53 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(7D, 91D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint54 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 75D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint55 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 86D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint56 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 90D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint57 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 86D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint58 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 99D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint59 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 75D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint60 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(7D, 80D);
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint61 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 150D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint62 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 180D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint63 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 190D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint64 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 186D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint65 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 165D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint66 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 174D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint67 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(7D, 175D);
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint68 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 88D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint69 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 95D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint70 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 76D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint71 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 85D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint72 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 76D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint73 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 86D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint74 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(7D, 95D);
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint75 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 96D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint76 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 89D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint77 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 95D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint78 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 79D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint79 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 82D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint80 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 96D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint81 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(7D, 99D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint82 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 79D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint83 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 70D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint84 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 73D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint85 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 68D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint86 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 80D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint87 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 86D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint88 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 179D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint89 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 150D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint90 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 204D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint91 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 168D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint92 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 180D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint93 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 186D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint94 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 79D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint95 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 70D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint96 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 73D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint97 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 68D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint98 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 80D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint99 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 86D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint100 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 90D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint101 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 99D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint102 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 95D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint103 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 89D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint104 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 99D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint105 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 95D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint106 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(7D, 91D);
             splitContainer1 = new SplitContainer();
             lblPatient = new Label();
             btnLogout = new Button();
@@ -127,30 +127,30 @@ namespace Home_Health_Device_Data_Logger
             dateTimePicker1 = new DateTimePicker();
             dataGridViewPatientHistory = new DataGridView();
             tabPageCharts_Reports = new TabPage();
-            label53 = new Label();
-            label54 = new Label();
-            dateTimePicker2 = new DateTimePicker();
-            dateTimePicker6 = new DateTimePicker();
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            ToCharts = new Label();
+            FromCharts = new Label();
+            dateTimePickerFromCharts = new DateTimePicker();
+            dateTimePickerToCharts = new DateTimePicker();
+            flowLayoutChartsAndReports = new FlowLayoutPanel();
             splitContainer3 = new SplitContainer();
-            tabControl2 = new TabControl();
-            tabPage5 = new TabPage();
-            BloodPressure = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            tabPage6 = new TabPage();
-            chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            tabPage7 = new TabPage();
-            chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            tabPage8 = new TabPage();
-            chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            tabControlCharts = new TabControl();
+            BloodPressureCharts = new TabPage();
+            BloodPressureLineCharts = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            SugarLevelCharts = new TabPage();
+            SugarLevelLineCharts = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            HeartRateCharts = new TabPage();
+            HeartRateLineCharts = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            OxygenLevelCharts = new TabPage();
+            OxygenLevelLineCharts = new System.Windows.Forms.DataVisualization.Charting.Chart();
             btnDownload = new Button();
-            groupBox1 = new GroupBox();
+            groupBoxDownloadAs = new GroupBox();
             radioButton6 = new RadioButton();
             radioButton5 = new RadioButton();
-            label19 = new Label();
-            dateTimePicker4 = new DateTimePicker();
-            dateTimePicker3 = new DateTimePicker();
-            label18 = new Label();
-            label17 = new Label();
+            lblToReports = new Label();
+            dateTimePickerToReports = new DateTimePicker();
+            dateTimePickerFromReports = new DateTimePicker();
+            lblFromReports = new Label();
+            lblGenerateReports = new Label();
             tabPageProfile = new TabPage();
             panel1 = new Panel();
             tabControl4 = new TabControl();
@@ -202,21 +202,21 @@ namespace Home_Health_Device_Data_Logger
             tabPageHistory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewPatientHistory).BeginInit();
             tabPageCharts_Reports.SuspendLayout();
-            flowLayoutPanel1.SuspendLayout();
+            flowLayoutChartsAndReports.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer3).BeginInit();
             splitContainer3.Panel1.SuspendLayout();
             splitContainer3.Panel2.SuspendLayout();
             splitContainer3.SuspendLayout();
-            tabControl2.SuspendLayout();
-            tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)BloodPressure).BeginInit();
-            tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
-            tabPage7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)chart2).BeginInit();
-            tabPage8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)chart3).BeginInit();
-            groupBox1.SuspendLayout();
+            tabControlCharts.SuspendLayout();
+            BloodPressureCharts.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)BloodPressureLineCharts).BeginInit();
+            SugarLevelCharts.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)SugarLevelLineCharts).BeginInit();
+            HeartRateCharts.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)HeartRateLineCharts).BeginInit();
+            OxygenLevelCharts.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)OxygenLevelLineCharts).BeginInit();
+            groupBoxDownloadAs.SuspendLayout();
             tabPageProfile.SuspendLayout();
             panel1.SuspendLayout();
             tabControl4.SuspendLayout();
@@ -446,57 +446,57 @@ namespace Home_Health_Device_Data_Logger
             // 
             // chtOverallHealth
             // 
-            chartArea1.Name = "ChartArea1";
-            chtOverallHealth.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            chtOverallHealth.Legends.Add(legend1);
+            chartArea6.Name = "ChartArea1";
+            chtOverallHealth.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            chtOverallHealth.Legends.Add(legend6);
             chtOverallHealth.Location = new Point(22, 12);
             chtOverallHealth.Margin = new Padding(4, 2, 4, 2);
             chtOverallHealth.Name = "chtOverallHealth";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Blood Pressure";
-            series1.Points.Add(dataPoint1);
-            series1.Points.Add(dataPoint2);
-            series1.Points.Add(dataPoint3);
-            series1.Points.Add(dataPoint4);
-            series1.Points.Add(dataPoint5);
-            series1.Points.Add(dataPoint6);
-            series1.Points.Add(dataPoint7);
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Sugar Level";
-            series2.Points.Add(dataPoint8);
-            series2.Points.Add(dataPoint9);
-            series2.Points.Add(dataPoint10);
-            series2.Points.Add(dataPoint11);
-            series2.Points.Add(dataPoint12);
-            series2.Points.Add(dataPoint13);
-            series2.Points.Add(dataPoint14);
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Heart Rate";
-            series3.Points.Add(dataPoint15);
-            series3.Points.Add(dataPoint16);
-            series3.Points.Add(dataPoint17);
-            series3.Points.Add(dataPoint18);
-            series3.Points.Add(dataPoint19);
-            series3.Points.Add(dataPoint20);
-            series3.Points.Add(dataPoint21);
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "OxygenLevel";
-            series4.Points.Add(dataPoint22);
-            series4.Points.Add(dataPoint23);
-            series4.Points.Add(dataPoint24);
-            series4.Points.Add(dataPoint25);
-            series4.Points.Add(dataPoint26);
-            series4.Points.Add(dataPoint27);
-            series4.Points.Add(dataPoint28);
-            chtOverallHealth.Series.Add(series1);
-            chtOverallHealth.Series.Add(series2);
-            chtOverallHealth.Series.Add(series3);
-            chtOverallHealth.Series.Add(series4);
+            series9.ChartArea = "ChartArea1";
+            series9.Legend = "Legend1";
+            series9.Name = "Blood Pressure";
+            series9.Points.Add(dataPoint54);
+            series9.Points.Add(dataPoint55);
+            series9.Points.Add(dataPoint56);
+            series9.Points.Add(dataPoint57);
+            series9.Points.Add(dataPoint58);
+            series9.Points.Add(dataPoint59);
+            series9.Points.Add(dataPoint60);
+            series10.ChartArea = "ChartArea1";
+            series10.Legend = "Legend1";
+            series10.Name = "Sugar Level";
+            series10.Points.Add(dataPoint61);
+            series10.Points.Add(dataPoint62);
+            series10.Points.Add(dataPoint63);
+            series10.Points.Add(dataPoint64);
+            series10.Points.Add(dataPoint65);
+            series10.Points.Add(dataPoint66);
+            series10.Points.Add(dataPoint67);
+            series11.ChartArea = "ChartArea1";
+            series11.Legend = "Legend1";
+            series11.Name = "Heart Rate";
+            series11.Points.Add(dataPoint68);
+            series11.Points.Add(dataPoint69);
+            series11.Points.Add(dataPoint70);
+            series11.Points.Add(dataPoint71);
+            series11.Points.Add(dataPoint72);
+            series11.Points.Add(dataPoint73);
+            series11.Points.Add(dataPoint74);
+            series12.ChartArea = "ChartArea1";
+            series12.Legend = "Legend1";
+            series12.Name = "OxygenLevel";
+            series12.Points.Add(dataPoint75);
+            series12.Points.Add(dataPoint76);
+            series12.Points.Add(dataPoint77);
+            series12.Points.Add(dataPoint78);
+            series12.Points.Add(dataPoint79);
+            series12.Points.Add(dataPoint80);
+            series12.Points.Add(dataPoint81);
+            chtOverallHealth.Series.Add(series9);
+            chtOverallHealth.Series.Add(series10);
+            chtOverallHealth.Series.Add(series11);
+            chtOverallHealth.Series.Add(series12);
             chtOverallHealth.Size = new Size(618, 190);
             chtOverallHealth.TabIndex = 5;
             chtOverallHealth.Text = "OverallHealthData";
@@ -578,11 +578,11 @@ namespace Home_Health_Device_Data_Logger
             // 
             // tabPageCharts_Reports
             // 
-            tabPageCharts_Reports.Controls.Add(label53);
-            tabPageCharts_Reports.Controls.Add(label54);
-            tabPageCharts_Reports.Controls.Add(dateTimePicker2);
-            tabPageCharts_Reports.Controls.Add(dateTimePicker6);
-            tabPageCharts_Reports.Controls.Add(flowLayoutPanel1);
+            tabPageCharts_Reports.Controls.Add(ToCharts);
+            tabPageCharts_Reports.Controls.Add(FromCharts);
+            tabPageCharts_Reports.Controls.Add(dateTimePickerFromCharts);
+            tabPageCharts_Reports.Controls.Add(dateTimePickerToCharts);
+            tabPageCharts_Reports.Controls.Add(flowLayoutChartsAndReports);
             tabPageCharts_Reports.Location = new Point(4, 24);
             tabPageCharts_Reports.Margin = new Padding(4, 2, 4, 2);
             tabPageCharts_Reports.Name = "tabPageCharts_Reports";
@@ -591,50 +591,50 @@ namespace Home_Health_Device_Data_Logger
             tabPageCharts_Reports.Text = "Charts & Reports";
             tabPageCharts_Reports.UseVisualStyleBackColor = true;
             // 
-            // label53
+            // ToCharts
             // 
-            label53.AutoSize = true;
-            label53.Location = new Point(384, 20);
-            label53.Margin = new Padding(4, 0, 4, 0);
-            label53.Name = "label53";
-            label53.Size = new Size(25, 15);
-            label53.TabIndex = 26;
-            label53.Text = "&To :";
+            ToCharts.AutoSize = true;
+            ToCharts.Location = new Point(384, 20);
+            ToCharts.Margin = new Padding(4, 0, 4, 0);
+            ToCharts.Name = "ToCharts";
+            ToCharts.Size = new Size(25, 15);
+            ToCharts.TabIndex = 26;
+            ToCharts.Text = "&To :";
             // 
-            // label54
+            // FromCharts
             // 
-            label54.AutoSize = true;
-            label54.Location = new Point(83, 20);
-            label54.Margin = new Padding(4, 0, 4, 0);
-            label54.Name = "label54";
-            label54.Size = new Size(41, 15);
-            label54.TabIndex = 25;
-            label54.Text = "&From :";
+            FromCharts.AutoSize = true;
+            FromCharts.Location = new Point(83, 20);
+            FromCharts.Margin = new Padding(4, 0, 4, 0);
+            FromCharts.Name = "FromCharts";
+            FromCharts.Size = new Size(41, 15);
+            FromCharts.TabIndex = 25;
+            FromCharts.Text = "&From :";
             // 
-            // dateTimePicker2
+            // dateTimePickerFromCharts
             // 
-            dateTimePicker2.Location = new Point(132, 16);
-            dateTimePicker2.Margin = new Padding(4, 2, 4, 2);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(212, 23);
-            dateTimePicker2.TabIndex = 24;
+            dateTimePickerFromCharts.Location = new Point(132, 16);
+            dateTimePickerFromCharts.Margin = new Padding(4, 2, 4, 2);
+            dateTimePickerFromCharts.Name = "dateTimePickerFromCharts";
+            dateTimePickerFromCharts.Size = new Size(212, 23);
+            dateTimePickerFromCharts.TabIndex = 24;
             // 
-            // dateTimePicker6
+            // dateTimePickerToCharts
             // 
-            dateTimePicker6.Location = new Point(426, 16);
-            dateTimePicker6.Margin = new Padding(4, 2, 4, 2);
-            dateTimePicker6.Name = "dateTimePicker6";
-            dateTimePicker6.Size = new Size(215, 23);
-            dateTimePicker6.TabIndex = 23;
+            dateTimePickerToCharts.Location = new Point(426, 16);
+            dateTimePickerToCharts.Margin = new Padding(4, 2, 4, 2);
+            dateTimePickerToCharts.Name = "dateTimePickerToCharts";
+            dateTimePickerToCharts.Size = new Size(215, 23);
+            dateTimePickerToCharts.TabIndex = 23;
             // 
-            // flowLayoutPanel1
+            // flowLayoutChartsAndReports
             // 
-            flowLayoutPanel1.Controls.Add(splitContainer3);
-            flowLayoutPanel1.Location = new Point(4, 58);
-            flowLayoutPanel1.Margin = new Padding(4, 2, 4, 2);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(640, 449);
-            flowLayoutPanel1.TabIndex = 0;
+            flowLayoutChartsAndReports.Controls.Add(splitContainer3);
+            flowLayoutChartsAndReports.Location = new Point(4, 58);
+            flowLayoutChartsAndReports.Margin = new Padding(4, 2, 4, 2);
+            flowLayoutChartsAndReports.Name = "flowLayoutChartsAndReports";
+            flowLayoutChartsAndReports.Size = new Size(640, 449);
+            flowLayoutChartsAndReports.TabIndex = 0;
             // 
             // splitContainer3
             // 
@@ -644,180 +644,180 @@ namespace Home_Health_Device_Data_Logger
             // 
             // splitContainer3.Panel1
             // 
-            splitContainer3.Panel1.Controls.Add(tabControl2);
+            splitContainer3.Panel1.Controls.Add(tabControlCharts);
             // 
             // splitContainer3.Panel2
             // 
             splitContainer3.Panel2.Controls.Add(btnDownload);
-            splitContainer3.Panel2.Controls.Add(groupBox1);
-            splitContainer3.Panel2.Controls.Add(label19);
-            splitContainer3.Panel2.Controls.Add(dateTimePicker4);
-            splitContainer3.Panel2.Controls.Add(dateTimePicker3);
-            splitContainer3.Panel2.Controls.Add(label18);
-            splitContainer3.Panel2.Controls.Add(label17);
+            splitContainer3.Panel2.Controls.Add(groupBoxDownloadAs);
+            splitContainer3.Panel2.Controls.Add(lblToReports);
+            splitContainer3.Panel2.Controls.Add(dateTimePickerToReports);
+            splitContainer3.Panel2.Controls.Add(dateTimePickerFromReports);
+            splitContainer3.Panel2.Controls.Add(lblFromReports);
+            splitContainer3.Panel2.Controls.Add(lblGenerateReports);
             splitContainer3.Size = new Size(635, 447);
             splitContainer3.SplitterDistance = 391;
             splitContainer3.SplitterWidth = 5;
             splitContainer3.TabIndex = 0;
             // 
-            // tabControl2
+            // tabControlCharts
             // 
-            tabControl2.Controls.Add(tabPage5);
-            tabControl2.Controls.Add(tabPage6);
-            tabControl2.Controls.Add(tabPage7);
-            tabControl2.Controls.Add(tabPage8);
-            tabControl2.Location = new Point(4, 2);
-            tabControl2.Margin = new Padding(4, 2, 4, 2);
-            tabControl2.Name = "tabControl2";
-            tabControl2.SelectedIndex = 0;
-            tabControl2.Size = new Size(383, 443);
-            tabControl2.TabIndex = 0;
+            tabControlCharts.Controls.Add(BloodPressureCharts);
+            tabControlCharts.Controls.Add(SugarLevelCharts);
+            tabControlCharts.Controls.Add(HeartRateCharts);
+            tabControlCharts.Controls.Add(OxygenLevelCharts);
+            tabControlCharts.Location = new Point(4, 2);
+            tabControlCharts.Margin = new Padding(4, 2, 4, 2);
+            tabControlCharts.Name = "tabControlCharts";
+            tabControlCharts.SelectedIndex = 0;
+            tabControlCharts.Size = new Size(383, 443);
+            tabControlCharts.TabIndex = 0;
             // 
-            // tabPage5
+            // BloodPressureCharts
             // 
-            tabPage5.Controls.Add(BloodPressure);
-            tabPage5.Location = new Point(4, 24);
-            tabPage5.Margin = new Padding(4, 2, 4, 2);
-            tabPage5.Name = "tabPage5";
-            tabPage5.Padding = new Padding(4, 2, 4, 2);
-            tabPage5.Size = new Size(375, 415);
-            tabPage5.TabIndex = 0;
-            tabPage5.Text = "Blood Pressure";
-            tabPage5.UseVisualStyleBackColor = true;
+            BloodPressureCharts.Controls.Add(BloodPressureLineCharts);
+            BloodPressureCharts.Location = new Point(4, 24);
+            BloodPressureCharts.Margin = new Padding(4, 2, 4, 2);
+            BloodPressureCharts.Name = "BloodPressureCharts";
+            BloodPressureCharts.Padding = new Padding(4, 2, 4, 2);
+            BloodPressureCharts.Size = new Size(375, 415);
+            BloodPressureCharts.TabIndex = 0;
+            BloodPressureCharts.Text = "Blood Pressure";
+            BloodPressureCharts.UseVisualStyleBackColor = true;
             // 
-            // BloodPressure
+            // BloodPressureLineCharts
             // 
-            chartArea2.Name = "ChartArea1";
-            BloodPressure.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            BloodPressure.Legends.Add(legend2);
-            BloodPressure.Location = new Point(25, 119);
-            BloodPressure.Margin = new Padding(4, 2, 4, 2);
-            BloodPressure.Name = "BloodPressure";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "BloodPressure";
-            series5.Points.Add(dataPoint29);
-            series5.Points.Add(dataPoint30);
-            series5.Points.Add(dataPoint31);
-            series5.Points.Add(dataPoint32);
-            series5.Points.Add(dataPoint33);
-            series5.Points.Add(dataPoint34);
-            BloodPressure.Series.Add(series5);
-            BloodPressure.Size = new Size(354, 163);
-            BloodPressure.TabIndex = 1;
-            BloodPressure.Text = "Blood Pressure";
+            chartArea7.Name = "ChartArea1";
+            BloodPressureLineCharts.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            BloodPressureLineCharts.Legends.Add(legend7);
+            BloodPressureLineCharts.Location = new Point(25, 119);
+            BloodPressureLineCharts.Margin = new Padding(4, 2, 4, 2);
+            BloodPressureLineCharts.Name = "BloodPressureLineCharts";
+            series13.ChartArea = "ChartArea1";
+            series13.Legend = "Legend1";
+            series13.Name = "BloodPressure";
+            series13.Points.Add(dataPoint82);
+            series13.Points.Add(dataPoint83);
+            series13.Points.Add(dataPoint84);
+            series13.Points.Add(dataPoint85);
+            series13.Points.Add(dataPoint86);
+            series13.Points.Add(dataPoint87);
+            BloodPressureLineCharts.Series.Add(series13);
+            BloodPressureLineCharts.Size = new Size(303, 163);
+            BloodPressureLineCharts.TabIndex = 1;
+            BloodPressureLineCharts.Text = "Blood Pressure";
             // 
-            // tabPage6
+            // SugarLevelCharts
             // 
-            tabPage6.Controls.Add(chart1);
-            tabPage6.Location = new Point(4, 24);
-            tabPage6.Margin = new Padding(4, 2, 4, 2);
-            tabPage6.Name = "tabPage6";
-            tabPage6.Padding = new Padding(4, 2, 4, 2);
-            tabPage6.Size = new Size(375, 415);
-            tabPage6.TabIndex = 1;
-            tabPage6.Text = "Sugar Level";
-            tabPage6.UseVisualStyleBackColor = true;
+            SugarLevelCharts.Controls.Add(SugarLevelLineCharts);
+            SugarLevelCharts.Location = new Point(4, 24);
+            SugarLevelCharts.Margin = new Padding(4, 2, 4, 2);
+            SugarLevelCharts.Name = "SugarLevelCharts";
+            SugarLevelCharts.Padding = new Padding(4, 2, 4, 2);
+            SugarLevelCharts.Size = new Size(375, 415);
+            SugarLevelCharts.TabIndex = 1;
+            SugarLevelCharts.Text = "Sugar Level";
+            SugarLevelCharts.UseVisualStyleBackColor = true;
             // 
-            // chart1
+            // SugarLevelLineCharts
             // 
-            chartArea3.Name = "ChartArea1";
-            chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            chart1.Legends.Add(legend3);
-            chart1.Location = new Point(7, 54);
-            chart1.Margin = new Padding(4, 2, 4, 2);
-            chart1.Name = "chart1";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Sugar Level";
-            series6.Points.Add(dataPoint35);
-            series6.Points.Add(dataPoint36);
-            series6.Points.Add(dataPoint37);
-            series6.Points.Add(dataPoint38);
-            series6.Points.Add(dataPoint39);
-            series6.Points.Add(dataPoint40);
-            chart1.Series.Add(series6);
-            chart1.Size = new Size(354, 163);
-            chart1.TabIndex = 2;
-            chart1.Text = "Blood Pressure";
+            chartArea8.Name = "ChartArea1";
+            SugarLevelLineCharts.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            SugarLevelLineCharts.Legends.Add(legend8);
+            SugarLevelLineCharts.Location = new Point(7, 54);
+            SugarLevelLineCharts.Margin = new Padding(4, 2, 4, 2);
+            SugarLevelLineCharts.Name = "SugarLevelLineCharts";
+            series14.ChartArea = "ChartArea1";
+            series14.Legend = "Legend1";
+            series14.Name = "Sugar Level";
+            series14.Points.Add(dataPoint88);
+            series14.Points.Add(dataPoint89);
+            series14.Points.Add(dataPoint90);
+            series14.Points.Add(dataPoint91);
+            series14.Points.Add(dataPoint92);
+            series14.Points.Add(dataPoint93);
+            SugarLevelLineCharts.Series.Add(series14);
+            SugarLevelLineCharts.Size = new Size(354, 163);
+            SugarLevelLineCharts.TabIndex = 2;
+            SugarLevelLineCharts.Text = "Sugar Level";
             // 
-            // tabPage7
+            // HeartRateCharts
             // 
-            tabPage7.Controls.Add(chart2);
-            tabPage7.Location = new Point(4, 24);
-            tabPage7.Margin = new Padding(4, 2, 4, 2);
-            tabPage7.Name = "tabPage7";
-            tabPage7.Size = new Size(375, 415);
-            tabPage7.TabIndex = 2;
-            tabPage7.Text = "Heart Rate";
-            tabPage7.UseVisualStyleBackColor = true;
+            HeartRateCharts.Controls.Add(HeartRateLineCharts);
+            HeartRateCharts.Location = new Point(4, 24);
+            HeartRateCharts.Margin = new Padding(4, 2, 4, 2);
+            HeartRateCharts.Name = "HeartRateCharts";
+            HeartRateCharts.Size = new Size(375, 415);
+            HeartRateCharts.TabIndex = 2;
+            HeartRateCharts.Text = "Heart Rate";
+            HeartRateCharts.UseVisualStyleBackColor = true;
             // 
-            // chart2
+            // HeartRateLineCharts
             // 
-            chartArea4.Name = "ChartArea1";
-            chart2.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            chart2.Legends.Add(legend4);
-            chart2.Location = new Point(7, 54);
-            chart2.Margin = new Padding(4, 2, 4, 2);
-            chart2.Name = "chart2";
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "Heart Rate";
-            series7.Points.Add(dataPoint41);
-            series7.Points.Add(dataPoint42);
-            series7.Points.Add(dataPoint43);
-            series7.Points.Add(dataPoint44);
-            series7.Points.Add(dataPoint45);
-            series7.Points.Add(dataPoint46);
-            chart2.Series.Add(series7);
-            chart2.Size = new Size(354, 163);
-            chart2.TabIndex = 2;
-            chart2.Text = "Blood Pressure";
+            chartArea9.Name = "ChartArea1";
+            HeartRateLineCharts.ChartAreas.Add(chartArea9);
+            legend9.Name = "Legend1";
+            HeartRateLineCharts.Legends.Add(legend9);
+            HeartRateLineCharts.Location = new Point(7, 54);
+            HeartRateLineCharts.Margin = new Padding(4, 2, 4, 2);
+            HeartRateLineCharts.Name = "HeartRateLineCharts";
+            series15.ChartArea = "ChartArea1";
+            series15.Legend = "Legend1";
+            series15.Name = "Heart Rate";
+            series15.Points.Add(dataPoint94);
+            series15.Points.Add(dataPoint95);
+            series15.Points.Add(dataPoint96);
+            series15.Points.Add(dataPoint97);
+            series15.Points.Add(dataPoint98);
+            series15.Points.Add(dataPoint99);
+            HeartRateLineCharts.Series.Add(series15);
+            HeartRateLineCharts.Size = new Size(354, 163);
+            HeartRateLineCharts.TabIndex = 2;
+            HeartRateLineCharts.Text = "Heart Rate";
             // 
-            // tabPage8
+            // OxygenLevelCharts
             // 
-            tabPage8.Controls.Add(chart3);
-            tabPage8.Location = new Point(4, 24);
-            tabPage8.Margin = new Padding(4, 2, 4, 2);
-            tabPage8.Name = "tabPage8";
-            tabPage8.Size = new Size(375, 415);
-            tabPage8.TabIndex = 3;
-            tabPage8.Text = "Oxygen Level";
-            tabPage8.UseVisualStyleBackColor = true;
+            OxygenLevelCharts.Controls.Add(OxygenLevelLineCharts);
+            OxygenLevelCharts.Location = new Point(4, 24);
+            OxygenLevelCharts.Margin = new Padding(4, 2, 4, 2);
+            OxygenLevelCharts.Name = "OxygenLevelCharts";
+            OxygenLevelCharts.Size = new Size(375, 415);
+            OxygenLevelCharts.TabIndex = 3;
+            OxygenLevelCharts.Text = "Oxygen Level";
+            OxygenLevelCharts.UseVisualStyleBackColor = true;
             // 
-            // chart3
+            // OxygenLevelLineCharts
             // 
-            chartArea5.Name = "ChartArea1";
-            chart3.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            chart3.Legends.Add(legend5);
-            chart3.Location = new Point(7, 54);
-            chart3.Margin = new Padding(4, 2, 4, 2);
-            chart3.Name = "chart3";
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "Oxygen Level";
-            series8.Points.Add(dataPoint47);
-            series8.Points.Add(dataPoint48);
-            series8.Points.Add(dataPoint49);
-            series8.Points.Add(dataPoint50);
-            series8.Points.Add(dataPoint51);
-            series8.Points.Add(dataPoint52);
-            series8.Points.Add(dataPoint53);
-            chart3.Series.Add(series8);
-            chart3.Size = new Size(354, 163);
-            chart3.TabIndex = 2;
-            chart3.Text = "Blood Pressure";
+            chartArea10.Name = "ChartArea1";
+            OxygenLevelLineCharts.ChartAreas.Add(chartArea10);
+            legend10.Name = "Legend1";
+            OxygenLevelLineCharts.Legends.Add(legend10);
+            OxygenLevelLineCharts.Location = new Point(7, 54);
+            OxygenLevelLineCharts.Margin = new Padding(4, 2, 4, 2);
+            OxygenLevelLineCharts.Name = "OxygenLevelLineCharts";
+            series16.ChartArea = "ChartArea1";
+            series16.Legend = "Legend1";
+            series16.Name = "Oxygen Level";
+            series16.Points.Add(dataPoint100);
+            series16.Points.Add(dataPoint101);
+            series16.Points.Add(dataPoint102);
+            series16.Points.Add(dataPoint103);
+            series16.Points.Add(dataPoint104);
+            series16.Points.Add(dataPoint105);
+            series16.Points.Add(dataPoint106);
+            OxygenLevelLineCharts.Series.Add(series16);
+            OxygenLevelLineCharts.Size = new Size(354, 163);
+            OxygenLevelLineCharts.TabIndex = 2;
+            OxygenLevelLineCharts.Text = "Oxygen Level";
             // 
             // btnDownload
             // 
             btnDownload.BackColor = SystemColors.HotTrack;
             btnDownload.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnDownload.ForeColor = SystemColors.ButtonFace;
-            btnDownload.Location = new Point(72, 394);
+            btnDownload.Location = new Point(54, 391);
             btnDownload.Margin = new Padding(4, 2, 4, 2);
             btnDownload.Name = "btnDownload";
             btnDownload.Size = new Size(130, 35);
@@ -826,18 +826,18 @@ namespace Home_Health_Device_Data_Logger
             btnDownload.UseVisualStyleBackColor = false;
             btnDownload.Click += btnDownload_Click;
             // 
-            // groupBox1
+            // groupBoxDownloadAs
             // 
-            groupBox1.Controls.Add(radioButton6);
-            groupBox1.Controls.Add(radioButton5);
-            groupBox1.Location = new Point(4, 259);
-            groupBox1.Margin = new Padding(4, 2, 4, 2);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(4, 2, 4, 2);
-            groupBox1.Size = new Size(233, 76);
-            groupBox1.TabIndex = 5;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Download As :";
+            groupBoxDownloadAs.Controls.Add(radioButton6);
+            groupBoxDownloadAs.Controls.Add(radioButton5);
+            groupBoxDownloadAs.Location = new Point(6, 260);
+            groupBoxDownloadAs.Margin = new Padding(4, 2, 4, 2);
+            groupBoxDownloadAs.Name = "groupBoxDownloadAs";
+            groupBoxDownloadAs.Padding = new Padding(4, 2, 4, 2);
+            groupBoxDownloadAs.Size = new Size(215, 75);
+            groupBoxDownloadAs.TabIndex = 5;
+            groupBoxDownloadAs.TabStop = false;
+            groupBoxDownloadAs.Text = "Download As :";
             // 
             // radioButton6
             // 
@@ -863,51 +863,51 @@ namespace Home_Health_Device_Data_Logger
             radioButton5.Text = "E&xcel";
             radioButton5.UseVisualStyleBackColor = true;
             // 
-            // label19
+            // lblToReports
             // 
-            label19.AutoSize = true;
-            label19.Location = new Point(6, 132);
-            label19.Margin = new Padding(4, 0, 4, 0);
-            label19.Name = "label19";
-            label19.Size = new Size(19, 15);
-            label19.TabIndex = 4;
-            label19.Text = "T&o";
+            lblToReports.AutoSize = true;
+            lblToReports.Location = new Point(6, 132);
+            lblToReports.Margin = new Padding(4, 0, 4, 0);
+            lblToReports.Name = "lblToReports";
+            lblToReports.Size = new Size(19, 15);
+            lblToReports.TabIndex = 4;
+            lblToReports.Text = "T&o";
             // 
-            // dateTimePicker4
+            // dateTimePickerToReports
             // 
-            dateTimePicker4.Location = new Point(4, 178);
-            dateTimePicker4.Margin = new Padding(4, 2, 4, 2);
-            dateTimePicker4.Name = "dateTimePicker4";
-            dateTimePicker4.Size = new Size(233, 23);
-            dateTimePicker4.TabIndex = 3;
+            dateTimePickerToReports.Location = new Point(4, 178);
+            dateTimePickerToReports.Margin = new Padding(4, 2, 4, 2);
+            dateTimePickerToReports.Name = "dateTimePickerToReports";
+            dateTimePickerToReports.Size = new Size(233, 23);
+            dateTimePickerToReports.TabIndex = 3;
             // 
-            // dateTimePicker3
+            // dateTimePickerFromReports
             // 
-            dateTimePicker3.Location = new Point(4, 80);
-            dateTimePicker3.Margin = new Padding(4, 2, 4, 2);
-            dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(233, 23);
-            dateTimePicker3.TabIndex = 2;
+            dateTimePickerFromReports.Location = new Point(4, 80);
+            dateTimePickerFromReports.Margin = new Padding(4, 2, 4, 2);
+            dateTimePickerFromReports.Name = "dateTimePickerFromReports";
+            dateTimePickerFromReports.Size = new Size(233, 23);
+            dateTimePickerFromReports.TabIndex = 2;
             // 
-            // label18
+            // lblFromReports
             // 
-            label18.AutoSize = true;
-            label18.Location = new Point(6, 46);
-            label18.Margin = new Padding(4, 0, 4, 0);
-            label18.Name = "label18";
-            label18.Size = new Size(35, 15);
-            label18.TabIndex = 1;
-            label18.Text = "F&rom";
+            lblFromReports.AutoSize = true;
+            lblFromReports.Location = new Point(6, 46);
+            lblFromReports.Margin = new Padding(4, 0, 4, 0);
+            lblFromReports.Name = "lblFromReports";
+            lblFromReports.Size = new Size(35, 15);
+            lblFromReports.TabIndex = 1;
+            lblFromReports.Text = "F&rom";
             // 
-            // label17
+            // lblGenerateReports
             // 
-            label17.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label17.Location = new Point(43, 6);
-            label17.Margin = new Padding(4, 0, 4, 0);
-            label17.Name = "label17";
-            label17.Size = new Size(176, 19);
-            label17.TabIndex = 0;
-            label17.Text = "Generate Reports";
+            lblGenerateReports.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblGenerateReports.Location = new Point(43, 6);
+            lblGenerateReports.Margin = new Padding(4, 0, 4, 0);
+            lblGenerateReports.Name = "lblGenerateReports";
+            lblGenerateReports.Size = new Size(176, 19);
+            lblGenerateReports.TabIndex = 0;
+            lblGenerateReports.Text = "Generate Reports";
             // 
             // tabPageProfile
             // 
@@ -1337,23 +1337,23 @@ namespace Home_Health_Device_Data_Logger
             ((System.ComponentModel.ISupportInitialize)dataGridViewPatientHistory).EndInit();
             tabPageCharts_Reports.ResumeLayout(false);
             tabPageCharts_Reports.PerformLayout();
-            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutChartsAndReports.ResumeLayout(false);
             splitContainer3.Panel1.ResumeLayout(false);
             splitContainer3.Panel2.ResumeLayout(false);
             splitContainer3.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer3).EndInit();
             splitContainer3.ResumeLayout(false);
-            tabControl2.ResumeLayout(false);
-            tabPage5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)BloodPressure).EndInit();
-            tabPage6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
-            tabPage7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)chart2).EndInit();
-            tabPage8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)chart3).EndInit();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            tabControlCharts.ResumeLayout(false);
+            BloodPressureCharts.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)BloodPressureLineCharts).EndInit();
+            SugarLevelCharts.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)SugarLevelLineCharts).EndInit();
+            HeartRateCharts.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)HeartRateLineCharts).EndInit();
+            OxygenLevelCharts.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)OxygenLevelLineCharts).EndInit();
+            groupBoxDownloadAs.ResumeLayout(false);
+            groupBoxDownloadAs.PerformLayout();
             tabPageProfile.ResumeLayout(false);
             panel1.ResumeLayout(false);
             tabControl4.ResumeLayout(false);
@@ -1398,7 +1398,7 @@ namespace Home_Health_Device_Data_Logger
         private Label label12;
         private Label label11;
         private Label label10;
-        private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel flowLayoutChartsAndReports;
         private TabControl tabControl3;
         private TabPage tabPage9;
         private TabPage tabPage10;
@@ -1406,19 +1406,19 @@ namespace Home_Health_Device_Data_Logger
         private TabPage tabPage12;
         private SplitContainer splitContainer2;
         private SplitContainer splitContainer3;
-        private TabControl tabControl2;
-        private TabPage tabPage5;
-        private TabPage tabPage6;
-        private TabPage tabPage7;
-        private TabPage tabPage8;
-        private Label label17;
-        private GroupBox groupBox1;
+        private TabControl tabControlCharts;
+        private TabPage BloodPressureCharts;
+        private TabPage SugarLevelCharts;
+        private TabPage HeartRateCharts;
+        private TabPage OxygenLevelCharts;
+        private Label lblGenerateReports;
+        private GroupBox groupBoxDownloadAs;
         private RadioButton radioButton6;
         private RadioButton radioButton5;
-        private Label label19;
-        private DateTimePicker dateTimePicker4;
-        private DateTimePicker dateTimePicker3;
-        private Label label18;
+        private Label lblToReports;
+        private DateTimePicker dateTimePickerToReports;
+        private DateTimePicker dateTimePickerFromReports;
+        private Label lblFromReports;
         private Button btnDownload;
         private Panel panel1;
         private TabControl tabControl4;
@@ -1443,8 +1443,8 @@ namespace Home_Health_Device_Data_Logger
         private Label label52;
         private DateTimePicker dateTimePicker5;
         private DateTimePicker dateTimePicker1;
-        private Label label53;
-        private Label label54;
+        private Label ToCharts;
+        private Label FromCharts;
         private DateTimePicker dateTimePicker2;
         private DateTimePicker dateTimePicker6;
         private Label LAge;
@@ -1454,10 +1454,10 @@ namespace Home_Health_Device_Data_Logger
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataVisualization.Charting.Chart BloodPressure;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
+        private System.Windows.Forms.DataVisualization.Charting.Chart BloodPressureLineCharts;
+        private System.Windows.Forms.DataVisualization.Charting.Chart SugarLevelLineCharts;
+        private System.Windows.Forms.DataVisualization.Charting.Chart HeartRateLineCharts;
+        private System.Windows.Forms.DataVisualization.Charting.Chart OxygenLevelLineCharts;
         private Button btnRefresh;
         private Button btnFilter;
         private Label lblRecentActivities;
@@ -1476,5 +1476,7 @@ namespace Home_Health_Device_Data_Logger
         private Label label1;
         private Label LFirstName;
         private Label LLastname;
+        private DateTimePicker dateTimePickerFromCharts;
+        private DateTimePicker dateTimePickerToCharts;
     }
 }
