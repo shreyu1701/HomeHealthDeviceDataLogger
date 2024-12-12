@@ -1,23 +1,34 @@
 ﻿using Home_Health_Device_Data_Logger.Data;
 using Home_Health_Device_Data_Logger.Models;
+using Home_Health_Device_Data_Logger.Services;
 using Home_Health_Device_Data_Logger.Views;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Home_Health_Device_Data_Logger
 {
     public partial class Technician : Form
     {
         private User _user;
+        private User LoggedInUser;
+        private bool _isEditing;
+        private ChartsService _chartService;
 
         public Technician(User user)
         {
             InitializeComponent();
             _user = user;
+            LoggedInUser = user;
+            _chartService = new ChartsService();
             LoadAllHealthData();
+            LoadPatientNames();
+            SetEditMode(false);
+            LoadProfileData();
+
         }
 
         // Logout Button
@@ -87,7 +98,7 @@ namespace Home_Health_Device_Data_Logger
             dataGridViewTechnicianHistory.DataSource = healthDataList.Select(h => new
             {
                 h.DataID,
-                //h.UserID,
+                h.UserID,
                 Date = h.DataDate.ToString("yyyy-MM-dd"),
                 h.BloodPressure,
                 h.SugarLevel,
@@ -272,6 +283,83 @@ namespace Home_Health_Device_Data_Logger
                 }
             }
         }
+        //Load Patient Name
+        private void LoadPatientNames()
+        {
+            try
+            {
+                var patientNames = UserDataAccess.GetPatientNames();
+                cmbPatientNames.DataSource = patientNames;
+                cmbPatientNames.DisplayMember = "FullName";  // Display patient names
+                cmbPatientNames.ValueMember = "UserID";     // Use UserID as the value
+                cmbPatientNames.SelectedIndex = -1;         // Default to no selection
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to load patient names: " + ex.Message);
+            }
+        }
+
+
+        private void btnSearchByName_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Validate patient name selection
+                if (cmbPatientNames.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Please select a patient name to search.");
+                    return;
+                }
+
+                // Validate date range selection
+                DateTime fromDate = dateTimePickerChartsFrom.Value;
+                DateTime toDate = dateTimePickerChartsTo.Value;
+
+                if (fromDate > toDate)
+                {
+                    MessageBox.Show("The 'From' date cannot be later than the 'To' date.");
+                    return;
+                }
+
+                string selectedPatientName = cmbPatientNames.SelectedItem?.ToString();
+
+                // Fetch filtered health data based on patient name
+                var filteredHealthData = HealthDataAccess.GetHealthDataByPatientName(selectedPatientName);
+
+                if (filteredHealthData == null || filteredHealthData.Count == 0)
+                {
+                    MessageBox.Show("No health data found for the selected patient.");
+                    return;
+                }
+
+                // Filter data further by date range
+                var dateFilteredData = filteredHealthData
+                    .Where(h => h.DataDate >= fromDate && h.DataDate <= toDate)
+                    .ToList();
+
+                if (dateFilteredData == null || dateFilteredData.Count == 0)
+                {
+                    MessageBox.Show("No health data found for the selected patient within the specified date range.");
+                    return;
+                }
+
+                // Bind data to DataGridView
+                //dgvHealthData.AutoGenerateColumns = true;
+                //dgvHealthData.DataSource = dateFilteredData;
+
+                // Update charts with filtered data
+                _chartService.UpdateBloodPressureChart(chtBloodPressure, dateFilteredData, fromDate, toDate);
+                _chartService.UpdateSugarLevelChart(chtSugarLevel, dateFilteredData, fromDate, toDate);
+                _chartService.UpdateHeartRateChart(chtHeartRate, dateFilteredData, fromDate, toDate);
+                _chartService.UpdateOxygenLevelChart(chtOxygenLevel, dateFilteredData, fromDate, toDate);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}\n{ex.StackTrace}");
+            }
+        }
+
 
 
         private void btnFilter_Click(object sender, EventArgs e)
@@ -324,6 +412,37 @@ namespace Home_Health_Device_Data_Logger
             }
         }
 
+        //reports
+        private void btnDownload_Click(object sender, EventArgs e)
+        {
+            PatientInfo selectedPatient = cmbPatientNames.SelectedItem as PatientInfo;
+            if (selectedPatient != null)
+            {
+                int selectedPatientUserID = selectedPatient.UserID;
+                string patientName = cmbPatientNames.Text;  // Or get from the selected item
+                string userId = cmbPatientNames.SelectedValue.ToString();
+
+                DateTime startDate = dateTimePickerTechnicianGenerateFrom.Value;
+                DateTime endDate = dateTimePickerTechnicianGenerateTo.Value;
+
+                DataTable healthData = HealthDataAccess.GetHealthDataForPatient(selectedPatientUserID, startDate, endDate);
+
+                // Generate the report (PDF or Excel) based on selected format
+                if (rdoPDF.Checked)
+                {
+                    ReportGenerationService.ExportReport(healthData, true, patientName, userId);
+                }
+                else if (rdoExcel.Checked)
+                {
+                    ReportGenerationService.ExportReport(healthData, false, patientName, userId);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a patient name to search.");
+            }
+        }
+
 
         // Add Patient Button - You can implement your patient addition logic here
         private void btnAddPatient_Click(object sender, EventArgs e)
@@ -333,10 +452,53 @@ namespace Home_Health_Device_Data_Logger
             Visible = true;
         }
 
+        private void LoadProfileData()
+        {
+            // Personal Info (make UserID non-editable)
+            lblUserID.Text = LoggedInUser.UserID.ToString();  // Display UserID, but don't allow editing
+            txtFirstName.Text = LoggedInUser.FirstName;
+            txtLastName.Text = LoggedInUser.LastName;
+            txtAge.Text = LoggedInUser.Age;
+            cmbGender.SelectedItem = LoggedInUser.Gender;
+            cmbBloodGroup.SelectedItem = LoggedInUser.BloodGroup;
+            txtEmail.Text = LoggedInUser.Email;
+            txtPassword.Text = LoggedInUser.Password;
+            txtPasswordHint.Text = LoggedInUser.PasswordHint;
+
+            // Profile Image
+            if (LoggedInUser.ProfileImage != null)
+            {
+                picProfilePic.Image = Image.FromStream(new MemoryStream(LoggedInUser.ProfileImage));
+            }
+        }
+
+        private void SetEditMode(bool isEditing)
+        {
+            _isEditing = isEditing;
+
+            // Enable/Disable textboxes and combo boxes
+            txtFirstName.Enabled = isEditing;
+            txtLastName.Enabled = isEditing;
+            txtAge.Enabled = isEditing;
+            cmbGender.Enabled = isEditing;
+            cmbBloodGroup.Enabled = isEditing;
+            txtEmail.Enabled = isEditing;
+            txtPassword.Enabled = isEditing;
+            txtPasswordHint.Enabled = isEditing;
+
+            // Enable/Disable upload button and save button
+            btnUploadImage.Enabled = isEditing;
+            btnPersonalSave.Enabled = isEditing;
+
+            // Toggle the Edit button text
+            btnPersonalEdit.Text = isEditing ? "Cancel" : "Edit";
+        }
+
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadAllHealthData();
         }
 
+       
     }
 }

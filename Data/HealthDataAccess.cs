@@ -267,8 +267,7 @@ namespace Home_Health_Device_Data_Logger.Data
                  BloodPressure AS BloodPressure,
                  SugarLevel AS SugarLevel,
                  HeartRate AS HeartRate,
-                 OxygenLevel AS OxygenLevel,
-                 Comments AS Comments
+                 OxygenLevel AS OxygenLevel
               FROM HealthData
               WHERE UserId = @UserID";
 
@@ -399,6 +398,96 @@ namespace Home_Health_Device_Data_Logger.Data
             return healthDataList;
         }
 
+        public static List<HealthData> GetHealthDataByPatientName(string patientName)
+        {
+            var healthDataList = new List<HealthData>();
+
+            try
+            {
+                // Define the SQL query to fetch health data
+                string query = @"
+                    SELECT hd.DataID, hd.DataDate, hd.BloodPressure, hd.SugarLevel, hd.HeartRate, 
+                           hd.OxygenLevel, hd.Comments, u.FirstName, u.LastName
+                    FROM HealthData hd
+                    INNER JOIN Users u ON hd.UserID = u.UserID
+                    WHERE CONCAT(u.FirstName, ' ', u.LastName) = @PatientName";
+
+                // Establish a connection to the database
+                using (SqlConnection connection = DbConnection.GetConnection())
+                {
+                    connection.Open();
+
+                    // Create a SQL command
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Add parameters to avoid SQL injection
+                        command.Parameters.AddWithValue("@PatientName", patientName);
+
+                        // Execute the command and read the results
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                var healthData = new HealthData
+                                {
+                                    DataID = reader.GetInt32(0),
+                                    DataDate = reader.GetDateTime(1),
+                                    BloodPressure = reader.IsDBNull(2) ? null : reader.GetString(2),
+                                    SugarLevel = reader.IsDBNull(3) ? null : reader.GetString(3),
+                                    HeartRate = reader.IsDBNull(4) ? 0 : reader.GetInt32(4),
+                                    OxygenLevel = reader.IsDBNull(5) ? 0 : reader.GetInt32(5),
+                                    Comments = reader.IsDBNull(6) ? null : reader.GetString(6),
+                                };
+
+                                healthDataList.Add(healthData);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions (log or rethrow based on your needs)
+                throw new Exception($"Error fetching health data for patient '{patientName}': {ex.Message}", ex);
+            }
+
+            return healthDataList;
+        }
+
+
+        //Report generator by Patient Name
+        public static DataTable GetHealthDataForPatient(int userID, DateTime startDate, DateTime endDate)
+        {
+            DataTable healthData = new DataTable();
+
+            // Define the query to get health data for the selected patient within the date range
+            string query = @"
+        SELECT DataID, BloodPressure, SugarLevel, HeartRate, OxygenLevel, DataDate
+        FROM HealthData
+        WHERE UserID = @UserID
+        AND DataDate BETWEEN @StartDate AND @EndDate
+        ORDER BY DataDate";
+
+            using (var connection = DbConnection.GetConnection())
+            {
+                using (var command = new SqlCommand(query, connection))
+                {
+                    // Add parameters to the SQL query
+                    command.Parameters.AddWithValue("@UserID", userID);
+                    command.Parameters.AddWithValue("@StartDate", startDate);
+                    command.Parameters.AddWithValue("@EndDate", endDate);
+
+                    // Open the connection and fill the DataTable
+                    connection.Open();
+                    using (var reader = command.ExecuteReader())
+                    {
+                        healthData.Load(reader);
+                    }
+                }
+            }
+
+            return healthData;
+        }
 
     }
 }

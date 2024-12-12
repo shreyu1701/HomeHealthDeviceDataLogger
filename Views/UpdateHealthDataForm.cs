@@ -22,7 +22,6 @@ namespace Home_Health_Device_Data_Logger.Views
 
         public bool IsUpdated { get; private set; }
 
-        // Constructor to pass the current health data
         public UpdateHealthDataForm(int healthDataId, string systolic, string diastolic, string sugarLevel, string heartRate, string oxygenLevel)
         {
             InitializeComponent();
@@ -33,7 +32,6 @@ namespace Home_Health_Device_Data_Logger.Views
             _heartRate = heartRate;
             _oxygenLevel = oxygenLevel;
 
-            // Pre-fill the textboxes with the current data
             txtSystolic.Text = _systolic;
             txtDiastolic.Text = _diastolic;
             txtSugarLevel.Text = _sugarLevel;
@@ -41,37 +39,39 @@ namespace Home_Health_Device_Data_Logger.Views
             txtOxygenLevel.Text = _oxygenLevel;
         }
 
-        // Save Button Clicked
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
-                // Validate input data
-                if (string.IsNullOrWhiteSpace(txtSystolic.Text) ||
-                    string.IsNullOrWhiteSpace(txtDiastolic.Text) ||
-                    string.IsNullOrWhiteSpace(txtSugarLevel.Text) ||
-                    string.IsNullOrWhiteSpace(txtHeartRate.Text) ||
-                    string.IsNullOrWhiteSpace(txtOxygenLevel.Text))
+                if (!DataValidation.ValidateRequiredField("Systolic", txtSystolic.Text, true) ||
+                    !DataValidation.ValidateRequiredField("Diastolic", txtDiastolic.Text, true) ||
+                    !DataValidation.ValidateRequiredField("Sugar Level", txtSugarLevel.Text, true) ||
+                    !DataValidation.ValidateRequiredField("Heart Rate", txtHeartRate.Text, true) ||
+                    !DataValidation.ValidateRequiredField("Oxygen Level", txtOxygenLevel.Text, true))
                 {
-                    MessageBox.Show("Please fill all the fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; 
+                }
+
+                if (!DataValidation.TryParseMetric("Systolic", txtSystolic.Text, out int systolic, true) ||
+                    !DataValidation.TryParseMetric("Diastolic", txtDiastolic.Text, out int diastolic, true) ||
+                    !DataValidation.TryParseMetric("Sugar Level", txtSugarLevel.Text, out int sugarLevel, true) ||
+                    !DataValidation.TryParseMetric("Heart Rate", txtHeartRate.Text, out int heartRate, true) ||
+                    !DataValidation.TryParseMetric("Oxygen Level", txtOxygenLevel.Text, out int oxygenLevel, true))
+                {
                     return;
                 }
 
-                // Parse and validate numeric fields
-                if (!int.TryParse(txtSystolic.Text, out int systolic) ||
-                    !int.TryParse(txtDiastolic.Text, out int diastolic) ||
-                    !int.TryParse(txtSugarLevel.Text, out int sugarLevel) ||
-                    !int.TryParse(txtHeartRate.Text, out int heartRate) ||
-                    !int.TryParse(txtOxygenLevel.Text, out int oxygenLevel))
+                if (!DataValidation.ValidateMetricRange("Systolic Blood Pressure", systolic, 90, 180) ||
+                    !DataValidation.ValidateMetricRange("Diastolic Blood Pressure", diastolic, 60, 120) ||
+                    !DataValidation.ValidateMetricRange("Sugar Level", sugarLevel, 70, 140) ||
+                    !DataValidation.ValidateMetricRange("Heart Rate", heartRate, 60, 100) ||
+                    !DataValidation.ValidateMetricRange("Oxygen Level", oxygenLevel, 95, 100))
                 {
-                    MessageBox.Show("Please enter valid numeric values for all fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                // Combine Systolic and Diastolic into Blood Pressure
                 string bloodPressure = systolic + "/" + diastolic;
 
-                // Update health data in the database
                 bool success = HealthDataAccess.UpdateHealthData(_healthDataId, bloodPressure, sugarLevel, heartRate, oxygenLevel);
 
                 if (success)
@@ -91,8 +91,6 @@ namespace Home_Health_Device_Data_Logger.Views
             }
         }
 
-
-        // Cancel Button Clicked
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();

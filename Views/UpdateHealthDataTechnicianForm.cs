@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Home_Health_Device_Data_Logger.Views
 {
-    public partial class UpdateHealthDataTechnicianForm: Form
+    public partial class UpdateHealthDataTechnicianForm : Form
     {
         private int _dataID;
 
@@ -21,7 +21,6 @@ namespace Home_Health_Device_Data_Logger.Views
 
             _dataID = dataID;
 
-            // Populate text fields with current data
             txtSystolic.Text = systolic;
             txtDiastolic.Text = diastolic;
             txtSugarLevel.Text = sugarLevel;
@@ -31,20 +30,57 @@ namespace Home_Health_Device_Data_Logger.Views
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            // Gather updated data
             string updatedSystolic = txtSystolic.Text;
             string updatedDiastolic = txtDiastolic.Text;
             string updatedSugarLevel = txtSugarLevel.Text;
             string updatedHeartRate = txtHeartRate.Text;
             string updatedOxygenLevel = txtOxygenLevel.Text;
 
-            string updatedBloodPressure = updatedSystolic + "/" + updatedDiastolic;
+            if (!DataValidation.ValidateRequiredField("Systolic", updatedSystolic, true) ||
+                !DataValidation.ValidateRequiredField("Diastolic", updatedDiastolic, true) ||
+                !DataValidation.ValidateRequiredField("Sugar Level", updatedSugarLevel, true) ||
+                !DataValidation.ValidateRequiredField("Heart Rate", updatedHeartRate, true) ||
+                !DataValidation.ValidateRequiredField("Oxygen Level", updatedOxygenLevel, true))
+            {
+                return;
+            }
 
-            HealthDataAccess.UpdateHealthData(_dataID, updatedBloodPressure, updatedSugarLevel, updatedHeartRate, updatedOxygenLevel);
+            int systolic, diastolic, sugarLevel, heartRate, oxygenLevel;
 
-            MessageBox.Show("Health data updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (!DataValidation.TryParseMetric("Systolic", updatedSystolic, out systolic, true) ||
+                !DataValidation.TryParseMetric("Diastolic", updatedDiastolic, out diastolic, true) ||
+                !DataValidation.TryParseMetric("Sugar Level", updatedSugarLevel, out sugarLevel, true) ||
+                !DataValidation.TryParseMetric("Heart Rate", updatedHeartRate, out heartRate, true) ||
+                !DataValidation.TryParseMetric("Oxygen Level", updatedOxygenLevel, out oxygenLevel, true))
+            {
+                return;
+            }
 
-            this.Close();
+            if (!DataValidation.ValidateMetricRange("Systolic", systolic, 90, 180) ||
+                !DataValidation.ValidateMetricRange("Diastolic", diastolic, 60, 120) ||
+                !DataValidation.ValidateMetricRange("Sugar Level", sugarLevel, 70, 200) ||
+                !DataValidation.ValidateMetricRange("Heart Rate", heartRate, 30, 180) ||
+                !DataValidation.ValidateMetricRange("Oxygen Level", oxygenLevel, 85, 100))
+            {
+                return;
+            }
+
+            // Combine Systolic and Diastolic into Blood Pressure
+            string updatedBloodPressure = $"{systolic}/{diastolic}";
+
+            try
+            {
+                HealthDataAccess.UpdateHealthData(_dataID, updatedBloodPressure, updatedSugarLevel, updatedHeartRate.ToString(), updatedOxygenLevel.ToString());
+
+                MessageBox.Show("Health data updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while updating the data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
     }
 }

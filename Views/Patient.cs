@@ -63,7 +63,7 @@ namespace Home_Health_Device_Data_Logger
                 var healthMetrics = HealthDataAccess.GetRecentHealthDataByUserId(LoggedInUser.UserID);
                 dataGridViewPatientDashboard.DataSource = healthMetrics.Select(h => new
                 {
-                    //h.DataID,
+                    h.DataID,
                     Date = h.DataDate.ToString("yyyy-MM-dd"),
                     h.BloodPressure,
                     h.SugarLevel,
@@ -270,11 +270,11 @@ namespace Home_Health_Device_Data_Logger
                 // Fetch health data for the logged-in user from the database (or service)
                 var healthData = HealthDataAccess.GetHealthDataByUserId(LoggedInUser.UserID);
 
-                // Assuming the healthData contains a list of HealthData objects
-                _chartService.UpdateBloodPressureChart(BloodPressureLineCharts, healthData);
-                _chartService.UpdateSugarLevelChart(SugarLevelLineCharts, healthData);
-                _chartService.UpdateHeartRateChart(HeartRateLineCharts, healthData);
-                _chartService.UpdateOxygenLevelChart(OxygenLevelLineCharts, healthData);
+                //// Assuming the healthData contains a list of HealthData objects
+                //_chartService.UpdateBloodPressureChart(BloodPressureLineCharts, healthData);
+                //_chartService.UpdateSugarLevelChart(SugarLevelLineCharts, healthData);
+                //_chartService.UpdateHeartRateChart(HeartRateLineCharts, healthData);
+                //_chartService.UpdateOxygenLevelChart(OxygenLevelLineCharts, healthData);
             }
             catch (Exception ex)
             {
@@ -312,7 +312,7 @@ namespace Home_Health_Device_Data_Logger
                             return;
                         }
 
-                        ReportGenerationService.ExportToCsv(filteredData, saveFileDialog.FileName);
+                        //ReportGenerationService.ExportToCsv(filteredData, saveFileDialog.FileName);
                         MessageBox.Show("Data exported successfully!", "Export Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (UnauthorizedAccessException)

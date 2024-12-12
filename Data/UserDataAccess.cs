@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Azure.Core;
 using Home_Health_Device_Data_Logger.Models;
+using Home_Health_Device_Data_Logger.Services;
 using Microsoft.Data.SqlClient;
 
 namespace Home_Health_Device_Data_Logger.Data
@@ -204,6 +205,56 @@ namespace Home_Health_Device_Data_Logger.Data
                 }
             }
         }
+
+        //public static List<string> GetPatientNames()
+        //{
+        //    var patientNames = new List<string>();
+        //    using (var connection = DbConnection.GetConnection())
+        //    {
+        //        var query = "SELECT CONCAT(FirstName, ' ', LastName) AS FullName FROM Users WHERE Role = 'Patient'";
+
+        //        using (var command = new SqlCommand(query, connection))
+        //        {
+        //            connection.Open();
+        //            using (var reader = command.ExecuteReader())
+        //            {
+        //                while (reader.Read())
+        //                {
+        //                    patientNames.Add(reader.GetString("FullName"));
+        //                }
+        //            }
+        //        }
+        //    }
+        //    return patientNames;
+        //}
+
+        public static List<PatientInfo> GetPatientNames()
+        {
+            var patientList = new List<PatientInfo>();
+            using (var connection = DbConnection.GetConnection())
+            {
+                var query = "SELECT UserID, CONCAT(FirstName, ' ', LastName) AS FullName FROM Users WHERE Role = 'Patient'";
+
+                using (var command = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var patient = new PatientInfo
+                            {
+                                UserID = reader.GetInt32("UserID"),
+                                FullName = reader.GetString("FullName")
+                            };
+                            patientList.Add(patient);
+                        }
+                    }
+                }
+            }
+            return patientList;
+        }
+
 
     }
 

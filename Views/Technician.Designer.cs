@@ -28,43 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 79D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 70D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 73D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 68D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 80D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 86D);
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 179D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 150D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 204D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 168D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint11 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 180D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint12 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 186D);
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint13 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 79D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint14 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 70D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint15 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 73D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint16 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 68D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint17 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 80D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint18 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 86D);
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint19 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 90D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint20 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 99D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint21 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 95D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint22 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 89D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint23 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 99D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint24 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 95D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint25 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(7D, 91D);
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             btnRefresh = new Button();
@@ -80,11 +43,12 @@
             dataGridViewTechnicianHistory = new DataGridView();
             dateTimePickerHistoryTo = new DateTimePicker();
             tabPage3 = new TabPage();
+            btnSearchByName = new Button();
+            label1 = new Label();
+            cmbPatientNames = new ComboBox();
             lblChartsTo = new Label();
             lblChartsFrom = new Label();
             dateTimePickerChartsFrom = new DateTimePicker();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
             splitContainer3 = new SplitContainer();
             tabControl2 = new TabControl();
@@ -108,34 +72,13 @@
             dateTimePickerChartsTo = new DateTimePicker();
             tabPage4 = new TabPage();
             panel1 = new Panel();
-            tabControl4 = new TabControl();
+            tabControlProfile = new TabControl();
             tabPage13 = new TabPage();
-            lblTechnicianPhoneNumber = new Label();
-            lblPersonalPhoneNumber = new Label();
-            lblTechnicianAddress = new Label();
-            lblPersonalAddress = new Label();
             btnPersonalSave = new Button();
             btnPersonalEdit = new Button();
-            lblTechnicianFirstName = new Label();
-            lblPersonalFirstName = new Label();
             btnUploadImage = new Button();
-            lblTechnicianAgeNumber = new Label();
-            lblPersonalAge = new Label();
-            lblTechnicianGenderOption = new Label();
-            lblPersonalGender = new Label();
-            lblTechnicianLastName = new Label();
             label23 = new Label();
             label22 = new Label();
-            lblPersonalLastName = new Label();
-            tabPage16 = new TabPage();
-            txtTechnicianConfirmPassword = new TextBox();
-            lblAccountConfirmPassword = new Label();
-            btnAccountSave = new Button();
-            btnAccountEdit = new Button();
-            txtTechnicianPassword = new TextBox();
-            lblAccountPassword = new Label();
-            lblTechnicianEmail = new Label();
-            lblAccountEmail = new Label();
             label50 = new Label();
             btnLogout = new Button();
             lblBlood = new Label();
@@ -147,6 +90,24 @@
             lblFullName = new Label();
             lblName = new Label();
             picProfilePic = new PictureBox();
+            LFirstName = new Label();
+            LLastname = new Label();
+            LUserID = new Label();
+            label4 = new Label();
+            LPassword = new Label();
+            LEmail = new Label();
+            txtPasswordHint = new TextBox();
+            txtPassword = new TextBox();
+            txtEmail = new TextBox();
+            cmbBloodGroup = new ComboBox();
+            cmbGender = new ComboBox();
+            txtAge = new TextBox();
+            txtLastName = new TextBox();
+            txtFirstName = new TextBox();
+            lblUserID = new Label();
+            LAge = new Label();
+            LBloodGroup = new Label();
+            LGender = new Label();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewTechnicianDashboard).BeginInit();
@@ -170,9 +131,8 @@
             grpDownload.SuspendLayout();
             tabPage4.SuspendLayout();
             panel1.SuspendLayout();
-            tabControl4.SuspendLayout();
+            tabControlProfile.SuspendLayout();
             tabPage13.SuspendLayout();
-            tabPage16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picProfilePic).BeginInit();
             SuspendLayout();
             // 
@@ -216,12 +176,15 @@
             // 
             // btnAddPatient
             // 
+            btnAddPatient.BackColor = SystemColors.Highlight;
+            btnAddPatient.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAddPatient.ForeColor = SystemColors.Control;
             btnAddPatient.Location = new Point(6, 6);
             btnAddPatient.Name = "btnAddPatient";
             btnAddPatient.Size = new Size(124, 33);
             btnAddPatient.TabIndex = 7;
             btnAddPatient.Text = "Add Patient";
-            btnAddPatient.UseVisualStyleBackColor = true;
+            btnAddPatient.UseVisualStyleBackColor = false;
             btnAddPatient.Click += btnAddPatient_Click;
             // 
             // btnTechnicianAddHealthData
@@ -265,12 +228,15 @@
             // 
             // btnFilter
             // 
-            btnFilter.Location = new Point(657, 22);
+            btnFilter.BackColor = SystemColors.HotTrack;
+            btnFilter.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnFilter.ForeColor = SystemColors.Control;
+            btnFilter.Location = new Point(657, 19);
             btnFilter.Name = "btnFilter";
-            btnFilter.Size = new Size(75, 23);
+            btnFilter.Size = new Size(75, 32);
             btnFilter.TabIndex = 19;
             btnFilter.Text = "Filter";
-            btnFilter.UseVisualStyleBackColor = true;
+            btnFilter.UseVisualStyleBackColor = false;
             btnFilter.Click += btnFilter_Click;
             // 
             // lblHistoryTo
@@ -300,10 +266,10 @@
             // 
             // txtID
             // 
-            txtID.Location = new Point(9, 22);
+            txtID.Location = new Point(9, 23);
             txtID.Name = "txtID";
             txtID.PlaceholderText = "Search #ID";
-            txtID.Size = new Size(206, 23);
+            txtID.Size = new Size(195, 23);
             txtID.TabIndex = 15;
             // 
             // dataGridViewTechnicianHistory
@@ -324,11 +290,12 @@
             // 
             // tabPage3
             // 
+            tabPage3.Controls.Add(btnSearchByName);
+            tabPage3.Controls.Add(label1);
+            tabPage3.Controls.Add(cmbPatientNames);
             tabPage3.Controls.Add(lblChartsTo);
             tabPage3.Controls.Add(lblChartsFrom);
             tabPage3.Controls.Add(dateTimePickerChartsFrom);
-            tabPage3.Controls.Add(textBox4);
-            tabPage3.Controls.Add(textBox5);
             tabPage3.Controls.Add(flowLayoutPanel1);
             tabPage3.Controls.Add(dateTimePickerChartsTo);
             tabPage3.Location = new Point(4, 24);
@@ -338,10 +305,40 @@
             tabPage3.Text = "Charts & Reports";
             tabPage3.UseVisualStyleBackColor = true;
             // 
+            // btnSearchByName
+            // 
+            btnSearchByName.BackColor = SystemColors.HotTrack;
+            btnSearchByName.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSearchByName.ForeColor = SystemColors.Control;
+            btnSearchByName.Location = new Point(613, 21);
+            btnSearchByName.Name = "btnSearchByName";
+            btnSearchByName.Size = new Size(109, 38);
+            btnSearchByName.TabIndex = 23;
+            btnSearchByName.Text = "Search";
+            btnSearchByName.UseVisualStyleBackColor = false;
+            btnSearchByName.Click += btnSearchByName_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(6, 11);
+            label1.Name = "label1";
+            label1.Size = new Size(82, 15);
+            label1.TabIndex = 22;
+            label1.Text = "Patient Name:";
+            // 
+            // cmbPatientNames
+            // 
+            cmbPatientNames.FormattingEnabled = true;
+            cmbPatientNames.Location = new Point(6, 29);
+            cmbPatientNames.Name = "cmbPatientNames";
+            cmbPatientNames.Size = new Size(145, 23);
+            cmbPatientNames.TabIndex = 21;
+            // 
             // lblChartsTo
             // 
             lblChartsTo.AutoSize = true;
-            lblChartsTo.Location = new Point(522, 8);
+            lblChartsTo.Location = new Point(380, 11);
             lblChartsTo.Name = "lblChartsTo";
             lblChartsTo.Size = new Size(25, 15);
             lblChartsTo.TabIndex = 20;
@@ -350,7 +347,7 @@
             // lblChartsFrom
             // 
             lblChartsFrom.AutoSize = true;
-            lblChartsFrom.Location = new Point(302, 8);
+            lblChartsFrom.Location = new Point(160, 11);
             lblChartsFrom.Name = "lblChartsFrom";
             lblChartsFrom.Size = new Size(41, 15);
             lblChartsFrom.TabIndex = 19;
@@ -358,26 +355,10 @@
             // 
             // dateTimePickerChartsFrom
             // 
-            dateTimePickerChartsFrom.Location = new Point(302, 26);
+            dateTimePickerChartsFrom.Location = new Point(160, 29);
             dateTimePickerChartsFrom.Name = "dateTimePickerChartsFrom";
             dateTimePickerChartsFrom.Size = new Size(208, 23);
             dateTimePickerChartsFrom.TabIndex = 18;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(185, 26);
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "Search #ID";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 17;
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(13, 26);
-            textBox5.Name = "textBox5";
-            textBox5.PlaceholderText = "Search #Name";
-            textBox5.Size = new Size(100, 23);
-            textBox5.TabIndex = 16;
             // 
             // flowLayoutPanel1
             // 
@@ -434,23 +415,9 @@
             // 
             // chtBloodPressure
             // 
-            chartArea1.Name = "ChartArea1";
-            chtBloodPressure.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            chtBloodPressure.Legends.Add(legend1);
-            chtBloodPressure.Location = new Point(71, 84);
+            chtBloodPressure.Location = new Point(19, 18);
             chtBloodPressure.Name = "chtBloodPressure";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "BloodPressure";
-            series1.Points.Add(dataPoint1);
-            series1.Points.Add(dataPoint2);
-            series1.Points.Add(dataPoint3);
-            series1.Points.Add(dataPoint4);
-            series1.Points.Add(dataPoint5);
-            series1.Points.Add(dataPoint6);
-            chtBloodPressure.Series.Add(series1);
-            chtBloodPressure.Size = new Size(303, 196);
+            chtBloodPressure.Size = new Size(449, 369);
             chtBloodPressure.TabIndex = 0;
             chtBloodPressure.Text = "Blood Pressure";
             // 
@@ -467,23 +434,9 @@
             // 
             // chtSugarLevel
             // 
-            chartArea2.Name = "ChartArea1";
-            chtSugarLevel.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            chtSugarLevel.Legends.Add(legend2);
-            chtSugarLevel.Location = new Point(140, 72);
+            chtSugarLevel.Location = new Point(22, 25);
             chtSugarLevel.Name = "chtSugarLevel";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Sugar Level";
-            series2.Points.Add(dataPoint7);
-            series2.Points.Add(dataPoint8);
-            series2.Points.Add(dataPoint9);
-            series2.Points.Add(dataPoint10);
-            series2.Points.Add(dataPoint11);
-            series2.Points.Add(dataPoint12);
-            chtSugarLevel.Series.Add(series2);
-            chtSugarLevel.Size = new Size(303, 196);
+            chtSugarLevel.Size = new Size(453, 376);
             chtSugarLevel.TabIndex = 1;
             chtSugarLevel.Text = "Sugar Level";
             // 
@@ -499,23 +452,9 @@
             // 
             // chtHeartRate
             // 
-            chartArea3.Name = "ChartArea1";
-            chtHeartRate.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            chtHeartRate.Legends.Add(legend3);
-            chtHeartRate.Location = new Point(145, 100);
+            chtHeartRate.Location = new Point(3, 15);
             chtHeartRate.Name = "chtHeartRate";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Heart Rate";
-            series3.Points.Add(dataPoint13);
-            series3.Points.Add(dataPoint14);
-            series3.Points.Add(dataPoint15);
-            series3.Points.Add(dataPoint16);
-            series3.Points.Add(dataPoint17);
-            series3.Points.Add(dataPoint18);
-            chtHeartRate.Series.Add(series3);
-            chtHeartRate.Size = new Size(303, 196);
+            chtHeartRate.Size = new Size(487, 386);
             chtHeartRate.TabIndex = 1;
             chtHeartRate.Text = "Heart Rate";
             // 
@@ -531,24 +470,9 @@
             // 
             // chtOxygenLevel
             // 
-            chartArea4.Name = "ChartArea1";
-            chtOxygenLevel.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            chtOxygenLevel.Legends.Add(legend4);
-            chtOxygenLevel.Location = new Point(134, 141);
+            chtOxygenLevel.Location = new Point(21, 25);
             chtOxygenLevel.Name = "chtOxygenLevel";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Oxygen Level";
-            series4.Points.Add(dataPoint19);
-            series4.Points.Add(dataPoint20);
-            series4.Points.Add(dataPoint21);
-            series4.Points.Add(dataPoint22);
-            series4.Points.Add(dataPoint23);
-            series4.Points.Add(dataPoint24);
-            series4.Points.Add(dataPoint25);
-            chtOxygenLevel.Series.Add(series4);
-            chtOxygenLevel.Size = new Size(303, 196);
+            chtOxygenLevel.Size = new Size(447, 376);
             chtOxygenLevel.TabIndex = 1;
             chtOxygenLevel.Text = "Oxygen Level";
             // 
@@ -557,20 +481,21 @@
             btnDownload.BackColor = SystemColors.HotTrack;
             btnDownload.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnDownload.ForeColor = SystemColors.ButtonFace;
-            btnDownload.Location = new Point(54, 296);
+            btnDownload.Location = new Point(55, 337);
             btnDownload.Name = "btnDownload";
             btnDownload.Size = new Size(111, 42);
             btnDownload.TabIndex = 6;
             btnDownload.Text = "Download";
             btnDownload.UseVisualStyleBackColor = false;
+            btnDownload.Click += btnDownload_Click;
             // 
             // grpDownload
             // 
             grpDownload.Controls.Add(rdoPDF);
             grpDownload.Controls.Add(rdoExcel);
-            grpDownload.Location = new Point(5, 188);
+            grpDownload.Location = new Point(5, 182);
             grpDownload.Name = "grpDownload";
-            grpDownload.Size = new Size(200, 91);
+            grpDownload.Size = new Size(200, 83);
             grpDownload.TabIndex = 5;
             grpDownload.TabStop = false;
             grpDownload.Text = "Download As :";
@@ -600,7 +525,7 @@
             // lblTechnicianGenerateTo
             // 
             lblTechnicianGenerateTo.AutoSize = true;
-            lblTechnicianGenerateTo.Location = new Point(5, 111);
+            lblTechnicianGenerateTo.Location = new Point(5, 109);
             lblTechnicianGenerateTo.Name = "lblTechnicianGenerateTo";
             lblTechnicianGenerateTo.Size = new Size(19, 15);
             lblTechnicianGenerateTo.TabIndex = 4;
@@ -608,14 +533,14 @@
             // 
             // dateTimePickerTechnicianGenerateTo
             // 
-            dateTimePickerTechnicianGenerateTo.Location = new Point(5, 127);
+            dateTimePickerTechnicianGenerateTo.Location = new Point(5, 125);
             dateTimePickerTechnicianGenerateTo.Name = "dateTimePickerTechnicianGenerateTo";
             dateTimePickerTechnicianGenerateTo.Size = new Size(200, 23);
             dateTimePickerTechnicianGenerateTo.TabIndex = 3;
             // 
             // dateTimePickerTechnicianGenerateFrom
             // 
-            dateTimePickerTechnicianGenerateFrom.Location = new Point(5, 70);
+            dateTimePickerTechnicianGenerateFrom.Location = new Point(5, 68);
             dateTimePickerTechnicianGenerateFrom.Name = "dateTimePickerTechnicianGenerateFrom";
             dateTimePickerTechnicianGenerateFrom.Size = new Size(200, 23);
             dateTimePickerTechnicianGenerateFrom.TabIndex = 2;
@@ -623,7 +548,7 @@
             // lblTechnicianGenerateFrom
             // 
             lblTechnicianGenerateFrom.AutoSize = true;
-            lblTechnicianGenerateFrom.Location = new Point(5, 52);
+            lblTechnicianGenerateFrom.Location = new Point(5, 50);
             lblTechnicianGenerateFrom.Name = "lblTechnicianGenerateFrom";
             lblTechnicianGenerateFrom.Size = new Size(35, 15);
             lblTechnicianGenerateFrom.TabIndex = 1;
@@ -640,7 +565,7 @@
             // 
             // dateTimePickerChartsTo
             // 
-            dateTimePickerChartsTo.Location = new Point(522, 26);
+            dateTimePickerChartsTo.Location = new Point(380, 29);
             dateTimePickerChartsTo.Name = "dateTimePickerChartsTo";
             dateTimePickerChartsTo.Size = new Size(210, 23);
             dateTimePickerChartsTo.TabIndex = 14;
@@ -657,42 +582,47 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(tabControl4);
+            panel1.Controls.Add(tabControlProfile);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(741, 525);
             panel1.TabIndex = 0;
             // 
-            // tabControl4
+            // tabControlProfile
             // 
-            tabControl4.Controls.Add(tabPage13);
-            tabControl4.Controls.Add(tabPage16);
-            tabControl4.Location = new Point(3, 3);
-            tabControl4.Name = "tabControl4";
-            tabControl4.SelectedIndex = 0;
-            tabControl4.Size = new Size(735, 519);
-            tabControl4.TabIndex = 0;
+            tabControlProfile.Controls.Add(tabPage13);
+            tabControlProfile.Location = new Point(3, 3);
+            tabControlProfile.Name = "tabControlProfile";
+            tabControlProfile.SelectedIndex = 0;
+            tabControlProfile.Size = new Size(735, 519);
+            tabControlProfile.TabIndex = 0;
             // 
             // tabPage13
             // 
-            tabPage13.Controls.Add(lblTechnicianPhoneNumber);
-            tabPage13.Controls.Add(lblPersonalPhoneNumber);
-            tabPage13.Controls.Add(lblTechnicianAddress);
-            tabPage13.Controls.Add(lblPersonalAddress);
+            tabPage13.Controls.Add(LFirstName);
+            tabPage13.Controls.Add(LLastname);
+            tabPage13.Controls.Add(LUserID);
+            tabPage13.Controls.Add(label4);
+            tabPage13.Controls.Add(LPassword);
+            tabPage13.Controls.Add(LEmail);
+            tabPage13.Controls.Add(txtPasswordHint);
+            tabPage13.Controls.Add(txtPassword);
+            tabPage13.Controls.Add(txtEmail);
+            tabPage13.Controls.Add(cmbBloodGroup);
+            tabPage13.Controls.Add(cmbGender);
+            tabPage13.Controls.Add(txtAge);
+            tabPage13.Controls.Add(txtLastName);
+            tabPage13.Controls.Add(txtFirstName);
+            tabPage13.Controls.Add(lblUserID);
+            tabPage13.Controls.Add(LAge);
+            tabPage13.Controls.Add(LBloodGroup);
+            tabPage13.Controls.Add(LGender);
             tabPage13.Controls.Add(btnPersonalSave);
             tabPage13.Controls.Add(btnPersonalEdit);
-            tabPage13.Controls.Add(lblTechnicianFirstName);
-            tabPage13.Controls.Add(lblPersonalFirstName);
             tabPage13.Controls.Add(btnUploadImage);
-            tabPage13.Controls.Add(lblTechnicianAgeNumber);
-            tabPage13.Controls.Add(lblPersonalAge);
-            tabPage13.Controls.Add(lblTechnicianGenderOption);
-            tabPage13.Controls.Add(lblPersonalGender);
-            tabPage13.Controls.Add(lblTechnicianLastName);
             tabPage13.Controls.Add(label23);
             tabPage13.Controls.Add(label22);
-            tabPage13.Controls.Add(lblPersonalLastName);
             tabPage13.Font = new Font("Segoe UI", 11.25F);
             tabPage13.Location = new Point(4, 24);
             tabPage13.Name = "tabPage13";
@@ -702,52 +632,12 @@
             tabPage13.Text = "Personal Information";
             tabPage13.UseVisualStyleBackColor = true;
             // 
-            // lblTechnicianPhoneNumber
-            // 
-            lblTechnicianPhoneNumber.AutoSize = true;
-            lblTechnicianPhoneNumber.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTechnicianPhoneNumber.Location = new Point(132, 221);
-            lblTechnicianPhoneNumber.Name = "lblTechnicianPhoneNumber";
-            lblTechnicianPhoneNumber.Size = new Size(119, 20);
-            lblTechnicianPhoneNumber.TabIndex = 21;
-            lblTechnicianPhoneNumber.Text = "+1 365 883 8766";
-            // 
-            // lblPersonalPhoneNumber
-            // 
-            lblPersonalPhoneNumber.AutoSize = true;
-            lblPersonalPhoneNumber.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPersonalPhoneNumber.Location = new Point(13, 223);
-            lblPersonalPhoneNumber.Name = "lblPersonalPhoneNumber";
-            lblPersonalPhoneNumber.Size = new Size(115, 20);
-            lblPersonalPhoneNumber.TabIndex = 20;
-            lblPersonalPhoneNumber.Text = "Phone Number :";
-            // 
-            // lblTechnicianAddress
-            // 
-            lblTechnicianAddress.AutoSize = true;
-            lblTechnicianAddress.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTechnicianAddress.Location = new Point(134, 190);
-            lblTechnicianAddress.Name = "lblTechnicianAddress";
-            lblTechnicianAddress.Size = new Size(309, 20);
-            lblTechnicianAddress.TabIndex = 19;
-            lblTechnicianAddress.Text = "59 Hayden St Unit 400,  Toronto, ON M4Y 2P2";
-            // 
-            // lblPersonalAddress
-            // 
-            lblPersonalAddress.AutoSize = true;
-            lblPersonalAddress.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPersonalAddress.Location = new Point(60, 188);
-            lblPersonalAddress.Name = "lblPersonalAddress";
-            lblPersonalAddress.Size = new Size(69, 20);
-            lblPersonalAddress.TabIndex = 18;
-            lblPersonalAddress.Text = "Address :";
-            // 
             // btnPersonalSave
             // 
             btnPersonalSave.BackColor = SystemColors.HotTrack;
             btnPersonalSave.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnPersonalSave.ForeColor = SystemColors.ButtonFace;
-            btnPersonalSave.Location = new Point(422, 346);
+            btnPersonalSave.Location = new Point(579, 421);
             btnPersonalSave.Name = "btnPersonalSave";
             btnPersonalSave.Size = new Size(78, 29);
             btnPersonalSave.TabIndex = 17;
@@ -759,30 +649,12 @@
             btnPersonalEdit.BackColor = SystemColors.HotTrack;
             btnPersonalEdit.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnPersonalEdit.ForeColor = SystemColors.ButtonFace;
-            btnPersonalEdit.Location = new Point(328, 346);
+            btnPersonalEdit.Location = new Point(408, 421);
             btnPersonalEdit.Name = "btnPersonalEdit";
             btnPersonalEdit.Size = new Size(76, 29);
             btnPersonalEdit.TabIndex = 16;
             btnPersonalEdit.Text = "Edit";
             btnPersonalEdit.UseVisualStyleBackColor = false;
-            // 
-            // lblTechnicianFirstName
-            // 
-            lblTechnicianFirstName.AutoSize = true;
-            lblTechnicianFirstName.Location = new Point(138, 83);
-            lblTechnicianFirstName.Name = "lblTechnicianFirstName";
-            lblTechnicianFirstName.Size = new Size(75, 20);
-            lblTechnicianFirstName.TabIndex = 15;
-            lblTechnicianFirstName.Text = "Shreyansh";
-            // 
-            // lblPersonalFirstName
-            // 
-            lblPersonalFirstName.AutoSize = true;
-            lblPersonalFirstName.Location = new Point(37, 82);
-            lblPersonalFirstName.Name = "lblPersonalFirstName";
-            lblPersonalFirstName.Size = new Size(91, 20);
-            lblPersonalFirstName.TabIndex = 14;
-            lblPersonalFirstName.Text = "First Name  :";
             // 
             // btnUploadImage
             // 
@@ -797,55 +669,6 @@
             btnUploadImage.UseVisualStyleBackColor = false;
             btnUploadImage.Click += btnUploadImage_Click;
             // 
-            // lblTechnicianAgeNumber
-            // 
-            lblTechnicianAgeNumber.AutoSize = true;
-            lblTechnicianAgeNumber.Font = new Font("Segoe UI", 11.25F);
-            lblTechnicianAgeNumber.Location = new Point(139, 163);
-            lblTechnicianAgeNumber.Name = "lblTechnicianAgeNumber";
-            lblTechnicianAgeNumber.Size = new Size(25, 20);
-            lblTechnicianAgeNumber.TabIndex = 5;
-            lblTechnicianAgeNumber.Text = "22";
-            // 
-            // lblPersonalAge
-            // 
-            lblPersonalAge.AutoSize = true;
-            lblPersonalAge.Font = new Font("Segoe UI", 11.25F);
-            lblPersonalAge.Location = new Point(86, 163);
-            lblPersonalAge.Name = "lblPersonalAge";
-            lblPersonalAge.Size = new Size(43, 20);
-            lblPersonalAge.TabIndex = 4;
-            lblPersonalAge.Text = "Age :";
-            // 
-            // lblTechnicianGenderOption
-            // 
-            lblTechnicianGenderOption.AutoSize = true;
-            lblTechnicianGenderOption.Font = new Font("Segoe UI", 11.25F);
-            lblTechnicianGenderOption.Location = new Point(136, 140);
-            lblTechnicianGenderOption.Name = "lblTechnicianGenderOption";
-            lblTechnicianGenderOption.Size = new Size(42, 20);
-            lblTechnicianGenderOption.TabIndex = 3;
-            lblTechnicianGenderOption.Text = "Male";
-            // 
-            // lblPersonalGender
-            // 
-            lblPersonalGender.Font = new Font("Segoe UI", 11.25F);
-            lblPersonalGender.Location = new Point(61, 137);
-            lblPersonalGender.Name = "lblPersonalGender";
-            lblPersonalGender.Size = new Size(72, 23);
-            lblPersonalGender.TabIndex = 0;
-            lblPersonalGender.Text = "Gender :";
-            // 
-            // lblTechnicianLastName
-            // 
-            lblTechnicianLastName.AutoSize = true;
-            lblTechnicianLastName.Font = new Font("Segoe UI", 11.25F);
-            lblTechnicianLastName.Location = new Point(136, 112);
-            lblTechnicianLastName.Name = "lblTechnicianLastName";
-            lblTechnicianLastName.Size = new Size(67, 20);
-            lblTechnicianLastName.TabIndex = 2;
-            lblTechnicianLastName.Text = "Koladiya";
-            // 
             // label23
             // 
             label23.Location = new Point(0, 0);
@@ -859,113 +682,6 @@
             label22.Name = "label22";
             label22.Size = new Size(100, 23);
             label22.TabIndex = 13;
-            // 
-            // lblPersonalLastName
-            // 
-            lblPersonalLastName.AutoSize = true;
-            lblPersonalLastName.Font = new Font("Segoe UI", 11.25F);
-            lblPersonalLastName.Location = new Point(42, 112);
-            lblPersonalLastName.Name = "lblPersonalLastName";
-            lblPersonalLastName.Size = new Size(86, 20);
-            lblPersonalLastName.TabIndex = 1;
-            lblPersonalLastName.Text = "Last Name :";
-            // 
-            // tabPage16
-            // 
-            tabPage16.Controls.Add(txtTechnicianConfirmPassword);
-            tabPage16.Controls.Add(lblAccountConfirmPassword);
-            tabPage16.Controls.Add(btnAccountSave);
-            tabPage16.Controls.Add(btnAccountEdit);
-            tabPage16.Controls.Add(txtTechnicianPassword);
-            tabPage16.Controls.Add(lblAccountPassword);
-            tabPage16.Controls.Add(lblTechnicianEmail);
-            tabPage16.Controls.Add(lblAccountEmail);
-            tabPage16.Location = new Point(4, 24);
-            tabPage16.Name = "tabPage16";
-            tabPage16.Size = new Size(727, 491);
-            tabPage16.TabIndex = 3;
-            tabPage16.Text = "Account Information";
-            tabPage16.UseVisualStyleBackColor = true;
-            // 
-            // txtTechnicianConfirmPassword
-            // 
-            txtTechnicianConfirmPassword.Location = new Point(143, 170);
-            txtTechnicianConfirmPassword.Name = "txtTechnicianConfirmPassword";
-            txtTechnicianConfirmPassword.PasswordChar = '*';
-            txtTechnicianConfirmPassword.Size = new Size(100, 23);
-            txtTechnicianConfirmPassword.TabIndex = 27;
-            // 
-            // lblAccountConfirmPassword
-            // 
-            lblAccountConfirmPassword.AutoSize = true;
-            lblAccountConfirmPassword.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblAccountConfirmPassword.Location = new Point(1, 172);
-            lblAccountConfirmPassword.Name = "lblAccountConfirmPassword";
-            lblAccountConfirmPassword.Size = new Size(134, 20);
-            lblAccountConfirmPassword.TabIndex = 26;
-            lblAccountConfirmPassword.Text = "Confirm Password :";
-            // 
-            // btnAccountSave
-            // 
-            btnAccountSave.BackColor = SystemColors.HotTrack;
-            btnAccountSave.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAccountSave.ForeColor = SystemColors.ButtonFace;
-            btnAccountSave.Location = new Point(409, 346);
-            btnAccountSave.Name = "btnAccountSave";
-            btnAccountSave.Size = new Size(78, 29);
-            btnAccountSave.TabIndex = 25;
-            btnAccountSave.Text = "Save";
-            btnAccountSave.UseVisualStyleBackColor = false;
-            // 
-            // btnAccountEdit
-            // 
-            btnAccountEdit.BackColor = SystemColors.HotTrack;
-            btnAccountEdit.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAccountEdit.ForeColor = SystemColors.ButtonFace;
-            btnAccountEdit.Location = new Point(315, 346);
-            btnAccountEdit.Name = "btnAccountEdit";
-            btnAccountEdit.Size = new Size(76, 29);
-            btnAccountEdit.TabIndex = 24;
-            btnAccountEdit.Text = "Edit";
-            btnAccountEdit.UseVisualStyleBackColor = false;
-            // 
-            // txtTechnicianPassword
-            // 
-            txtTechnicianPassword.Location = new Point(143, 134);
-            txtTechnicianPassword.Name = "txtTechnicianPassword";
-            txtTechnicianPassword.PasswordChar = '*';
-            txtTechnicianPassword.Size = new Size(100, 23);
-            txtTechnicianPassword.TabIndex = 3;
-            // 
-            // lblAccountPassword
-            // 
-            lblAccountPassword.AutoSize = true;
-            lblAccountPassword.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblAccountPassword.Location = new Point(60, 134);
-            lblAccountPassword.Name = "lblAccountPassword";
-            lblAccountPassword.Size = new Size(77, 20);
-            lblAccountPassword.TabIndex = 2;
-            lblAccountPassword.Text = "Password :";
-            // 
-            // lblTechnicianEmail
-            // 
-            lblTechnicianEmail.AutoSize = true;
-            lblTechnicianEmail.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTechnicianEmail.Location = new Point(139, 104);
-            lblTechnicianEmail.Name = "lblTechnicianEmail";
-            lblTechnicianEmail.Size = new Size(245, 20);
-            lblTechnicianEmail.TabIndex = 1;
-            lblTechnicianEmail.Text = "shreyanshkoladiyawork@gmail.com";
-            // 
-            // lblAccountEmail
-            // 
-            lblAccountEmail.AutoSize = true;
-            lblAccountEmail.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblAccountEmail.Location = new Point(84, 104);
-            lblAccountEmail.Name = "lblAccountEmail";
-            lblAccountEmail.Size = new Size(53, 20);
-            lblAccountEmail.TabIndex = 0;
-            lblAccountEmail.Text = "Email :";
             // 
             // label50
             // 
@@ -1072,6 +788,167 @@
             picProfilePic.TabIndex = 22;
             picProfilePic.TabStop = false;
             // 
+            // LFirstName
+            // 
+            LFirstName.AutoSize = true;
+            LFirstName.Location = new Point(109, 106);
+            LFirstName.Name = "LFirstName";
+            LFirstName.Size = new Size(83, 20);
+            LFirstName.TabIndex = 53;
+            LFirstName.Text = "FirstName :";
+            // 
+            // LLastname
+            // 
+            LLastname.AutoSize = true;
+            LLastname.Location = new Point(106, 141);
+            LLastname.Name = "LLastname";
+            LLastname.Size = new Size(86, 20);
+            LLastname.TabIndex = 52;
+            LLastname.Text = "&Last Name :";
+            // 
+            // LUserID
+            // 
+            LUserID.AutoSize = true;
+            LUserID.Location = new Point(124, 65);
+            LUserID.Name = "LUserID";
+            LUserID.Size = new Size(68, 20);
+            LUserID.TabIndex = 51;
+            LUserID.Text = "User &ID : ";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 11.25F);
+            label4.Location = new Point(84, 367);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(109, 20);
+            label4.TabIndex = 50;
+            label4.Text = "Password &Hint :";
+            // 
+            // LPassword
+            // 
+            LPassword.AutoSize = true;
+            LPassword.Font = new Font("Segoe UI", 11.25F);
+            LPassword.Location = new Point(119, 318);
+            LPassword.Margin = new Padding(4, 0, 4, 0);
+            LPassword.Name = "LPassword";
+            LPassword.Size = new Size(73, 20);
+            LPassword.TabIndex = 49;
+            LPassword.Text = "&Password:";
+            // 
+            // LEmail
+            // 
+            LEmail.AutoSize = true;
+            LEmail.Font = new Font("Segoe UI", 11.25F);
+            LEmail.Location = new Point(133, 282);
+            LEmail.Margin = new Padding(4, 0, 4, 0);
+            LEmail.Name = "LEmail";
+            LEmail.Size = new Size(59, 20);
+            LEmail.TabIndex = 48;
+            LEmail.Text = "&E-mail :";
+            // 
+            // txtPasswordHint
+            // 
+            txtPasswordHint.Location = new Point(250, 364);
+            txtPasswordHint.Name = "txtPasswordHint";
+            txtPasswordHint.Size = new Size(121, 27);
+            txtPasswordHint.TabIndex = 47;
+            // 
+            // txtPassword
+            // 
+            txtPassword.Location = new Point(250, 315);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
+            txtPassword.Size = new Size(121, 27);
+            txtPassword.TabIndex = 46;
+            // 
+            // txtEmail
+            // 
+            txtEmail.Location = new Point(250, 279);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(121, 27);
+            txtEmail.TabIndex = 45;
+            // 
+            // cmbBloodGroup
+            // 
+            cmbBloodGroup.FormattingEnabled = true;
+            cmbBloodGroup.Items.AddRange(new object[] { "A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-" });
+            cmbBloodGroup.Location = new Point(250, 243);
+            cmbBloodGroup.Name = "cmbBloodGroup";
+            cmbBloodGroup.Size = new Size(121, 28);
+            cmbBloodGroup.TabIndex = 44;
+            // 
+            // cmbGender
+            // 
+            cmbGender.FormattingEnabled = true;
+            cmbGender.Items.AddRange(new object[] { "Male", "Female", "Others" });
+            cmbGender.Location = new Point(250, 209);
+            cmbGender.Name = "cmbGender";
+            cmbGender.Size = new Size(121, 28);
+            cmbGender.TabIndex = 43;
+            // 
+            // txtAge
+            // 
+            txtAge.Location = new Point(250, 174);
+            txtAge.Name = "txtAge";
+            txtAge.Size = new Size(121, 27);
+            txtAge.TabIndex = 42;
+            // 
+            // txtLastName
+            // 
+            txtLastName.Location = new Point(250, 138);
+            txtLastName.Name = "txtLastName";
+            txtLastName.Size = new Size(121, 27);
+            txtLastName.TabIndex = 41;
+            // 
+            // txtFirstName
+            // 
+            txtFirstName.Location = new Point(250, 99);
+            txtFirstName.Name = "txtFirstName";
+            txtFirstName.Size = new Size(121, 27);
+            txtFirstName.TabIndex = 40;
+            // 
+            // lblUserID
+            // 
+            lblUserID.AutoSize = true;
+            lblUserID.Location = new Point(250, 65);
+            lblUserID.Name = "lblUserID";
+            lblUserID.Size = new Size(53, 20);
+            lblUserID.TabIndex = 39;
+            lblUserID.Text = "UserID";
+            // 
+            // LAge
+            // 
+            LAge.AutoSize = true;
+            LAge.Location = new Point(145, 177);
+            LAge.Margin = new Padding(4, 0, 4, 0);
+            LAge.Name = "LAge";
+            LAge.Size = new Size(47, 20);
+            LAge.TabIndex = 38;
+            LAge.Text = "&Age : ";
+            // 
+            // LBloodGroup
+            // 
+            LBloodGroup.AutoSize = true;
+            LBloodGroup.Font = new Font("Segoe UI", 11.25F);
+            LBloodGroup.Location = new Point(91, 246);
+            LBloodGroup.Margin = new Padding(4, 0, 4, 0);
+            LBloodGroup.Name = "LBloodGroup";
+            LBloodGroup.Size = new Size(101, 20);
+            LBloodGroup.TabIndex = 37;
+            LBloodGroup.Text = "&Blood Group :";
+            // 
+            // LGender
+            // 
+            LGender.Font = new Font("Segoe UI", 11.25F);
+            LGender.Location = new Point(124, 212);
+            LGender.Margin = new Padding(4, 0, 4, 0);
+            LGender.Name = "LGender";
+            LGender.Size = new Size(84, 19);
+            LGender.TabIndex = 36;
+            LGender.Text = "&Gender :";
+            // 
             // Technician
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1118,11 +995,9 @@
             grpDownload.PerformLayout();
             tabPage4.ResumeLayout(false);
             panel1.ResumeLayout(false);
-            tabControl4.ResumeLayout(false);
+            tabControlProfile.ResumeLayout(false);
             tabPage13.ResumeLayout(false);
             tabPage13.PerformLayout();
-            tabPage16.ResumeLayout(false);
-            tabPage16.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picProfilePic).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -1171,51 +1046,49 @@
         private PictureBox picProfilePic;
         private TextBox txtID;
         private TextBox txtName;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TabControl tabControl4;
+        private TabControl tabControlProfile;
         private TabPage tabPage13;
         private Button btnPersonalSave;
         private Button btnPersonalEdit;
-        private Label lblTechnicianFirstName;
-        private Label lblPersonalFirstName;
         private Button btnUploadImage;
-        private Label lblTechnicianEmail;
         private Label lblPersonalEmail;
-        private Label lblTechnicianAgeNumber;
-        private Label lblPersonalAge;
-        private Label lblTechnicianGenderOption;
-        private Label lblPersonalGender;
-        private Label lblTechnicianLastName;
         private Label label23;
         private Label label22;
-        private Label lblPersonalLastName;
-        private TabPage tabPage16;
-        private Button btnAccountSave;
-        private Button btnAccountEdit;
-        private TextBox txtTechnicianPassword;
         private Button button14;
         private TextBox textBox1;
-        private Label lblAccountPassword;
         private Label label48;
-        private Label lblAccountEmail;
-        private Label lblTechnicianPhoneNumber;
-        private Label lblPersonalPhoneNumber;
-        private Label lblTechnicianAddress;
-        private Label lblPersonalAddress;
         private Label lblHistoryTo;
         private Label lblHistoryFrom;
         private DateTimePicker dateTimePickerHistoryFrom;
         private DateTimePicker dateTimePickerChartsFrom;
         private Label lblChartsTo;
         private Label lblChartsFrom;
-        private TextBox txtTechnicianConfirmPassword;
-        private Label lblAccountConfirmPassword;
         private System.Windows.Forms.DataVisualization.Charting.Chart chtSugarLevel;
         private System.Windows.Forms.DataVisualization.Charting.Chart chtHeartRate;
         private System.Windows.Forms.DataVisualization.Charting.Chart chtOxygenLevel;
         private Button btnAddPatient;
         private Button btnRefresh;
         private Button btnFilter;
+        private Label label1;
+        private ComboBox cmbPatientNames;
+        private Button btnSearchByName;
+        private Label LFirstName;
+        private Label LLastname;
+        private Label LUserID;
+        private Label label4;
+        private Label LPassword;
+        private Label LEmail;
+        private TextBox txtPasswordHint;
+        private TextBox txtPassword;
+        private TextBox txtEmail;
+        private ComboBox cmbBloodGroup;
+        private ComboBox cmbGender;
+        private TextBox txtAge;
+        private TextBox txtLastName;
+        private TextBox txtFirstName;
+        private Label lblUserID;
+        private Label LAge;
+        private Label LBloodGroup;
+        private Label LGender;
     }
 }
